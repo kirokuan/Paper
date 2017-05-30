@@ -1,0 +1,261 @@
+% author: Tz-Huan Huang [http://www.csie.ntu.edu.tw/~tzhuan]
+% ----------------------------------------------------------------------------
+% "THE CHOCOLATE-WARE LICENSE":
+% Tz-Huan Huang wrote this file. As long as you retain this notice you
+% can do whatever you want with this stuff. If we meet some day, and you think
+% this stuff is worth it, you can buy me a chocolate in return Tz-Huan Huang
+%
+% ----------------------------------------------------------------------------
+% This template was modified by Chih-Ming Chen for NCCU style. 
+% Feel free to contact with me via changecandy@gmail.com 
+%
+%\RequirePackage{tabular}
+\RequirePackage{array}
+\RequirePackage{graphicx}
+\RequirePackage{CJKutf8}
+\RequirePackage{CJKvert}
+\RequirePackage[top=3cm,left=3cm,bottom=2cm,right=3cm]{geometry}
+%\RequirePackage[top=4cm,left=3cm,bottom=3cm,right=2cm]{geometry}
+
+\newcommand\universityCH[1]{\newcommand{\theuniversityCH}{#1}}
+\newcommand\collageCH[1]{\newcommand{\thecollageCH}{#1}}
+\newcommand\instituteCH[1]{\newcommand{\theinstituteCH}{#1}}
+\newcommand\thesisCH[1]{\newcommand{\thethesisCH}{#1}}
+\newcommand\instituteEN[1]{\newcommand{\theinstituteEN}{#1}}
+\newcommand\collageEN[1]{\newcommand{\thecollageEN}{#1}}
+\newcommand\universityEN[1]{\newcommand{\theuniversityEN}{#1}}
+\newcommand\thesisEN[1]{\newcommand{\thethesisEN}{#1}}
+\newcommand\titleCH[1]{\newcommand{\thetitleCH}{#1}}
+\newcommand\titleEN[1]{\newcommand{\thetitleEN}{#1}}
+\newcommand\authorCH[1]{\newcommand{\theauthorCH}{#1}}
+\newcommand\authorEN[1]{\newcommand{\theauthorEN}{#1}}
+\newcommand\advisorCH[1]{\newcommand{\theadvisorCH}{#1}}
+\newcommand\advisorEN[1]{\newcommand{\theadvisorEN}{#1}}
+\newcommand\advisortitleCH[1]{\newcommand{\theadvisortitleCH}{#1}}
+\newcommand\advisortitleEN[1]{\newcommand{\theadvisortitleEN}{#1}}
+\newcommand\yearCH[1]{\newcommand{\theyearCH}{#1}}
+\newcommand\yearEN[1]{\newcommand{\theyearEN}{#1}}
+\newcommand\monthCH[1]{\newcommand{\themonthCH}{#1}}
+\newcommand\monthEN[1]{\newcommand{\themonthEN}{#1}}
+\newcommand\dateCH[1]{\newcommand{\thedateCH}{#1}}
+\newcommand\datetitleCH[1]{\newcommand{\thedatetitleCH}{#1}}
+\newcommand\yeartitleCH[1]{\newcommand{\theyeartitleCH}{#1}}
+\newcommand\monthtitleCH[1]{\newcommand{\themonthtitleCH}{#1}}
+\newcommand\writtenCH[1]{\newcommand{\thewrittenCH}{#1}}
+\newcommand\abstractnameEN[1]{\newcommand{\theabstractnameEN}{#1}}
+\newcommand\abstractnameCH[1]{\newcommand{\theabstractnameCH}{#1}}
+\newcommand\studentID[1]{\newcommand{\thestudentID}{#1}}
+\newcommand\acknowledgementsnameEN[1]{\newcommand{\theacknowledgementsnameEN}{#1}}
+\newcommand\acknowledgementsnameCH[1]{\newcommand{\theacknowledgementsnameCH}{#1}}
+
+% Command to generate the title page.
+\renewcommand{\maketitle}{ %{{{
+\begin{CJK}{UTF8}{bkai}
+\CJKhorz
+\begin{titlepage}
+\begin{center}
+
+\fontsize{26}{26}\selectfont
+\linespread{1.5}\selectfont
+\theuniversityCH\theinstituteCH\\
+
+\fontsize{22}{22}\selectfont
+\theinstituteEN\\
+\theuniversityEN\\
+
+\fontsize{12}{12}\selectfont
+\ \\
+\ \\
+
+\fontsize{22}{22}\selectfont
+\thethesisCH\\
+\thethesisEN\\
+
+\fontsize{12}{12}\selectfont
+\ \\
+\ \\
+\ \\
+\ \\
+\ \\
+
+\fontsize{22}{22}\selectfont
+\parbox[c][150pt][c]{\textwidth}{
+\centering
+\thetitleCH\\
+\thetitleEN
+}
+
+\fontsize{12}{12}\selectfont
+\ \\
+\ \\
+\ \\
+\ \\
+\ \\
+
+\fontsize{18}{18}\selectfont
+{研 究 生：}\theauthorCH\\
+{指導教授：}\theadvisorCH\\
+
+\fontsize{12}{12}\selectfont
+\ \\
+\ \\
+\ \\
+\ \\
+
+\fontsize{16}{16}\selectfont
+\thedatetitleCH{}
+	\raisebox{1pt}{\theyearCH} \theyeartitleCH{}
+	\raisebox{1pt}{\themonthCH} \themonthtitleCH\\
+\themonthEN{\ }\theyearEN
+\end{center}
+\end{titlepage}
+\end{CJK}
+} % }}}
+
+% Comment to generate titlepage
+\newcommand{\maketitlep}{%{{{
+\begin{CJK}{UTF8}{bkai}
+\CJKhorz
+\begin{titlepage}
+\begin{center}
+
+\fontsize{18}{18}\selectfont
+\linespread{1.5}\selectfont
+\centering
+\thetitleCH\\
+\thetitleEN
+
+\fontsize{16}{16}\selectfont
+\ \\
+{研 究 生：}\theauthorCH
+\hspace{10 mm}
+{Student：}\theauthorEN\\
+
+{指導教授：}\theadvisorCH
+\hspace{10 mm}
+{Advisor：}\theadvisorEN
+
+\fontsize{12}{12}\selectfont
+\ \\
+\ \\
+
+\fontsize{16}{16}\selectfont
+\theuniversityCH\\
+\theinstituteCH\\
+\thethesisCH
+
+\fontsize{12}{12}\selectfont
+\ \\
+\ \\
+\ \\
+
+\fontsize{16}{16}\selectfont
+\centering
+A Thesis\\
+submitted to Department of Computer Science\\
+National Chengchi University\\
+in partial fulfillment of the Requirements\\
+for the degree of\\
+Master\\
+in\\
+Computer Science
+
+\fontsize{12}{12}\selectfont
+\ \\
+\ \\
+\ \\
+
+\fontsize{16}{16}\selectfont
+\thedatetitleCH{}
+	\raisebox{1pt}{\theyearCH} \theyeartitleCH{}
+	\raisebox{1pt}{\themonthCH} \themonthtitleCH\\
+\themonthEN{\ }\theyearEN
+\end{center}
+\end{titlepage}
+\end{CJK}
+}%}}}
+
+% Command to generate the side page.
+\newcommand{\makeside}{ %{{{
+\begin{CJK}{UTF8}{bkai}
+\CJKvert
+\fontsize{12}{12}\selectfont
+\noindent\rotatebox{-90}{
+\begin{tabular}{%
+	m{3cm}m{0.1cm}m{10cm}m{0.1cm}m{5cm}m{0.1cm}m{2.5cm}m{0.1cm}m{1.5cm}}
+\fontsize{14}{14}
+{\rotatebox{90}{\hspace{-2mm}105}}\thethesisCH & &
+{\selectfont\thetitleCH} & &
+{政治大學資訊科學系} & &
+{\theauthorCH}
+\end{tabular}
+}
+\end{CJK}
+\thispagestyle{empty}
+\newpage
+} % }}}
+
+
+
+
+% Command to generate the certification page
+\newcommand{\makecertificationCH}{ % {{{
+\begin{CJK}{UTF8}{bkai}\CJKhorz
+\addcontentsline{toc}{chapter}{口試委員會審定書（中文）}
+\includepdf{cm01.pdf}
+\newpage
+\end{CJK}
+}
+
+% }}}
+
+
+% Command to generate the certification page
+\newcommand{\makecertificationEN}{ % {{{
+\begin{CJK}{UTF8}{bkai}\CJKhorz
+\addcontentsline{toc}{chapter}{口試委員會審定書（英文）}
+\includepdf{cm02.pdf}
+\end{CJK}
+}
+
+% }}}
+
+% Environment to generate the english abstract page.
+\newenvironment{abstractEN} % {{{
+  { \centering
+    \thetitleEN
+    \\
+    \section*{\centerline{\theabstractnameEN}}%
+	\addcontentsline{toc}{chapter}{\theabstractnameEN}%
+	\quotation}
+  {\endquotation\newpage} % }}}
+
+% Environment to generate the chinese abstract page.
+\newenvironment{abstractCH} % {{{
+  { \centering
+    \thetitleCH
+    \\
+    \begin{CJK}{UTF8}{bkai}\CJKhorz%
+	\section*{\centerline{\theabstractnameCH}}%
+	\addcontentsline{toc}{chapter}{\theabstractnameCH}%
+	\quotation}
+  {\endquotation\end{CJK}\newpage} % }}}
+
+% Environment to generate the english acknowledgements page.
+\newenvironment{acknowledgementsEN} % {{{
+  {\chapter*{\centerline{\theacknowledgementsnameEN}}%
+	\addcontentsline{toc}{chapter}{\theacknowledgementsnameEN}%
+	\quotation}
+  {\endquotation\newpage} % }}}
+
+% Environment to generate the chinese acknowledgements page.
+\newenvironment{acknowledgementsCH} % {{{
+  {\begin{CJK}{UTF8}{bkai}\CJKhorz%
+	\chapter*{\centerline{\theacknowledgementsnameCH}}%
+	\addcontentsline{toc}{chapter}{\theacknowledgementsnameCH}%
+	\quotation}
+  {\endquotation\end{CJK}\newpage} % }}}
+
+\input{nccuvars}
+
+% vim: filetype=tex softtabstop=4 shiftwidth=4 tabstop=4 foldmethod=marker:
