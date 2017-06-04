@@ -1,7 +1,23 @@
 \chapter{研究方法}
 
-The data set we chose is WeiboScope, which is collected from 2012 WeiBo randomly. It contains 226 millions posts distributing over the year. We used the tags in post as the indicators of sentiment,and removed some duplicated posts and some posts without any tags, or too many tags and evaluate the accuracy of different algorithms.  We used the TF-IDF and SVM as baseline.
+The data set we chose is WeiboScope, which is collected from 2012 WeiBo randomly. It contains 226 millions posts distributing over the year. We used the tags in post as the indicators of sentiment,and removed some duplicated posts or some posts without any tags, or too many tags. We evaluated the accuracy of the classification for different algorithms.  We used the TF-IDF () and SVM (Joachims, 1998). as baseline.
 
 \section{模型簡介}
 
-中文測試
+1. TF-IDF\\
+
+	The conventional way to evaluate the semantics based on the occurrence of words     and term, and it also take the occurrence of word in global context into consideration.  It's simple and effective, but it still suffers from some disadvantages like data sparsity and high dimensionality. \\
+	
+2. FastText\\
+	
+	The structure of FastText is similiar to CBOW of Mikolov et al. (2013), and it uses the softmax to compute the probabilities for predefined classes. The word representation is looked up through a table and finally averaged into the text representation. Finally it uses the linear classification.
+ 
+
+3. Paragraph vector\\
+
+	This is raised in [Quoc Le and Tomas Mikolov. Distributed Representations of Sentences and Documents.] 
+
+We use the implementation of Gensim and use SVM with linear kernel to classify. 
+
+4. Siamese-Cbow\\
+
