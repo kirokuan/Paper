@@ -1,5 +1,12 @@
 \chapter{結論}
 
+The result shows that FastText can archive better accuracy in general way.
+
 \section{結論}
 
-中文測試
+
+For the baseline, though TF-IDF it can archive the accuracy about 0.44(+-0.04). The most distinguishable features they use are some rarely used terminology. Since we only removed the duplicated post roughly, it may still suffer from the duplicated post from different sources with certain rarely-used words. 
+
+Generally, FastText can get the better accuracy , even converting the posts to pinyin, it can also achieve the same accuracy. Though, we tried the different settings for FastText, the accuracy didn't differ so much. And it also took much less time than other algorithms to complete.
+
+The Siamese-CBOW, the performance is below the baseline. We tried evaluate the model it trained, it seemed it is not converged enough. The word embedding is not converted correctly. In the original paper, the dataset they used is Toronto Books, which contains novels, so the sentences may be more coherent. 

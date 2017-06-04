@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.5.30)  4 JUN 2017 16:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.5.30)  4 JUN 2017 18:40
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1050,33 +1050,39 @@ Chapter 2.
 ]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
 [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-) (result.tex [4]
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+) (result.tex
+Overfull \hbox (14.18016pt too wide) in paragraph at lines 34--1
+[]\OT1/ptm/m/n/12 We used the im-ple-men-ta-tion (https://bitbucket.org/TomKent
+er/siamese-cbow/overview)
+ []
+
+[4]
 Chapter 4.
 ) (conclusion.tex [5
 
@@ -1093,13 +1099,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 8475 strings out of 493328
- 120722 string characters out of 3140830
+ 8483 strings out of 493328
+ 120829 string characters out of 3140830
  201329 words of memory out of 3000000
- 11590 multiletter control sequences out of 15000+200000
- 58666 words of font info for 178 fonts, out of 3000000 for 9000
+ 11596 multiletter control sequences out of 15000+200000
+ 58962 words of font info for 179 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,43p,452b,1035s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,12n,43p,536b,1035s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<D:/Program Files/MiKTeX
 /fonts/type1/arphic/bkaiu/bkaiu4e.pfb><D:/Program Files/MiKTeX/fonts/type1/arph
 ic/bkaiu/bkaiu52.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu53.
@@ -1113,28 +1119,29 @@ iKTeX/fonts/type1/arphic/bkaiu/bkaiu5e.pfb><D:/Program Files/MiKTeX/fonts/type1
 iu65.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu67.pfb><D:/Prog
 ram Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu6a.pfb><D:/Program Files/MiKTeX/
 fonts/type1/arphic/bkaiu/bkaiu6c.pfb><D:/Program Files/MiKTeX/fonts/type1/arphi
-c/bkaiu/bkaiu6e.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu73.p
-fb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu75.pfb><D:/Program Fi
-les/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu76.pfb><D:/Program Files/MiKTeX/fonts/
-type1/arphic/bkaiu/bkaiu78.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkai
-u/bkaiu79.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu7a.pfb><D:
-/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu7b.pfb><D:/Program Files/Mi
-KTeX/fonts/type1/arphic/bkaiu/bkaiu7c.pfb><D:/Program Files/MiKTeX/fonts/type1/
-arphic/bkaiu/bkaiu7d.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkai
-u82.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu83.pfb><D:/Progr
-am Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu85.pfb><D:/Program Files/MiKTeX/f
-onts/type1/arphic/bkaiu/bkaiu88.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic
-/bkaiu/bkaiu8a.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu8c.pf
-b><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu92.pfb><D:/Program Fil
-es/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu93.pfb><D:/Program Files/MiKTeX/fonts/t
-ype1/arphic/bkaiu/bkaiu95.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu
-/bkaiu96.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu98.pfb><D:/
-Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu9a.pfb><D:/Program Files/MiK
-TeX/fonts/type1/arphic/bkaiu/bkaiuff.pfb><D:/Program Files/MiKTeX/fonts/type1/u
-rw/times/utmb8a.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on thesis.pdf (13 pages, 188189 bytes).
+c/bkaiu/bkaiu6d.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu6e.p
+fb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu73.pfb><D:/Program Fi
+les/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu75.pfb><D:/Program Files/MiKTeX/fonts/
+type1/arphic/bkaiu/bkaiu76.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkai
+u/bkaiu78.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu79.pfb><D:
+/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu7a.pfb><D:/Program Files/Mi
+KTeX/fonts/type1/arphic/bkaiu/bkaiu7b.pfb><D:/Program Files/MiKTeX/fonts/type1/
+arphic/bkaiu/bkaiu7c.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkai
+u7d.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu82.pfb><D:/Progr
+am Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu83.pfb><D:/Program Files/MiKTeX/f
+onts/type1/arphic/bkaiu/bkaiu85.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic
+/bkaiu/bkaiu88.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu8a.pf
+b><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu8c.pfb><D:/Program Fil
+es/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu92.pfb><D:/Program Files/MiKTeX/fonts/t
+ype1/arphic/bkaiu/bkaiu93.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu
+/bkaiu95.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu96.pfb><D:/
+Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu98.pfb><D:/Program Files/MiK
+TeX/fonts/type1/arphic/bkaiu/bkaiu9a.pfb><D:/Program Files/MiKTeX/fonts/type1/a
+rphic/bkaiu/bkaiuff.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.p
+fb><D:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
+Output written on thesis.pdf (13 pages, 194479 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
+ 249 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

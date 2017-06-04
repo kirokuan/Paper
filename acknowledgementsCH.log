@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.5.30)  4 JUN 2017 14:45
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.6.4)  4 JUN 2017 18:07
 entering extended mode
 **./acknowledgementsCH.tex
 (acknowledgementsCH.tex
@@ -24,19 +24,6 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 \\
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
 l.6 \\
       
 Your command was ignored.
@@ -50,7 +37,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7 \raggedleft
+l.7 \\
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \raggedleft
                {\textbf{ç®¡èŠ¸è¾°}}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -63,20 +63,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7 \raggedleft{\textbf{ç®¡èŠ¸è¾°}
+l.8 \raggedleft{\textbf{ç®¡èŠ¸è¾°}
                                   }
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-Missing character: There is no ç in font cmbx10!
-Missing character: There is no ® in font cmbx10!
-Missing character: There is no ¡ in font cmbx10!
-Missing character: There is no è in font cmbx10!
-Missing character: There is no Š in font cmbx10!
-Missing character: There is no ¸ in font cmbx10!
-Missing character: There is no è in font cmbx10!
-Missing character: There is no ¾ in font cmbx10!
-Missing character: There is no ° in font cmbx10!
+Missing character: There is no ç®¡ in font [lmroman10-bold]:mapping=tex-text;!
+Missing character: There is no èŠ¸ in font [lmroman10-bold]:mapping=tex-text;!
+Missing character: There is no è¾° in font [lmroman10-bold]:mapping=tex-text;!
+
+Overfull \hbox (8.4pt too wide) in paragraph at lines 8--9
+ []\TU/lmr/bx/n/10 ç®¡èŠ¸è¾°
+ []
+
 
 ! LaTeX Error: Missing \begin{document}.
 
@@ -84,44 +83,22 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 \raggedright{å
-                  œ‹ç«‹æ”¿æ²»å¤§å­¸è³‡è¨Šç§‘å­¸ç³»}
+l.10 \raggedright{åœ‹
+                     ç«‹æ”¿æ²»å¤§å­¸è³‡è¨Šç§‘å­¸ç³»}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-Missing character: There is no å in font nullfont!
-Missing character: There is no œ in font nullfont!
-Missing character: There is no ‹ in font nullfont!
-Missing character: There is no ç in font nullfont!
-Missing character: There is no « in font nullfont!
-Missing character: There is no ‹ in font nullfont!
-Missing character: There is no æ in font nullfont!
-Missing character: There is no ” in font nullfont!
-Missing character: There is no ¿ in font nullfont!
-Missing character: There is no æ in font nullfont!
-Missing character: There is no ² in font nullfont!
-Missing character: There is no » in font nullfont!
-Missing character: There is no å in font nullfont!
-Missing character: There is no ¤ in font nullfont!
-Missing character: There is no § in font nullfont!
-Missing character: There is no å in font nullfont!
-Missing character: There is no ­ in font nullfont!
-Missing character: There is no ¸ in font nullfont!
-Missing character: There is no è in font nullfont!
-Missing character: There is no ³ in font nullfont!
-Missing character: There is no ‡ in font nullfont!
-Missing character: There is no è in font nullfont!
-Missing character: There is no ¨ in font nullfont!
-Missing character: There is no Š in font nullfont!
-Missing character: There is no ç in font nullfont!
-Missing character: There is no § in font nullfont!
-Missing character: There is no ‘ in font nullfont!
-Missing character: There is no å in font nullfont!
-Missing character: There is no ­ in font nullfont!
-Missing character: There is no ¸ in font nullfont!
-Missing character: There is no ç in font nullfont!
-Missing character: There is no ³ in font nullfont!
-Missing character: There is no » in font nullfont!
+Missing character: There is no åœ‹ in font nullfont!
+Missing character: There is no ç«‹ in font nullfont!
+Missing character: There is no æ”¿ in font nullfont!
+Missing character: There is no æ²» in font nullfont!
+Missing character: There is no å¤§ in font nullfont!
+Missing character: There is no å­¸ in font nullfont!
+Missing character: There is no è³‡ in font nullfont!
+Missing character: There is no è¨Š in font nullfont!
+Missing character: There is no ç§‘ in font nullfont!
+Missing character: There is no å­¸ in font nullfont!
+Missing character: There is no ç³» in font nullfont!
 
 ! LaTeX Error: Missing \begin{document}.
 
@@ -129,7 +106,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.11 \raggedright{J
+l.12 \raggedright{J
                    une\ 2017}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -149,7 +126,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.13 \end{acknowledgementsCH}
+l.14 \end{acknowledgementsCH}
                              
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -163,11 +140,11 @@ or  <return>  to continue without it.
 
  
 Here is how much of TeX's memory you used:
- 11 strings out of 493328
- 206 string characters out of 3140830
- 53405 words of memory out of 3000000
- 3644 multiletter control sequences out of 15000+200000
- 3948 words of font info for 15 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 13i,1n,10p,75b,90s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 11 strings out of 427841
+ 229 string characters out of 3153301
+ 60634 words of memory out of 3000000
+ 4061 multiletter control sequences out of 15000+200000
+ 3648 words of font info for 15 fonts, out of 3000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 13i,1n,8p,73b,94s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.
