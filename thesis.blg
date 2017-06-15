@@ -7,4 +7,5 @@ Warning--empty journal in kenter2016siamesecbow
 Name 1 in "Quoc V. Le, and Tomas Mikolov" has a comma at the end for entry PVDB
 while executing---line 1090 of file abbrv.bst
 Warning--empty journal in PVDB
+Warning--empty journal in word2vec
 (There were 2 error messages)

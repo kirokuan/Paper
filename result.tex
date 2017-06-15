@@ -1,15 +1,35 @@
-\chapter{Discussion}
+\chapter{Conclusion}
 
 \begin{table}[]
 \centering
-\caption{Accuracy for different  models}
-\label{my-label}
-\begin{tabular}{lllll}
-TD-IDF &  &  &  &  \\
-PVDM &  &  &  &  \\
-FastText &  &  &  &  \\
-Siamese-CBOW &  &  &  & 
+\caption{Results}
+\label{resultAll}
+\begin{tabular}{ll}
+Tf-IDF   & 0.44+-0.04 \\
+PVDM &     \\
+FastText &  ~0.51   \\
+FastText(Pinyin) &  ~0.51  \\
+Simaese-CBOW & 0.41 (+/- 0.04)    
 \end{tabular}
 \end{table}
 
-\section{實驗設定}
+\begin{table}[]
+\centering
+\caption{FastText}
+\label{fasttext}
+\begin{tabular}{llllll}
+   & 8 & 12 & 16 & 32 & 64 \\
+no segmentation  & 0.369 & 0.375 & 0.389 & 0.372 & 0.368 \\
+segmentation  & 0.515 & 0.515 & 0.514 & 0.516 & 0.513 \\
+segmentation + pinyin  & 0.513 & 0.518 & 0.516 & 0.517 & 0.51 \\  
+\end{tabular}
+\end{table}
+
+
+
+\section{Experiment Settings}
+
+
+We used baseline TD-IDF plus SVM with linear kernel as baseline. We compared it with other models with different settings. \\
+
+For PVDB, we use 3 different models dm/c,dbow and dm/m. Additionally, we also tried to convert data set to pinyin to evaluate if the pinyin improve the sematic recognition for FastText ,which support vocabulary expansion with subword information \cite{bojanowski2016enriching}. 

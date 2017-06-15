@@ -7,8 +7,8 @@
 \contentsline {chapter}{\numberline {2}Related Work}{2}
 \contentsline {chapter}{\numberline {3}Methods}{3}
 \contentsline {section}{\numberline {3.1}The model introduction}{3}
-\contentsline {chapter}{\numberline {4}Discussion}{5}
-\contentsline {section}{\numberline {4.1}實驗設定}{5}
-\contentsline {chapter}{\numberline {5}Discussion}{6}
-\contentsline {section}{\numberline {5.1}Discussion}{6}
+\contentsline {chapter}{\numberline {4}Conclusion}{5}
+\contentsline {section}{\numberline {4.1}Experiment Settings}{5}
+\contentsline {chapter}{\numberline {5}Discussion}{7}
+\contentsline {section}{\numberline {5.1}Discussion}{7}
 \contentsfinish 
