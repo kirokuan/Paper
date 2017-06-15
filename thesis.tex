@@ -16,8 +16,8 @@
 \usepackage{lscape}% 將表格橫放
 \usepackage{titletoc}% 中文目錄用
 
-% define new columntype from: 
-% http://tex.stackexchange.com/questions/12703/how-to-create-fixed-width-table-columns-with-text-raggedright-centered-raggedlef  
+% define new columntype from:
+% http://tex.stackexchange.com/questions/12703/how-to-create-fixed-width-table-columns-with-text-raggedright-centered-raggedlef
 \newcolumntype{C}[1]{>{\centering}m{#1}}
 
 \usepackage{wallpaper}
@@ -28,7 +28,7 @@
 % uncomment this if you want to make pdf file with hyperlink
 % \usepackage[dvipdf,colorlinks=false,unicode]{hyperref}
 
-% uncomment the following and correct them if you want to set 
+% uncomment the following and correct them if you want to set
 % set the pdf properties
 %\hypersetup{
 %	pdfauthor={Tz-Huan Huang},
@@ -45,12 +45,12 @@
 \pagestyle{plain}
 
 \usepackage{titlesec}
-%\titleformat{\chapter}[display]
-%  {\normalfont\huge\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
 % 顯示中文章節
 \usepackage{CJKnumb}
-\titleformat{\chapter}[display]
-  {\centering\Huge\bfseries}{第\,\CJKnumber{\thechapter}\,章}{1em}{\Huge}
+%\titleformat{\chapter}[display]
+%  {\centering\Huge\bfseries}{第\,\CJKnumber{\thechapter}\,章}{1em}{\Huge}
 
 \begin{document}
 
@@ -67,18 +67,18 @@
 \begin{CJK}{UTF8}{bkai}
 \CJKhorz
 % 將圖表更改為中文表示
-\renewcommand\contentsname{目錄}
-\renewcommand\listfigurename{圖目錄}
-\renewcommand\listtablename{表目錄}
-\newcommand{\loflabel}{圖}
-\newcommand{\lotlabel}{表}
-\renewcommand\figurename{圖}
-\renewcommand\tablename{表}
-\renewcommand\bibname{參考文獻}
+\renewcommand\contentsname{Content}
+\renewcommand\listfigurename{Figure Content}
+\renewcommand\listtablename{Table Content}
+\newcommand{\loflabel}{Figure}
+\newcommand{\lotlabel}{Table}
+\renewcommand\figurename{Figure}
+\renewcommand\tablename{Table}
+\renewcommand\bibname{Reference}
 %\makecertificationCH
 %\makecertificationEN
 
-% comment one of the following unless you are sure you want to 
+% comment one of the following unless you are sure you want to
 % have both english and chinese acknowledgements in your thesis
 
 %\input{acknowledgementsEN}
@@ -90,7 +90,7 @@
 % 目錄顯示中文章節
 \titlecontents{chapter}[0em]
 {}{\makebox[4.1em][l]
-{第\CJKnumber{\thecontentslabel}章}}{}
+{{\thecontentslabel}}}{}
 {\titlerule*[0.7pc]{.}\contentspage}
 %\end{CJK}
 % 將圖表目錄改為圖1.1 表1.1 (Latex預設不會顯示)

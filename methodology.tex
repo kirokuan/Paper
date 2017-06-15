@@ -1,18 +1,18 @@
-\chapter{研究方法}
+\chapter{Methods}
 
 The data set we chose is Open WeiboScope, which is collected WeiBo randomly by researchers at the Journalism and Media Center of the University of Hong Kong in 2012. It contains 226 millions posts distributing over the year. We used the tags in post as the indicators of sentiment,and removed some duplicated posts or some posts without any tags, or too many tags. We evaluated the accuracy of the classification for different algorithms.  We used the TF-IDF () and SVM (Joachims, 1998). as baseline.
 
 For the data preprocessing and cleansing, it's a Weibo feature to allow the user to use emoticon, and the emoticon in raw data expressed as [笑](smile),[淚](tear).
 
 we removed the posts that contains too many tags, or without any tags. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog [cite] for Chinese netizens to post repeatedly, but most algorithms can't resist the duplicated posts. Besides, we only chose the post that over certain length .
- 
+
 The posts meets the criteria is about 7.4 millions. And we removed the tags in the original post, and there are so many tags , we use most-used 6 categories to categorize them as Figure 1.
 
 We used jieba and dictionary to segment to post.
 
 
 
-\section{模型簡介}
+\section{The model introduction}
 
 1. TF-IDF + SVM \\
 
@@ -21,16 +21,16 @@ We used jieba and dictionary to segment to post.
 2. FastText\\
 	
 	The structure of FastText is similar to CBOW of Mikolov et al. (2013), and it uses the softmax to compute the probabilities for predefined classes. The word representation is looked up through a table and finally averaged into the text representation. Finally it uses the linear classification.
- 
+
 3. Paragraph vector\\
 
-	This is raised in [Quoc Le and Tomas Mikolov. Distributed Representations of Sentences and Documents.] 
+	This is raised in [Quoc Le and Tomas Mikolov. Distributed Representations of Sentences and Documents.]
 
-We use the implementation of Gensim and use SVM with linear kernel to classify. 
+We use the implementation of Gensim and use SVM with linear kernel to classify.
 
 4. Siamese-Cbow\\
 
 	The method computes a sentence embedding is to average the embeddings of its
 constituent words, instead of using pre-trained word embedding.
 
-	We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the author, and made it compatible with python3 for better compatibility with unicode. 
+	We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the author, and made it compatible with python3 for better compatibility with unicode.

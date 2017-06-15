@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.5.30)  4 JUN 2017 20:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.5.30)  15 JUN 2017 14:22
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1084,65 +1084,67 @@ er/siamese-cbow/overview)
 
 [4]
 Chapter 4.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 3.
+
 ) (conclusion.tex [5
 
 ]
 Chapter 5.
 ) [6
 
-]
-No file thesis.bbl.
-(thesis.aux)
+] (thesis.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [7
+
+
+] (thesis.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.26pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 8491 strings out of 493328
- 120946 string characters out of 3140830
- 201340 words of memory out of 3000000
- 11601 multiletter control sequences out of 15000+200000
- 59642 words of font info for 181 fonts, out of 3000000 for 9000
+ 8305 strings out of 493328
+ 117755 string characters out of 3140830
+ 200329 words of memory out of 3000000
+ 11465 multiletter control sequences out of 15000+200000
+ 47996 words of font info for 138 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,43p,536b,1035s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,12n,40p,536b,1035s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<D:/Program Files/MiKTeX
 /fonts/type1/arphic/bkaiu/bkaiu4e.pfb><D:/Program Files/MiKTeX/fonts/type1/arph
-ic/bkaiu/bkaiu52.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu53.
-pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu56.pfb><D:/Program F
-iles/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu57.pfb><D:/Program Files/MiKTeX/fonts
-/type1/arphic/bkaiu/bkaiu58.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bka
-iu/bkaiu59.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu5b.pfb><D
-:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu5c.pfb><D:/Program Files/M
-iKTeX/fonts/type1/arphic/bkaiu/bkaiu5e.pfb><D:/Program Files/MiKTeX/fonts/type1
-/arphic/bkaiu/bkaiu63.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bka
-iu65.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu67.pfb><D:/Prog
-ram Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu6a.pfb><D:/Program Files/MiKTeX/
-fonts/type1/arphic/bkaiu/bkaiu6c.pfb><D:/Program Files/MiKTeX/fonts/type1/arphi
-c/bkaiu/bkaiu6d.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu6e.p
-fb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu73.pfb><D:/Program Fi
-les/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu75.pfb><D:/Program Files/MiKTeX/fonts/
-type1/arphic/bkaiu/bkaiu76.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkai
-u/bkaiu78.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu79.pfb><D:
-/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu7a.pfb><D:/Program Files/Mi
-KTeX/fonts/type1/arphic/bkaiu/bkaiu7b.pfb><D:/Program Files/MiKTeX/fonts/type1/
-arphic/bkaiu/bkaiu7c.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkai
-u7d.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu82.pfb><D:/Progr
-am Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu83.pfb><D:/Program Files/MiKTeX/f
-onts/type1/arphic/bkaiu/bkaiu85.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic
-/bkaiu/bkaiu88.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu8a.pf
-b><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu8c.pfb><D:/Program Fil
-es/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu8f.pfb><D:/Program Files/MiKTeX/fonts/t
-ype1/arphic/bkaiu/bkaiu92.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu
-/bkaiu93.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu95.pfb><D:/
-Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu96.pfb><D:/Program Files/MiK
-TeX/fonts/type1/arphic/bkaiu/bkaiu98.pfb><D:/Program Files/MiKTeX/fonts/type1/a
-rphic/bkaiu/bkaiu9a.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu
-ff.pfb><D:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Program Fi
-les/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on thesis.pdf (13 pages, 198940 bytes).
+ic/bkaiu/bkaiu53.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu57.
+pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu58.pfb><D:/Program F
+iles/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu59.pfb><D:/Program Files/MiKTeX/fonts
+/type1/arphic/bkaiu/bkaiu5b.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bka
+iu/bkaiu5c.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu5e.pfb><D
+:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu63.pfb><D:/Program Files/M
+iKTeX/fonts/type1/arphic/bkaiu/bkaiu65.pfb><D:/Program Files/MiKTeX/fonts/type1
+/arphic/bkaiu/bkaiu67.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bka
+iu6c.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu6d.pfb><D:/Prog
+ram Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu75.pfb><D:/Program Files/MiKTeX/
+fonts/type1/arphic/bkaiu/bkaiu76.pfb><D:/Program Files/MiKTeX/fonts/type1/arphi
+c/bkaiu/bkaiu78.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu79.p
+fb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu7a.pfb><D:/Program Fi
+les/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu7b.pfb><D:/Program Files/MiKTeX/fonts/
+type1/arphic/bkaiu/bkaiu7c.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkai
+u/bkaiu82.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu83.pfb><D:
+/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu85.pfb><D:/Program Files/Mi
+KTeX/fonts/type1/arphic/bkaiu/bkaiu8a.pfb><D:/Program Files/MiKTeX/fonts/type1/
+arphic/bkaiu/bkaiu8c.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkai
+u8f.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu92.pfb><D:/Progr
+am Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiu96.pfb><D:/Program Files/MiKTeX/f
+onts/type1/arphic/bkaiu/bkaiu98.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic
+/bkaiu/bkaiu9a.pfb><D:/Program Files/MiKTeX/fonts/type1/arphic/bkaiu/bkaiuff.pf
+b><D:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><D:/Program Files/M
+iKTeX/fonts/type1/urw/times/utmr8a.pfb>
+Output written on thesis.pdf (14 pages, 157523 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
+ 212 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
