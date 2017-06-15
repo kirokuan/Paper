@@ -22,13 +22,13 @@ We used jieba and dictionary to segment to post.
 	
 	The structure of FastText is similar to CBOW of Mikolov et al. (2013), and it uses the softmax to compute the probabilities for predefined classes. The word representation is looked up through a table and finally averaged into the text representation. Finally it uses the linear classification.
 
-3. Paragraph vector\\
+3. Paragraph vector \cite{PVDB}\\
 
-	This is raised in [Quoc Le and Tomas Mikolov. Distributed Representations of Sentences and Documents.]
+	This is method is purposed in \cite{PVDB}. The idea is obtain the summary of paragraphs,sentences or documents.
 
 We use the implementation of Gensim and use SVM with linear kernel to classify.
 
-4. Siamese-Cbow\\
+4. Siamese-Cbow\cite{kenter2016siamesecbow}\\
 
 	The method computes a sentence embedding is to average the embeddings of its
 constituent words, instead of using pre-trained word embedding.

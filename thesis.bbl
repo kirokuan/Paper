@@ -1,3 +1,14 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{kenter2016siamesecbow}
+T.~Kenter, A.~Borisov, and M.~de~Rijke.
+\newblock Siamese cbow: Optimizing word embeddings for sentence
+  representations.
+\newblock 2016.
+
+\bibitem{PVDB}
+Q.~V. Le and T.~Mikolov.
+\newblock Distributed representations of sentences and documents icml.
+\newblock 2014.
 
 \end{thebibliography}
