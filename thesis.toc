@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {1.2}Purpose}{1}
 \contentsline {chapter}{\numberline {2}Related Work}{2}
 \contentsline {chapter}{\numberline {3}Methods}{3}
-\contentsline {section}{\numberline {3.1}The model introduction}{3}
+\contentsline {section}{\numberline {3.1}The model introduction}{4}
 \contentsline {chapter}{\numberline {4}Conclusion}{5}
 \contentsline {section}{\numberline {4.1}Experiment Settings}{5}
 \contentsline {chapter}{\numberline {5}Discussion}{7}
