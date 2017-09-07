@@ -12,6 +12,12 @@
             },
             "command": "pdflatex.exe --interaction=errorstopmode --synctex=-1 \"thesis.tex\"",
             "problemMatcher": []
+        },
+        {
+            "taskName": "push",
+            "type": "shell",
+            "command": "git push",
+            "problemMatcher": []
         }
     ]
 }
