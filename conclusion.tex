@@ -5,7 +5,7 @@ The result shows that FastText can archive better accuracy in general way.
 \section{Discussion}
 
 
-For the baseline, though TF-IDF it can archive the accuracy about 0.44( ±0.04). The most distinguishable features they use are some rarely used terminology. Since we only removed the duplicated post roughly, it may still suffer from the duplicated post from different sources with certain rarely-used words. In general, the model is not generalized enough, it may not be applicable when the data set changed.
+For the baseline, though TF-IDF it can archive the accuracy about 0.44(±0.04). The most distinguishable features they use are some rarely used terminology. Since we only removed the duplicated post roughly, it may still suffer from the duplicated post from different sources with certain rarely-used words. In general, the model is not general enough, it may not be applicable when the data set changed.
 
 Generally, FastText can get the better accuracy , even converting the posts to pinyin, it also achieves the same accuracy. Though, we tried the different settings for FastText, the accuracy didn't differ so much. In the comparison set, segmented data set outperforms the one without segmentation. It suggested that the term itself is more meaningful than a single character. And it also took much less time than other algorithms to complete.
 
