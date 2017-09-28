@@ -1,7 +1,16 @@
 \chapter{Related Work}
 
-In recent years, most models are aimed at English or more general way. \cite{zhao2012moodlens} performed the basic way to classify the articles from WeiBo with Naive Bayes.  \\
+In recent years, most models are aimed at English or more general way. 
+\cite{zhao2012moodlens} performed the basic way to classify the articles from WeiBo with Naive Bayes.  \\
 
-There are also some researches about Emoticon in sentiment analysis like \cite{Emojis}, which indicates the high correlation between emoticon and sentiment from the users. 
+%There are also some researches about Emoticon in sentiment analysis like 
+%\cite{Emojis}, which indicates the high correlation between emoticon and sentiment from the users. 
 
-Additionally, sentiment analysis with typical deep learning models are conducted, like CNN \cite{kim2014convolutional}, RNN \cite{arevian2007recurrent} 
+Additionally, sentiment analysis with typical deep learning models are conducted, like CNN 
+\cite{kim2014convolutional}, RNN \cite{arevian2007recurrent}. 
+
+When it comes to multiligual environment, the preprocess approach may differ in languages. Like Chinese and Japanese, segmentation may also invloved.
+In the example of FastText\cite{joulin2016fasttext}, they also demostrated to convert character into pinyin, which make the subword infomation can be obtained. 
+
+There is also a work\cite{multilingual} to evaluate the multiligual approach and monoligual one. However, it used the Spanish and English as target, both two are belongs 
+to Indo-European languages. It also addressed the culture difference, "dragon" mean harmful in English but it's opposite in Chinese. 
