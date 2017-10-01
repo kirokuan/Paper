@@ -8,7 +8,7 @@
 \contentsline {chapter}{\numberline {3}Methods}{3}
 \contentsline {section}{\numberline {3.1}The model introduction}{4}
 \contentsline {chapter}{\numberline {4}Conclusion}{5}
-\contentsline {section}{\numberline {4.1}Experiment Settings}{7}
-\contentsline {chapter}{\numberline {5}Discussion}{8}
-\contentsline {section}{\numberline {5.1}Discussion}{8}
+\contentsline {section}{\numberline {4.1}Experiment Settings}{5}
+\contentsline {chapter}{\numberline {5}Discussion}{7}
+\contentsline {section}{\numberline {5.1}Discussion}{7}
 \contentsfinish 
