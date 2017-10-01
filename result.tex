@@ -37,32 +37,34 @@ dm/m &  0.38  & 0.436
 \end{tabular}
 \end{table}
 
-\begin{figure}
-\centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{tf-idf}
-  \caption{The confusion matrix for TF-IDF+ SVM }
-  \label{fig:sub1}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{sc-ratio}
-  \caption{The confusion matrix for siemese-CBOW}
-  \label{fig:sub2}
-\end{subfigure}
-\caption{The confusion matrix for two models comparison}
-\label{fig:test}
-\end{figure}
-}
 
 \section{Experiment Settings}
 
 
-We used baseline TD-IDF plus SVM with linear kernel as baseline. We compared it with other models with different settings. \\
+We used baseline TD-IDF plus SVM with linear kernel as baseline. Since the original distribution for classes is a little skewed, most the test sample is classified into 2 major classes.
+We compared it with other models with different settings. \\
 
 For PVDB, we use 3 different models dm/c and dm/m and dbow. All of them, we choose most commonly-used parameters,dm : dimension:100, window size:10, negative:5, hs:0 and we tested both dm with concatenation of context vectors (dm/c) and average of context vectors(dm/m). The other model dbow, we chose the same parameters.
 
 In FastText experiment, we iterated through the parameters like window size from 8 to 100, loss function ns,hs,softmax.  Since the result did't indicate significant difference between these parameters, we only display 1 of them as reference.
 
 Additionally, we also tried to convert data set to pinyin to evaluate if the pinyin improve the sematic recognition for FastText ,which support vocabulary expansion with subword information \cite{bojanowski2016enriching}. 
+
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{tf-idf}
+  \caption{The confusion matrix for TF-IDF+ SVM }
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{sc-ratio}
+  \caption{The confusion matrix for siemese-CBOW}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{The confusion matrix for two models comparison}
+\label{fig:confusion}
+\end{figure}
