@@ -44,16 +44,10 @@ T.~Mikolov, I.~Sutskever, K.~Chen, G.~S. Corrado, and J.~Dean.
   compositionality.
 \newblock pages 3111--3119, 2013.
 
-\bibitem{Emojis}
-P.~K. Novak, J.~Smailovic, B.~Sluban, and I.~Mozetic.
-\newblock Sentiment of emojis.
-\newblock {\em PLoS One}, 10(12), 12 2015.
-\newblock 著作權 - © 2015 Kralj Novak et al. This is an open access article
-  distributed under the terms of the Creative Commons Attribution License,
-  which permits unrestricted use, distribution, and reproduction in any medium,
-  provided the original author and source are credited Citation: Kralj Novak P,
-  Smailovi? J, Sluban B, Mozeti? I (2015) Sentiment of Emojis. PLoS ONE 10(12):
-  e0144296. doi:10.1371/journal.pone.0144296; 最後更新 - 2015-12-12.
+\bibitem{multilingual}
+D.~Vilares, M.~Alonso~Pardo, and C.~Gómez-Rodríguez.
+\newblock Supervised sentiment analysis in multilingual environments.
+\newblock 53, 05 2017.
 
 \bibitem{zhao2012moodlens}
 J.~Zhao, L.~Dong, J.~Wu, and K.~Xu.

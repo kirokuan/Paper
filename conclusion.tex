@@ -5,13 +5,24 @@ The result shows that FastText can archive better accuracy in general way.
 \section{Discussion}
 
 
-For the baseline, though TF-IDF it can archive the accuracy about 0.44(±0.04). The most distinguishable features they use are some rarely used terminology. Since we only removed the duplicated post roughly, it may still suffer from the duplicated post from different sources with certain rarely-used words. In general, the model is not general enough, it may not be applicable when the data set changed.
+For the baseline, though TF-IDF it can archive the accuracy about 0.44(±0.04). 
+The most distinguishable features they use are some rarely used terminology. 
+Since we only removed the duplicated post roughly, it may still suffer from the duplicated post from different sources with certain rarely-used words. 
+In general, the model is not general enough, it may not be applicable when the data set changed.
 
-Generally, FastText can get the better accuracy , even converting the posts to pinyin, it also achieves the same accuracy. Though, we tried the different settings for FastText, the accuracy didn't differ so much. In the comparison set, segmented data set outperforms the one without segmentation. It suggested that the term itself is more meaningful than a single character. And it also took much less time than other algorithms to complete.
+Generally, FastText can get the better accuracy , even converting the posts to pinyin,
+it also achieves the same accuracy. Though, we tried the different settings for FastText,
+the accuracy didn't differ so much. In the comparison set, segmented data set outperforms the one without segmentation. 
+It suggested that the term itself is more meaningful than a single character. And it also took much less time than other algorithms to complete.
 
-The Siamese-CBOW, the performance is below the baseline. We tried evaluate the model it trained, it seemed it is not converged enough. The word embedding is not converted correctly. In the original paper, the dataset they used is Toronto Books, which contains novels, so the sentences may be more coherent with previous sentence and next one.
+The Siamese-CBOW, the performance is below the baseline. 
+We tried evaluate the model it trained, it seemed it is not converged enough. 
+The word embedding is not converted correctly. 
+In the original paper, the dataset they used is Toronto Books, which contains novels,
+ therefore the sematics of the sentences may be more coherent with previous sentence and next one. 
 
 
-We demonstrated the various modern methods on the Chinese corpus, and it indicated that some models like FastText are invariant to language property. In general, most models improve the sematic analysis
+We demonstrated the various modern methods on the Chinese corpus, and it indicated that some models like FastText are invariant to language property. In general, most models improve the sematic analysis compared with tranditional TFIDF.
 
-Most methods are developed with English property, so segmentation plays a crucial role to make the Chinese posts look like English. But the segmentation may also contribute something wrong. 
+Most methods are developed with English property, so segmentation plays a crucial role to make the Chinese posts look like English.
+ But the segmentation may also contribute something wrong. Though FastText also can performed with non-segmented sentences, it performed worse due to  the nature of word embedding.

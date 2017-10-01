@@ -18,6 +18,12 @@
             "type": "shell",
             "command": "git push",
             "problemMatcher": []
+        },
+        {
+            "taskName": "buildBib",
+            "type": "shell",
+            "command": "bibtex thesis",
+            "problemMatcher": []
         }
     ]
 }
