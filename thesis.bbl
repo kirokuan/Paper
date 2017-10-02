@@ -11,6 +11,13 @@ P.~Bojanowski, E.~Grave, A.~Joulin, and T.~Mikolov.
 \newblock Enriching word vectors with subword information.
 \newblock {\em arXiv preprint arXiv:1607.04606}, 2016.
 
+\bibitem{Dashtipour2016}
+K.~Dashtipour, S.~Poria, A.~Hussain, E.~Cambria, A.~Y.~A. Hawalah, A.~Gelbukh,
+  and Q.~Zhou.
+\newblock Multilingual sentiment analysis: State of the art and independent
+  comparison of techniques.
+\newblock {\em Cognitive Computation}, 8(4):757--771, Aug 2016.
+
 \bibitem{fu2013reality}
 K.-w. Fu and M.~Chau.
 \newblock Reality check for the chinese microblog space: a random sampling
