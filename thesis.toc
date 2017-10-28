@@ -5,10 +5,15 @@
 \contentsline {section}{\numberline {1.1}Abstract}{1}
 \contentsline {section}{\numberline {1.2}Purpose}{1}
 \contentsline {chapter}{\numberline {2}Related Work}{2}
-\contentsline {chapter}{\numberline {3}Methods}{3}
+\contentsline {section}{\numberline {2.1}Traditional Approach}{2}
+\contentsline {section}{\numberline {2.2}Chinese Related Sentiment Analysis}{2}
+\contentsline {section}{\numberline {2.3}Advanced Approach}{2}
+\contentsline {chapter}{\numberline {3}Methods}{4}
 \contentsline {section}{\numberline {3.1}The model introduction}{4}
-\contentsline {chapter}{\numberline {4}Conclusion}{5}
-\contentsline {section}{\numberline {4.1}Experiment Settings}{5}
-\contentsline {chapter}{\numberline {5}Discussion}{7}
-\contentsline {section}{\numberline {5.1}Discussion}{7}
+\contentsline {chapter}{\numberline {4}Experiment}{6}
+\contentsline {section}{\numberline {4.1}Set Up}{6}
+\contentsline {chapter}{\numberline {5}Conclusion}{8}
+\contentsline {section}{\numberline {5.1}Experiment Settings}{8}
+\contentsline {chapter}{\numberline {6}Discussion}{10}
+\contentsline {section}{\numberline {6.1}Discussion}{10}
 \contentsfinish 

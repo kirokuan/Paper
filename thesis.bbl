@@ -11,6 +11,13 @@ P.~Bojanowski, E.~Grave, A.~Joulin, and T.~Mikolov.
 \newblock Enriching word vectors with subword information.
 \newblock {\em arXiv preprint arXiv:1607.04606}, 2016.
 
+\bibitem{Chen:2013:TUP:2512938.2512940}
+L.~Chen, C.~Zhang, and C.~Wilson.
+\newblock Tweeting under pressure: Analyzing trending topics and evolving word
+  choice on sina weibo.
+\newblock In {\em Proceedings of the First ACM Conference on Online Social
+  Networks}, COSN '13, pages 89--100, New York, NY, USA, 2013. ACM.
+
 \bibitem{Dashtipour2016}
 K.~Dashtipour, S.~Poria, A.~Hussain, E.~Cambria, A.~Y.~A. Hawalah, A.~Gelbukh,
   and Q.~Zhou.

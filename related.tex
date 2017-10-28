@@ -1,19 +1,29 @@
 \chapter{Related Work}
 
+
+\section{Traditional Approach}
+
 In recent years, most models are aimed at English or more general way. 
-\cite{zhao2012moodlens} performed the basic way to classify the articles from WeiBo with Naive Bayes.  \\
+
+\section{Chinese Related Sentiment Analysis}
+
+\cite{zhao2012moodlens} performed the basic way to classify the articles from WeiBo with Naive Bayes. 
+In this work, the authors also use emoticon as the ground truth to verify the approach, and   \\
 
 %There are also some researches about Emoticon in sentiment analysis like 
 %\cite{Emojis}, which indicates the high correlation between emoticon and sentiment from the users. 
+
+\section{Advanced Approach}
+
+
+\cite{Dashtipour2016} summarized both corpus-base and lexicon-base techniques and list the languages those technique aimed at. 
+Besides supervised methodology, there are some semi-supervised approaches.
 
 Additionally, sentiment analysis with typical deep learning models are conducted, like CNN 
 \cite{kim2014convolutional}, RNN \cite{arevian2007recurrent}, but most of them are applied in English dataset only. 
 
 When it comes to multiligual environment, the preprocess approach may differ in languages. Like Chinese and Japanese, segmentation may also invloved.
 In the example of FastText\cite{joulin2016fasttext}, they also demostrated to convert character into pinyin, which make the subword infomation can be obtained. 
-
-\cite{Dashtipour2016} summarized both corpus-base and lexicon-base techniques and list the languages those technique aimed at. 
-Besides supervised methodology, there are some semi-supervised approaches.
 
 There is also a work\cite{multilingual} to evaluate the multiligual approach and monoligual one. However, it used the Spanish and English as target, both two are belongs 
 to Indo-European languages. It also addressed the culture difference, "dragon" mean harmful in English but it's opposite in Chinese. 
