@@ -21,6 +21,9 @@ The word embedding is not converted correctly. And in the confusion matrix, we f
 In the original paper, the dataset they used is Toronto Books, which contains novels,
  therefore the sematics of the sentences may be more coherent with previous sentence and next one. Using some pre-trained embedding may help to deal with such situation. 
 
+In paragraph vector experiment, the result shows that DBOW produced best precision among 3 model. In the original paper, the author suggested that the DM is consistently better than DBOW
+, and that the sum version of DM is often better that concatenation.
+
 We demonstrated the various modern methods on the Chinese corpus, and it indicated that some models like FastText are invariant to language property. 
 In general, most models improve the sematic analysis compared with tranditional TFIDF.
 
