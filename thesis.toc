@@ -14,6 +14,6 @@
 \contentsline {section}{\numberline {4.1}Set Up}{6}
 \contentsline {chapter}{\numberline {5}Conclusion}{8}
 \contentsline {section}{\numberline {5.1}Experiment Settings}{8}
-\contentsline {chapter}{\numberline {6}Discussion}{10}
-\contentsline {section}{\numberline {6.1}Discussion}{10}
+\contentsline {chapter}{\numberline {6}Discussion}{11}
+\contentsline {section}{\numberline {6.1}Discussion}{11}
 \contentsfinish 
