@@ -21,8 +21,29 @@ The word embedding is not converted correctly. And in the confusion matrix, we f
 In the original paper, the dataset they used is Toronto Books, which contains novels,
  therefore the sematics of the sentences may be more coherent with previous sentence and next one. Using some pre-trained embedding may help to deal with such situation. 
 
-In paragraph vector experiment, the result shows that DBOW produced best precision among 3 model. In the original paper, the author suggested that the DM is consistently better than DBOW
-, and that the sum version of DM is often better that concatenation.
+\section{PVDM vs. FastText}
+
+In paragraph vector experiment, the result shows that DBOW produced best accuracy among 3 models. In the original paper, the author suggested that the DM is consistently better than DBOW
+, and that the sum version of DM is often better that concatenation. 
+So far, it's not clear under what condition that DBOW outperform the DM model. We tried leverge the model it built. 
+We fetched most similar word of I (我) as Table \ref{table:doc2vec}. Surprisingly, the similar words of DBOW are all not related words. 
+Both DM/C and DM/M generated better results.
+
+\begin{table}[]
+\centering
+\caption{The most similar 5 words of I (我) in 2 models}
+\label{doc2vec}
+\begin{tabular}{llll}
+      & DM/C & DBOW & DM/M \\
+1 & 俺 &  三条  & 偶\\
+2 & 偶  & 田徑運動 & 他\\
+3 & 老子  & 温暖人间 & 俺\\
+4 & 哀家  & youtudou & 我们\\
+5 & 皮下  & 化妝水 & 她
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
 
 We demonstrated the various modern methods on the Chinese corpus, and it indicated that some models like FastText are invariant to language property. 
 In general, most models improve the sematic analysis compared with tranditional TFIDF.
