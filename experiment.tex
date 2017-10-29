@@ -33,10 +33,14 @@ and the emoticon in raw data expressed as [笑](smile),[淚](tear). It displays 
 Like \cite{zhao2012moodlens},we also suffered the problem that the numbers of emoticon classes skewed,
  we deleted some posts from JOY and SAD randomly to make the dataset more balance.  
 
-we removed the posts that contains too many tags, or without any tags. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly, 
+we removed the posts containing too many tags, or without any tags. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly, 
 Besides, we only chose the post that over certain length (over above 10 characters). Finally, we used jieba and dictionary to segment to post.
 
 The posts meets the criteria is about 7.4 millions. And we removed the tags in the original post, and there are so many tags 
 ,we use most-used 6 categories to categorize them as \ref{table:CategoryTable}.
+
+In the Paragraph vector experiment, we tested both DM and DBOW. Additionally, there are 2 different ways supported by gensim to use average or concatenation.
+And we used the parameters suggested. 
+
 
 For converting to pinyin, we use jieba + pinyin (https://www.npmjs.com/package/pinyin) npm package to counter the problem.

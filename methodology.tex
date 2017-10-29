@@ -4,23 +4,46 @@
 
 Here are some models we tested.
 
-1. TF-IDF + SVM \\
+\section{TF-IDF + SVM}
 
 	The conventional way to evaluate the semantics based on the occurrence of words and term, and it also takes the occurrence of word in global context into consideration.  It's simple and effective, but it still suffers from some disadvantages like data sparsity and high dimension. \\
 	
-2. FastText \cite{joulin2016fasttext}\\
+\section{FastText}
 	
-	The structure of FastText is similar to CBOW of Mikolov et al. (2013), and it uses the softmax to compute the probabilities for predefined classes. The word representation is looked up through a table and finally averaged into the text representation. Finally it uses the linear classification.
+	The approach is purposed by \cite{joulin2016fasttext}. The structure of FastText is similar to CBOW of Mikolov et al. (2013), and it uses the softmax to compute the probabilities for predefined classes. The word representation is looked up through a table and finally averaged into the text representation. Finally it uses the linear classification.
 
-3. Paragraph vector \cite{PVDB}\\
-
-	This is method is purposed in \cite{PVDB}. The idea is obtain the summary of paragraphs,sentences or documents. There are 2 different algorithms we tested, which are dm (distributed memory) and dbow(distributed bag of words).
+\section{Paragraph vector}
+	
+This is method is purposed in \cite{PVDB}. The idea is obtain the summary of paragraphs,sentences or documents. 
+There are 2 different algorithms we tested, which are DM(distributed memory) and DBOW(distributed bag of words). 
+The DM model in figure \ref{fig:dm} is quite similar with Word2Vec.
+Figure \ref{fig:dbow} show the model archeture. Compared with DM model, DBOW conceptually simple, this model requires to store less data. \\
 
 We use the implementation of Gensim and use SVM with linear kernel to classify.
 
-4. Siamese-Cbow\cite{kenter2016siamesecbow}\\
+\section{Siamese-Cbow}
 
-	The method computes a sentence embedding is to average the embeddings of its
-constituent words, instead of using pre-trained word embedding.
+	The Simese-Cbow\cite{kenter2016siamesecbow} computes a sentence embedding is to average the embeddings of its
+constituent words, instead of using pre-trained word embedding. \\
 
 	We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the author, and made it compatible with python3 for better compatibility with unicode.
+
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{dm}
+  \caption{distributed memory}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{DBOW}
+  \caption{distributed bag of words}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{A figure with two subfigures}
+\label{fig:test}
+\end{figure}
+

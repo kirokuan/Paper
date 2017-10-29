@@ -10,6 +10,10 @@
 \contentsline {section}{\numberline {2.3}Advanced Approach}{3}
 \contentsline {chapter}{\numberline {3}Methods}{4}
 \contentsline {section}{\numberline {3.1}The model introduction}{4}
+\contentsline {section}{\numberline {3.2}TF-IDF + SVM}{4}
+\contentsline {section}{\numberline {3.3}FastText}{4}
+\contentsline {section}{\numberline {3.4}Paragraph vector}{5}
+\contentsline {section}{\numberline {3.5}Siamese-Cbow}{5}
 \contentsline {chapter}{\numberline {4}Experiment}{6}
 \contentsline {section}{\numberline {4.1}Set Up}{6}
 \contentsline {chapter}{\numberline {5}Conclusion}{8}
