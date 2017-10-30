@@ -25,9 +25,10 @@ In the original paper, the dataset they used is Toronto Books, which contains no
 
 We used TFIDF as baseline, the result is 0.44(±0.04), which is statistically greater than the random result in 6 classes problem, 
 even we consider the skewed classes.  We tried to evaluate the feature that TF-IDF use to classify as Table \ref{table:featureoftfidf}. 
+
 Most of words in each classes actually are not used so commonly. It is contributed by the problem of IDF, which may overweight some rarely-used words.
 The other problem is that we observed the netizen keep posting something quite similar like advertisement, joke or news..., 
-Though their content are not the same extractly, the words or terminology they used may be quite common. 
+Though their content are not the same exactly, the words or terminology they used may be quite common. 
 Besides TFIDF, most algorithms assume that the articles themselves are distinct from others. In real world, it's not a common case except some well-organized website articles.
 \begin{table}[]
 \centering

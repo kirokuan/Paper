@@ -22,12 +22,15 @@ Two models are also can ne concatenated, which means combine both models togethe
 
 We use the implementation of Gensim and use SVM with linear kernel to classify.
 
-\section{Siamese-Cbow}
+\section{Siamese-CBOW}
 
-	The Simese-Cbow\cite{kenter2016siamesecbow} computes a sentence embedding is to average the embeddings of its
-constituent words, instead of using pre-trained word embedding. \\
+	The Simese-CBOW\cite{kenter2016siamesecbow} computes a sentence embedding is to average the embeddings of its
+constituent words, instead of using pre-trained word embedding. 
 
-	We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the author, and made it compatible with python3 for better compatibility with unicode.
+It applied the concept of bag of word from Word2Vec. It used the average from the word composing the sentence and use it to evaluate the possibility to predict the sentence around. 
+The architecture shows as Figure \ref{fig:siamese}
+
+We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the author, and made it compatible with python3 for better compatibility with unicode.
 
 
 \begin{figure}
@@ -42,9 +45,15 @@ constituent words, instead of using pre-trained word embedding. \\
   \centering
   \includegraphics[width=.9\linewidth]{DBOW}
   \caption{distributed bag of words}
-  \label{fig:DBOW}
+  \label{fig:dbow}
 \end{subfigure}
 \caption{Paragraph vector}
 \label{fig:PVDM}
 \end{figure}
 
+\begin{figure}[h]
+    \centering
+	\includegraphics[width=.9\linewidth]{siamesecbow}
+    \caption{The architecture of Siamese-CBOW}
+    \label{fig:siamese}
+\end{figure}
