@@ -21,10 +21,19 @@ The word embedding is not converted correctly. And in the confusion matrix, we f
 In the original paper, the dataset they used is Toronto Books, which contains novels,
  therefore the sematics of the sentences may be more coherent with previous sentence and next one. Using some pre-trained embedding may help to deal with such situation. 
 
+\section{Baseline}
+
+We used TFIDF as baseline, the result is 0.44(±0.04), which is statistically greater than the random result in 6 classes problem, 
+even we consider the skewed classes.  We tried to evaluate the feature that TF-IDF use to classify as Table . 
+Most of words in each classes actually are not used so commonly. It is contributed by the problem of IDF, which may overweight some rarely-used words.
+The other problem is that we observed the netizen keep posting something quite similar like advertisement, joke or news..., 
+Though their content are not the same extractly, the words or terminology they used may be quite common. 
+Besides TFIDF, most algorithms assume that the articles themselves are distinct from others. In real world, it's not a common case except some well-organized website articles.
+
 \section{PVDM vs. FastText}
 
 In paragraph vector experiment, the result shows that DBOW produced best accuracy among 3 models. In the original paper, the author suggested that the DM is consistently better than DBOW
-, and that the sum version of DM is often better that concatenation. 
+, and that the sum version of DM is often better than concatenation. 
 So far, it's not clear under what condition that DBOW outperform the DM model. We tried leverge the model it built. 
 We fetched most similar word of I (我) as Table \ref{table:doc2vec}. Surprisingly, the similar words of DBOW are all not related words. 
 Both DM/C and DM/M generated better results.

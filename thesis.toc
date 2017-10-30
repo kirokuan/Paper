@@ -20,6 +20,7 @@
 \contentsline {section}{\numberline {5.1}Experiment Settings}{9}
 \contentsline {chapter}{\numberline {6}Discussion}{12}
 \contentsline {section}{\numberline {6.1}Discussion}{12}
-\contentsline {section}{\numberline {6.2}PVDM vs. FastText}{13}
-\contentsline {section}{\numberline {6.3}Conclusion}{13}
+\contentsline {section}{\numberline {6.2}Baseline}{13}
+\contentsline {section}{\numberline {6.3}PVDM vs. FastText}{13}
+\contentsline {section}{\numberline {6.4}Conclusion}{13}
 \contentsfinish 
