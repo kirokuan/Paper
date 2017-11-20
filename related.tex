@@ -28,9 +28,9 @@ In this work, the authors also use emoticon as the ground truth to verify the ap
 
 \section{Advanced Approach}
 
-Besides the tradition approaches, which try to extract the effective features. With deep approach, it may be possible to learn more in  continuous representations
-Additionally, sentiment analysis with typical deep learning models are conducted, like CNN 
-\cite{kim2014convolutional}, RNN \cite{arevian2007recurrent}, but most of them are applied in English dataset only. 
+Besides the tradition approaches, which try to extract the effective features. With deep approach, it may be possible to learn more in  continuous representations.
+Additionally, sentiment analysis with typical deep learning models are conducted. Multiple tasks are performed like  parsing (Socher et al., 2013a), language
+modeling (Bengio et al., 2003; Mnih and Hinton,2009) and NER (Turian et al., 2010). For sentiment analysis, the legendacy models were also tested, like CNN \cite{kim2014convolutional}, RNN \cite{arevian2007recurrent}, but most of them are applied in English dataset only. 
 
 Recently, word2vec(Mikolov et al. 2013)\cite{word2vec} is considered to perform efficiently to vecctorize the meaning of single words. Therefore, the same concept can be adapted to phrase or sentence level as well.
 Mikolov also purpose it with sentence level \cite{PVDB}, and claimed it can applied to both short text and long article. These approaches are unsupervised, but it can be conducted to sentiment analysis with proper transformation. 
@@ -39,7 +39,7 @@ To detect the sentiment polarity of short text has attracted the interest of stu
 For the task of sentiment classification, an effective feature learning method is to compose the representation of a
 sentence (or document) from the representations of the words or phrases it contains (Socher et al., 2013b; Yessenalina and Cardie, 2011).
 
-Pang et al. (2002)\cite{pang2002thumbs} already used bag-of-word representation, and present the word as one-hot vector, and they get the better classification results. However, it's still not enough to represent the complex meaning or linguistic characteristics.
+Pang et al. (2002)\cite{pang2002thumbs} already used bag-of-word representation, and present the word as one-hot vector, and they get the better classification results. However, it is still not enough to represent the complex meaning or linguistic characteristics.
 The following works, like \cite{tang2014learning}, the paper purpose to use deep learning to do sentiment analysis directly.
 
 There is also a work\cite{multilingual} to evaluate the multiligual approach and monoligual one. However, it used the Spanish and English as target, both two are belongs 

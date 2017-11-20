@@ -8,21 +8,21 @@
 \contentsline {section}{\numberline {2.1}Traditional Approach}{3}
 \contentsline {section}{\numberline {2.2}Chinese Related Sentiment Analysis}{3}
 \contentsline {section}{\numberline {2.3}Advanced Approach}{4}
-\contentsline {chapter}{\numberline {3}Methods}{5}
-\contentsline {section}{\numberline {3.1}The model introduction}{5}
-\contentsline {section}{\numberline {3.2}TF-IDF + SVM}{5}
-\contentsline {section}{\numberline {3.3}FastText}{5}
-\contentsline {section}{\numberline {3.4}Paragraph Vector}{6}
-\contentsline {section}{\numberline {3.5}Siamese-CBOW}{6}
-\contentsline {chapter}{\numberline {4}Experiment}{8}
-\contentsline {section}{\numberline {4.1}Set Up}{8}
-\contentsline {section}{\numberline {4.2}Preprocess}{9}
-\contentsline {section}{\numberline {4.3}Other}{9}
-\contentsline {chapter}{\numberline {5}Conclusion}{10}
-\contentsline {section}{\numberline {5.1}Experiment Settings}{10}
-\contentsline {chapter}{\numberline {6}Discussion}{13}
-\contentsline {section}{\numberline {6.1}Discussion}{13}
-\contentsline {section}{\numberline {6.2}Baseline}{14}
-\contentsline {section}{\numberline {6.3}PVDM vs. FastText}{14}
-\contentsline {section}{\numberline {6.4}Conclusion}{15}
+\contentsline {chapter}{\numberline {3}Methods}{6}
+\contentsline {section}{\numberline {3.1}The model introduction}{6}
+\contentsline {section}{\numberline {3.2}TF-IDF + SVM}{6}
+\contentsline {section}{\numberline {3.3}FastText}{6}
+\contentsline {section}{\numberline {3.4}Paragraph Vector}{7}
+\contentsline {section}{\numberline {3.5}Siamese-CBOW}{7}
+\contentsline {chapter}{\numberline {4}Experiment}{9}
+\contentsline {section}{\numberline {4.1}Set Up}{9}
+\contentsline {section}{\numberline {4.2}Preprocess}{10}
+\contentsline {section}{\numberline {4.3}Other}{10}
+\contentsline {chapter}{\numberline {5}Conclusion}{11}
+\contentsline {section}{\numberline {5.1}Experiment Settings}{11}
+\contentsline {chapter}{\numberline {6}Discussion}{14}
+\contentsline {section}{\numberline {6.1}Discussion}{14}
+\contentsline {section}{\numberline {6.2}Baseline}{15}
+\contentsline {section}{\numberline {6.3}PVDM vs. FastText}{15}
+\contentsline {section}{\numberline {6.4}Conclusion}{16}
 \contentsfinish 
