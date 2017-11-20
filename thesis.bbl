@@ -40,6 +40,12 @@ Y.~Kim.
 \newblock Convolutional neural networks for sentence classification.
 \newblock {\em arXiv preprint arXiv:1408.5882}, 2014.
 
+\bibitem{kiros2015skip}
+R.~Kiros, Y.~Zhu, R.~Salakhutdinov, R.~S. Zemel, A.~Torralba, R.~Urtasun, and
+  S.~Fidler.
+\newblock Skip-thought vectors.
+\newblock {\em arXiv preprint arXiv:1506.06726}, 2015.
+
 \bibitem{PVDB}
 Q.~V. Le and T.~Mikolov.
 \newblock Distributed representations of sentences and documents icml.
