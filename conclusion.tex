@@ -8,17 +8,16 @@ The result shows that FastText can archive better accuracy in general way.
 For the baseline, though TF-IDF it can archive the accuracy about 0.44(±0.04). 
 The most distinguishable features they use are some rarely used terminology. 
 Since we only removed the duplicated post roughly, it may still suffer from the duplicated post from different sources with certain rarely-used words. 
-In general, the model is not general enough, it may not be applicable when the data set changed.
+In general, the model is not general enough, it may not be applicable when the data set changed. 
 
 Generally, FastText can retrieve the better accuracy , even converting the posts to pinyin,
 it also achieves the same accuracy. Though, we tried the different settings for FastText,
 the accuracy is not different significantly despite of the various settings of loss function,window size and dimension. In the comparison set, segmented data set outperforms the one without segmentation. 
 It suggested that the term itself is more meaningful than a single character. And it also took much less time than that of other algorithms.
 
-The Siamese-CBOW, the performance is below the baseline. 
-We tried evaluate the model it trained, it seemed it is not converged enough. 
+The Siamese-CBOW, the performance is below the baseline. We tried evaluate the model it trained, it seemed it is not converged enough. 
 The word embedding is not converted correctly. And in the confusion matrix, we found the most tested result fall into two major classes.
-In the original paper, the dataset they used is Toronto Books, which contains novels,
+In the original paper, the dataset they conduected is Toronto Books, which contains novels,
  therefore the sematics of the sentences may be more highly coherent with previous sentence and next one. Using some pre-trained embedding may help to deal with such situation. 
 
 \section{Baseline}
@@ -30,6 +29,8 @@ Most of words in each classes actually are not used so commonly. It is contribut
 The other problem is that we observed the netizen keep posting something quite similar like advertisement, joke or news..., 
 Though their content are not the same exactly, the words or terminology they used may be quite common. 
 Besides TFIDF, most algorithms assume that the articles themselves are distinct from others. In real world, it's not a common case except some well-organized website articles.
+We may require some extra preprocess to handle to prevent intentionally repeated posts.
+
 \begin{table}[]
 \centering
 \caption{The feature extracted from TF-IDF}
@@ -73,6 +74,8 @@ Both DM/C and DM/M generated better results, which top 10 related words are syno
 
 \section{Subword Information}
 
+According to the paper, the feature subword information can compensate the insufficience of word embeddings. 
+We tried to evaluate if the feature works in pinyin as well, which means sentimatics can be inferred from the pronunciation. 
 Although we converted the dataset to pinyin, the accuracy is not significantly different from the original accuracy. 
 Intuitively, pinyin is less readible to native speaker and inreversible to the characters, since the multiple characters own the same pronunciation. 
 Chinese contains less syllables and more homonyms than English do. In the original paper\cite{bojanowski2016enriching}, they evaluate the effectiveness in various languages like Arabic, Czech, German, English...etc.

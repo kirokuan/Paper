@@ -6,8 +6,12 @@ Here are some models we tested.
 
 \section{TF-IDF + SVM}
 
-	The conventional way to evaluate the semantics based on the occurrence of words and term, and it also takes the occurrence of word in global context into consideration.  It's simple and effective, but it still suffers from some disadvantages like data sparsity and high dimension. \\
-	
+	The conventional way to evaluate the semantics based on the occurrence of words and term, and it also takes the occurrence of word in global context into consideration.  
+
+  It's simple and effective, but it still suffers from some disadvantages like data sparsity and high dimension, which may slow down the classifiers. \\
+
+  The SVM we conducted is LinearSVC in sklearn, which uses linear kernel. It used one-vs-rest strategy to handle the multiclass cases.
+  We used default parameters. The penalty is l2, and loss function is squared hinge. 
 \section{FastText}
 	
 The approach is purposed by \cite{joulin2016fasttext}. 
