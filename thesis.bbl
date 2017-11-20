@@ -51,6 +51,11 @@ Q.~V. Le and T.~Mikolov.
 \newblock Distributed representations of sentences and documents icml.
 \newblock 2014.
 
+\bibitem{DBLP:journals/corr/MikolovLS13}
+T.~Mikolov, Q.~V. Le, and I.~Sutskever.
+\newblock Exploiting similarities among languages for machine translation.
+\newblock {\em CoRR}, abs/1309.4168, 2013.
+
 \bibitem{word2vec}
 T.~Mikolov, I.~Sutskever, K.~Chen, G.~S. Corrado, and J.~Dean.
 \newblock Distributed representations of words and phrases and their

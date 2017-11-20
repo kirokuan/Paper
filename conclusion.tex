@@ -75,6 +75,10 @@ Both DM/C and DM/M generated better results.
 
 Although we converted the dataset to pinyin, the accuracy is not significantly different from the original accuracy. 
 Intuitively, pinyin is less readible to native speaker and inreversible to the characters, since the multiple characters own the same pronunciation. 
+Chinese contains less syllables and more homonyms than English do. So far, we are still hard to quantize the effectiveness conducted in Chinese.
+
+In the \cite{DBLP:journals/corr/MikolovLS13}, it provides similar function to compensate the words absent from training set. 
+It employs similarity of pre-trained word-embedding, rather than the similarity of n-gram characters features. It may be a good topic to evaluate the difference of these approaches. 
 
 \section{Conclusion}
 

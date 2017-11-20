@@ -24,5 +24,6 @@
 \contentsline {section}{\numberline {6.1}Discussion}{14}
 \contentsline {section}{\numberline {6.2}Baseline}{15}
 \contentsline {section}{\numberline {6.3}PVDM vs. FastText}{15}
-\contentsline {section}{\numberline {6.4}Conclusion}{16}
+\contentsline {section}{\numberline {6.4}Subword Information}{16}
+\contentsline {section}{\numberline {6.5}Conclusion}{16}
 \contentsfinish 

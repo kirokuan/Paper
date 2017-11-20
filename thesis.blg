@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
 The style file: abbrv.bst
 Database file #1: thesis.bib
-Warning--I didn't find a database entry for "Chen:2013:TUP:2512938.25"
+Warning--I didn't find a database entry for "Chen2013TUP251293825"
 Name 1 in "Quoc V. Le, and Tomas Mikolov" has a comma at the end for entry PVDB
 while executing---line 1049 of file abbrv.bst
 Warning--empty journal in kenter2016siamesecbow
