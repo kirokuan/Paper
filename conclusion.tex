@@ -10,7 +10,7 @@ The most distinguishable features they use are some rarely used terminology.
 Since we only removed the duplicated post roughly, it may still suffer from the duplicated post from different sources with certain rarely-used words. 
 In general, the model is not general enough, it may not be applicable when the data set changed.
 
-Generally, FastText can get the better accuracy , even converting the posts to pinyin,
+Generally, FastText can retrieve the better accuracy , even converting the posts to pinyin,
 it also achieves the same accuracy. Though, we tried the different settings for FastText,
 the accuracy is not different significantly despite of the various settings of loss function,window size and dimension. In the comparison set, segmented data set outperforms the one without segmentation. 
 It suggested that the term itself is more meaningful than a single character. And it also took much less time than that of other algorithms.
@@ -55,7 +55,7 @@ In paragraph vector experiment, the result shows that DBOW produced best accurac
 , and that the sum version of DM is often better than concatenation. 
 So far, it's not clear under what condition that DBOW outperform the DM model. We tried leverge the model it built. 
 We fetched most similar word of I (我) as Table \ref{table:doc2vec}. Surprisingly, the similar words of DBOW are all not related words. 
-Both DM/C and DM/M generated better results.
+Both DM/C and DM/M generated better results, which top 10 related words are synonyms of I.
 
 \begin{table}[]
 \centering
@@ -75,10 +75,13 @@ Both DM/C and DM/M generated better results.
 
 Although we converted the dataset to pinyin, the accuracy is not significantly different from the original accuracy. 
 Intuitively, pinyin is less readible to native speaker and inreversible to the characters, since the multiple characters own the same pronunciation. 
-Chinese contains less syllables and more homonyms than English do. So far, we are still hard to quantize the effectiveness conducted in Chinese.
+Chinese contains less syllables and more homonyms than English do. In the original paper\cite{bojanowski2016enriching}, they evaluate the effectiveness in various languages like Arabic, Czech, German, English...etc.
+All of them belong to phonography, and most languages belong to phonography. Chinese belongs to logogram specially. So far, we are still hard to quantize the effectiveness conducted in Chinese.
 
 In the \cite{DBLP:journals/corr/MikolovLS13}, it provides similar function to compensate the words absent from training set. 
-It employs similarity of pre-trained word-embedding, rather than the similarity of n-gram characters features. It may be a good topic to evaluate the difference of these approaches. 
+It employs similarity of pre-trained word-embedding, rather than the similarity of n-gram characters features. 
+There are also some differnet approaches like morphologically annotated data, whcih were introduced by Cotterell and Schütze (2015).
+It may be a good topic to evaluate the difference of these approaches. 
 
 \section{Conclusion}
 
@@ -86,7 +89,7 @@ We demonstrated the various modern methods on the Chinese corpus, and it indicat
 In general, most models improve the sematic analysis compared with tranditional TFIDF.
 
 Most methods are developed with English property, so segmentation plays a crucial role to make the Chinese posts look like English.
- But the segmentation may also contribute something wrong. Though FastText also can performed with non-segmented sentences, it performed worse due to  the nature of word embedding.
+ But the segmentation may also contribute something wrong. Though FastText also can performed with non-segmented sentences, it performed worse due to the nature of word embedding.
 
 Some publications\cite{Chen2013TUP251293825} shows that the posters may use some morphs to avoid censorship, which we can't evaluate how these words contributes to the sentiment analysis. 
  However, the similarity of morphs is quite easy to identified by Word2vec. 
