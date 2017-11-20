@@ -71,6 +71,11 @@ Both DM/C and DM/M generated better results.
 \end{tabular}
 \end{table}
 
+\section{Subword Information}
+
+Although we converted the dataset to pinyin, the accuracy is not significantly different from the original accuracy. 
+Intuitively, pinyin is less readible to native speaker and inreversible to the characters, since the multiple characters own the same pronunciation. 
+
 \section{Conclusion}
 
 We demonstrated the various modern methods on the Chinese corpus, and it indicated that some models like FastText are invariant to language property. 
@@ -79,5 +84,5 @@ In general, most models improve the sematic analysis compared with tranditional 
 Most methods are developed with English property, so segmentation plays a crucial role to make the Chinese posts look like English.
  But the segmentation may also contribute something wrong. Though FastText also can performed with non-segmented sentences, it performed worse due to  the nature of word embedding.
 
-Some publications\cite{Chen:2013:TUP:2512938.25} shows that the posters may use some morphs to avoid censorship, which we can't evaluate how these words contributes to the sentiment analysis. 
+Some publications\cite{Chen2013TUP251293825} shows that the posters may use some morphs to avoid censorship, which we can't evaluate how these words contributes to the sentiment analysis. 
  However, the similarity of morphs is quite easy to identified by Word2vec. 
