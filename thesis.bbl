@@ -11,13 +11,6 @@ P.~Bojanowski, E.~Grave, A.~Joulin, and T.~Mikolov.
 \newblock Enriching word vectors with subword information.
 \newblock {\em arXiv preprint arXiv:1607.04606}, 2016.
 
-\bibitem{Chen:2013:TUP:2512938.2512940}
-L.~Chen, C.~Zhang, and C.~Wilson.
-\newblock Tweeting under pressure: Analyzing trending topics and evolving word
-  choice on sina weibo.
-\newblock In {\em Proceedings of the First ACM Conference on Online Social
-  Networks}, COSN '13, pages 89--100, New York, NY, USA, 2013. ACM.
-
 \bibitem{Dashtipour2016}
 K.~Dashtipour, S.~Poria, A.~Hussain, E.~Cambria, A.~Y.~A. Hawalah, A.~Gelbukh,
   and Q.~Zhou.
@@ -57,6 +50,20 @@ T.~Mikolov, I.~Sutskever, K.~Chen, G.~S. Corrado, and J.~Dean.
 \newblock Distributed representations of words and phrases and their
   compositionality.
 \newblock pages 3111--3119, 2013.
+
+\bibitem{pang2002thumbs}
+B.~Pang, L.~Lee, and S.~Vaithyanathan.
+\newblock Thumbs up?: sentiment classification using machine learning
+  techniques.
+\newblock In {\em Proceedings of the ACL-02 conference on Empirical methods in
+  natural language processing-Volume 10}, pages 79--86. Association for
+  Computational Linguistics, 2002.
+
+\bibitem{tang2014learning}
+D.~Tang, F.~Wei, N.~Yang, M.~Zhou, T.~Liu, and B.~Qin.
+\newblock Learning sentiment-specific word embedding for twitter sentiment
+  classification.
+\newblock In {\em ACL (1)}, pages 1555--1565, 2014.
 
 \bibitem{multilingual}
 D.~Vilares, M.~Alonso~Pardo, and C.~Gómez-Rodríguez.
