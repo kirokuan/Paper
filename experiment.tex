@@ -24,7 +24,7 @@ ANGER & 怒 抓狂
     \label{fig:weibo}
 \end{figure}
 
-The data set we chose is Open WeiboScope\cite{fu2013reality}, which is collected WeiBo randomly with API by researchers at the Journalism and Media Center of the University of Hong Kong in 2012. 
+The dataset we chose is Open WeiboScope\cite{fu2013reality}, which is collected WeiBo randomly with API by researchers at the Journalism and Media Center of the University of Hong Kong in 2012. 
 It contains 226 millions posts distributing evenly over the year. 
 it's a Weibo feature to allow the user to use emoticon, 
 and the emoticon in raw data expressed as [笑](smile),[淚](tear). It displays as images like the figure \ref{fig:weibo}. 
@@ -34,8 +34,8 @@ We evaluated the accuracy of the classification for different algorithms. We use
 
 \section{Preprocess}
 
-For the data preprocessing and cleansing, most posts contains more than 1 tags. To avoid ambiguity, we only preserve those with single tages.
-we removed the posts containing too many tags, or without any tags. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly. 
+For the data preprocessing and cleansing, most posts contains more than 1 tag. To avoid ambiguity, we only preserve those with single tag.
+we removed the posts containing too many tags, or without any tag. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly. 
 Besides, we only chose the post that over certain length (over above 10 characters). Finally, we used jieba and dictionary to segment to post. \\
 
 Like \cite{zhao2012moodlens}, we also suffered the problem that the numbers of emoticon classes skewed. The numbers of JOY and SAD are more than 50\% of posts. 
@@ -44,12 +44,21 @@ we deleted some posts from JOY and SAD randomly to make the dataset more balance
 The posts meets the criteria is about 7.4 millions. And we removed the tags in the original post, and there are so many tags 
 ,we use most-used 6 categories to categorize them as \ref{table:CategoryTable}.
 
-After initial round, we found some special string or token like username or url may affect the result. Therefore, we also removed those special tokens from the posts as well.
+After initial round, we found some special string or tokens like username or url may affect the result. 
+Therefore, we also removed those special tokens from the posts as well.
 
 \section{Other}
 
 In the Paragraph vector experiment, we tested both DM and DBOW. Additionally, there are 2 different ways supported by gensim to use average or concatenation.
 And we used the parameters suggested. 
 
-
 For converting to pinyin, we use jieba + pinyin (https://www.npmjs.com/package/pinyin) npm package to counter the problem.
+
+
+\begin{figure}[h]
+    \centering
+	\includegraphics[width=1\linewidth]{dataset}
+    \caption{Dataset for 3 different format}
+    \label{fig:sub1}
+\end{figure}
+

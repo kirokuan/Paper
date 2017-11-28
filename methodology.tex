@@ -8,9 +8,10 @@ Here are some models we tested.
 
 	The conventional way to evaluate the semantics based on the occurrence of words and term, and it also takes the occurrence of word in global context into consideration.  
 
-  It's simple and effective, but it still suffers from some disadvantages like data sparsity and high dimension, which may slow down the classifiers. \\
+  It is simple and effective, but it still suffers from some disadvantages like data sparsity and high dimension, which may slow down the classifiers. \\
 
   The SVM we conducted is LinearSVC in sklearn, which uses linear kernel. It used one-vs-rest strategy to handle the multiclass cases.
+  In the other word, it generates less models than SVC.
   We used default parameters. The penalty is l2, and loss function is squared hinge. 
 \section{FastText}
 	
