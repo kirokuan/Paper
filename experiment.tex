@@ -25,8 +25,11 @@ ANGER & 怒 抓狂
 \end{figure}
 
 The dataset we chose is Open WeiboScope\cite{fu2013reality}, which is collected WeiBo randomly with API by researchers at the Journalism and Media Center of the University of Hong Kong in 2012. 
-It contains 226 millions posts distributing evenly over the year. 
-it's a Weibo feature to allow the user to use emoticon, 
+It contains 226 millions posts distributing evenly over the year.  
+The most weibo users come from the different province of China. There are also some users from Hong Kong or oversea. 
+The content of weibo contains both simplified Chinese and traditional Chinese.
+
+It's a Weibo feature to allow the user to use emoticon, 
 and the emoticon in raw data expressed as [笑](smile),[淚](tear). It displays as images like the Figure \ref{fig:weibo}. 
 We used the tags in posts as the indicators of sentiment, and removed some duplicated posts or some posts without any tags, or too many tags. 
 We evaluated the accuracy of the classification for different algorithms. We used the TF-IDF and SVM (Joachims, 1998). as baseline.
@@ -35,13 +38,14 @@ We evaluated the accuracy of the classification for different algorithms. We use
 
 For the data preprocessing and cleansing, most posts contains more than 1 tag. To avoid ambiguity, we only preserve those with single tag.
 we removed the posts containing too many tags, or without any tag. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly. 
-Besides, we only chose the post that over certain length (over above 10 characters). Finally, we used jieba and dictionary to segment to post. \\
+Besides, we only chose the posts over certain length (over above 10 characters). Finally, we used jieba and dictionary to segment to post. \\
 
 We used most-used 6 emotion which most social network support: JOY, SAD, ANGER, FEAR, SURPRICE, DISGUST.
 We classify these tags into these classes manually. 
 Like \cite{zhao2012moodlens}, we also suffered the problem that the numbers of emoticon classes skewed. The numbers of JOY and SAD are more than 50\% of posts. 
 We only selected some specific tags from JOY and SAD to make the whole dataset more balance.   
-The mapping table shows in Table \ref{CategoryTable}.
+The mapping table shows in Table \ref{CategoryTable}. The JOY contains the tags like 呵呵(haha), 贊(excellent)...etc. 
+The SAD contains the tags like 失望(disppointed), 淚(tear).
 
 
 We removed the tags from the original post, and there are so many tags. 
@@ -75,8 +79,8 @@ And we used the parameters suggested.
 \section{FastText}
 
 In the FastText experiment, we tried 3 formats, including non-segmented dataset, segmented dataset and the dataset with pinyin.
-We tested the non-segmented dataset, since some training data in demo is Japanese without segmentation. We wonder if the segmentation matters.
-Additionally, we also want to test if the subword information work for Chinese. So we convert the dataset to pinyin as well. We can see the differences from the table\ref{table:ftdataset}.
+We tested the non-segmented dataset, since some training data in demostration is Japanese without segmentation. We wonder if the segmentation matters.
+Additionally, we also want to test if the subword information work for Chinese. So we convert the dataset to pinyin as well. We can see the differences from the table\ref{ftdataset}.
 
 For converting to pinyin, we use jieba + pinyin (https://www.npmjs.com/package/pinyin) npm package to convert the  charaters to pinyin, which also includes the tone.
 
