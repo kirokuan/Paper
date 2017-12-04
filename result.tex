@@ -6,11 +6,13 @@
 \label{resultAll}
 \begin{tabular}{|c|c|}
 \hline
-Tf-IDF   & 0.44±0.04 \\
+Tf-IDF   & 0.44 (± 0.04) \\
 PVDM(dbow) & 0.40    \\
 FastText &  ~0.51   \\
 FastText(Pinyin) &  ~0.51  \\
-Siamese-CBOW & 0.41 (± 0.04) \\
+Siamese-CBOW(5) & 0.41 (± 0.04) \\
+Siamese-CBOW(10) & 0.39 (± 0.03) \\
+
 \hline
 \end{tabular}
 \end{table}
@@ -59,6 +61,9 @@ The other model dbow, we chose the same parameters.
 In FastText experiment, we iterated through the parameters like window size from 8 to 100, 
 loss function ns,hs,softmax.  Since the result did't indicate significant difference between these parameters, 
 we only display 1 of them as reference.
+
+It took around 2 days with GPU NVIDIA TITAN X to finish Siamese-CBOW word-embedding training. With both 5,10 epoch the perforamance are below the baseline. 
+We would discuss in the Discussion. 
 
 Additionally, we also tried to convert data set to pinyin to evaluate 
 if the pinyin improve the sematic recognition for FastText, 
