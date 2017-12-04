@@ -27,10 +27,9 @@ ANGER & 怒 抓狂
 The dataset we chose is Open WeiboScope\cite{fu2013reality}, which is collected WeiBo randomly with API by researchers at the Journalism and Media Center of the University of Hong Kong in 2012. 
 It contains 226 millions posts distributing evenly over the year. 
 it's a Weibo feature to allow the user to use emoticon, 
-and the emoticon in raw data expressed as [笑](smile),[淚](tear). It displays as images like the figure \ref{fig:weibo}. 
+and the emoticon in raw data expressed as [笑](smile),[淚](tear). It displays as images like the Figure \ref{fig:weibo}. 
 We used the tags in posts as the indicators of sentiment, and removed some duplicated posts or some posts without any tags, or too many tags. 
 We evaluated the accuracy of the classification for different algorithms. We used the TF-IDF and SVM (Joachims, 1998). as baseline.
-
 
 \section{Preprocess}
 
@@ -38,14 +37,35 @@ For the data preprocessing and cleansing, most posts contains more than 1 tag. T
 we removed the posts containing too many tags, or without any tag. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly. 
 Besides, we only chose the post that over certain length (over above 10 characters). Finally, we used jieba and dictionary to segment to post. \\
 
+We used most-used 6 emotion which most social network support: JOY, SAD, ANGER, FEAR, SURPRICE, DISGUST.
+We classify these tags into these classes manually. 
 Like \cite{zhao2012moodlens}, we also suffered the problem that the numbers of emoticon classes skewed. The numbers of JOY and SAD are more than 50\% of posts. 
-we deleted some posts from JOY and SAD randomly to make the dataset more balance.  
+We only selected some specific tags from JOY and SAD to make the whole dataset more balance.   
+The mapping table shows in Table \ref{CategoryTable}.
 
-The posts meets the criteria is about 7.4 millions. And we removed the tags in the original post, and there are so many tags 
-,we use most-used 6 categories to categorize them as \ref{table:CategoryTable}.
+
+We removed the tags from the original post, and there are so many tags. 
+The posts left for 6 categories display in Table \ref{cat_num}. The majority classes are still JOY and SAD. 
 
 After initial round, we found some special string or tokens like username or url may affect the result. 
 Therefore, we also removed those special tokens from the posts as well.
+
+\begin{table}[]
+\centering
+\caption{Number for categories}
+\label{cat_num}
+\begin{tabular}{|c|c|}
+\hline
+ANGER      &331091 \\                                                           
+DISGUST    &261955 \\                                                         
+FEAR       &151564 \\                                                         
+JOY        &717059 \\                                                           
+SAD        &788492 \\                                                           
+SURPRICE   &191974 \\
+\hline
+\end{tabular}
+\end{table}
+
 
 \section{Other}
 
@@ -84,4 +104,4 @@ In the siamese-cbow, we use siames-cbow with the default parameters that the aut
 The dimension is 100, and update algorithm is ada delta. 
 We ran it with epoch 5, 10 separately without any pre-trained word embedding, so it generates the word embedding from scratch. 
 
-After the vectors are generated, we use Multinomial Naive-Bayes to classify the results.
+After the vectors are generated, we use both multinomial Naive-Bayes and Linear SVC to classify the results.

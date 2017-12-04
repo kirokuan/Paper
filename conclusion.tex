@@ -11,7 +11,7 @@ Since we only removed the duplicated post roughly, it may still suffer from the 
 In general, the model is not general enough, it may not be applicable when the data set changed. 
 
 Additionally, compared to other methods, those approaches convert the sentence to vectors with lower dimensions.
-It may benefit the classifier with more dense presentation. Sparse matrix cause much more time and space to train.
+Theoretically, it may benefit the classifier with more dense presentation. Sparse matrix cause much more time and space to train.
 
 Generally, FastText can retrieve the better accuracy with segmentation inclusion. 
 With conversion to Pinyin, it also achieves the similar accuracy. Though, we tried the different settings for FastText,
@@ -21,15 +21,15 @@ It suggested that the term itself may be more meaningful than a single character
 
 \section{Baseline}
 
-We used TFIDF as baseline, the result is 0.44(±0.04), which is statistically greater than the random result in 6 classes problem, 
+We used TF-IDF as baseline, the result is 0.44(±0.04), which is statistically greater than the random result in 6 classes problem, 
 even we consider the skewed classes.  We tried to evaluate the feature that TF-IDF use to classify as Table \ref{table:featureoftfidf}. 
 Though some term here seemed related like, 2nd place in ANGER is 造謠 (create humor),3rd one is 恶浪(violent billow). 
-The 2nd place in FEAR is 谋财害命(commit murder for money).
+The 2nd place in FEAR is 谋财害命(commit murder for money). The most term is not so related intuitively. 
 
 Most of words in each classes actually are not used so commonly. It is contributed by the problem of IDF, which may overweight some rarely-used words.
 The other problem is that we observed the netizen keep posting something quite similar like advertisement, joke or news..., 
 Though their content are not the same exactly, the words or terminology they used may be quite common. 
-Besides TFIDF, most algorithms assume that the articles themselves are distinct from others. In real world, it's not a common case except some well-organized website articles.
+Besides TF-IDF, most algorithms assume that the articles themselves are distinct from others. In real world, it's not a common case except some well-organized website articles.
 We may require some extra preprocess procedure to handle to prevent intentionally repeated posts.
 
 Some publications\cite{Chen2013TUP251293825} shows that the posters may use some morphs to avoid censorship, which we can't evaluate how these words contributes to the sentiment analysis. 
