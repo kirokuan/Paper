@@ -1,6 +1,6 @@
 \chapter{Discussion}
 
-The result shows that FastText can archive better accuracy in general way.
+The result shows that FastText can archive better accuracy in general way. We also compare the result between different models.
 
 \section{Discussion}
 
@@ -10,10 +10,11 @@ The most distinguishable features they use are some rarely used terminology.
 Since we only removed the duplicated post roughly, it may still suffer from the duplicated post from different sources with certain rarely-used words. 
 In general, the model is not general enough, it may not be applicable when the data set changed. 
 
-Generally, FastText can retrieve the better accuracy , even converting the posts to pinyin,
-it also achieves the same accuracy. Though, we tried the different settings for FastText,
-the accuracy is not different significantly despite of the various settings of loss function,window size and dimension. In the comparison set, segmented data set outperforms the one without segmentation. 
-It suggested that the term itself is more meaningful than a single character. And it also took much less time than that of other algorithms.
+Generally, FastText can retrieve the better accuracy with segmentation inclusion. 
+With conversion to Pinyin, it also achieves the similar accuracy. Though, we tried the different settings for FastText,
+the accuracy is not different significantly despite of the various settings of loss function, window size and dimensions. 
+In the comparison set, segmented dataset outperforms the one without segmentation. 
+It suggested that the term itself may be more meaningful than a single character. And it also took much less time than that of other implementatons.
 
 The Siamese-CBOW, the performance is below the baseline. We tried evaluate the model it trained, it seemed it is not converged enough. 
 The word embedding is not converted correctly. And in the confusion matrix, we found the most tested result fall into two major classes.

@@ -76,3 +76,12 @@ segmentation + pinyin  & bì lǎ , hǎosì yǒu shǎo shǎo hóulóngtòng tiān
 \end{table}
 
 We also tested the both dimesion size from 8-300, and loss function including hs (Hierarchical Softmax), ns (negative sampling), softmax.
+
+
+\section{Siamese-CBOW}
+
+In the siamese-cbow, we use siames-cbow with the default parameters that the author suggested. 
+The dimension is 100, and update algorithm is ada delta. 
+We ran it with epoch 5, 10 separately without any pre-trained word embedding. 
+
+After the vectors are generated, we use multilabel Naive-Bayes to classify the results.
