@@ -2,26 +2,42 @@
 
 \section{The model introduction}
 
-Here are some models we tested.
+Here are some models we tested, including TF-IDF, fasttext, PVDB, and siamese-CBOW.
 
 \section{TF-IDF + SVM}
 
-	The conventional way to evaluate the semantics based on the occurrence of words and term, and it also takes the occurrence of word in global context into consideration.  
+	TF-IDF represent as "term frequency–inverse document frequency". The conventional way to evaluate the semantics based on the occurrence of words and term, 
+  and it also takes the occurrence of word in global context into consideration, which means the more entry the word present, less meaningful it is.
 
-  It is simple and effective, but it still suffers from some disadvantages like data sparsity and high dimension, which may slow down the classifiers. \\
+  It is simple and effective, but it still suffers from some disadvantages like data sparsity and high dimension, which may slow down the classifiers, and inability to model synonymy. \\
 
   The SVM we conducted is LinearSVC in sklearn, which uses linear kernel. It used one-vs-rest strategy to handle the multiclass cases.
   In the other word, it generates less models than SVC.
   We used default parameters. The penalty is l2, and loss function is squared hinge. 
+
 \section{FastText}
 	
 The approach is purposed by \cite{joulin2016fasttext}. 
-The structure of FastText is similar to CBOW of Mikolov et al. (2013), and it uses the softmax to compute the probabilities for predefined classes. 
+The structure of FastText can be considered as extension of word2vec as well, and it uses the hierarchical softmax to compute the probabilities for predefined classes. 
+However, the key difference of FastText from word2vec is that it employed bag of N-grams feature. 
+For example the word vector “apple” is a sum of the vectors of the N-grams “<ap”, “app”, ”appl”, “apple”, “apple>”, “ppl”, “pple”, “pple>”, “ple”, “ple>”, “le>”.
+This approach tries to take the local word order into consideration and evaluate the partial information from spelling. It may also vectorize the rare words better, which have less neighboring words to model.
+
+While the computation and space complexity increase, it employs the hashing trick like word2vec as well. 
 The word representation is looked up through a table and finally averaged into the text representation. 
 For the words absent from word embeddings, it uses subword infomation\cite{bojanowski2016enriching} to guess the meaning of the word.
 Finally it uses the linear classification to classify the data.
 
 We used the released version from Facebook github.
+
+
+\begin{figure}[h]
+    \centering
+	\includegraphics[width=.8\linewidth]{fasttext}
+    \caption{The architecture of fasttext}
+    \label{fig:fasttext}
+\end{figure}
+
 
 \section{Paragraph Vector}
 	
@@ -33,17 +49,6 @@ Two models are also can ne concatenated, which means combine both models togethe
 
 We use the implementation of Gensim and use SVM with linear kernel to classify.
 
-\section{Siamese-CBOW}
-
-	The Simese-CBOW\cite{kenter2016siamesecbow} computes a sentence embedding is to average the embeddings of its
-constituent words, instead of using pre-trained word embedding. 
-
-It applied the concept of bag of word from Word2Vec. It used the average from the word composing the sentence and use it to evaluate the possibility to predict the sentence around. 
-The architecture shows as Figure \ref{fig:siamese}
-
-We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the author, and made it compatible with python3 for better compatibility with unicode.
-
-
 \begin{figure}
 \centering
 \begin{subfigure}{.5\textwidth}
@@ -51,7 +56,7 @@ We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overvie
   \includegraphics[width=.9\linewidth]{dm}
   \caption{distributed memory}
   \label{fig:dm}
-\end{subfigure}%
+\end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=.9\linewidth]{DBOW}
@@ -61,6 +66,16 @@ We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overvie
 \caption{Paragraph vector}
 \label{fig:PVDM}
 \end{figure}
+
+\section{Siamese-CBOW}
+
+	The Simese-CBOW\cite{kenter2016siamesecbow} computes a sentence embedding is to average the embeddings of its
+constituent words, instead of using pre-trained word embedding. 
+
+It applied the concept of bag of word from Word2Vec. It used the average from the word composing the sentence and use it to evaluate the possibility to predict the sentence around. 
+The architecture shows as Figure \ref{fig:siamese}
+
+We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the author, and made it compatible with python3 for better compatibility with unicode.
 
 \begin{figure}[h]
     \centering

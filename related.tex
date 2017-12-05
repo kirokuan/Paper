@@ -8,8 +8,14 @@ The advantage of corpus-base is that it is dictionary-free, but it requires rela
 When lexicon-based approach comes to the informal articles contributed by netizens, it may suffer some troubles like misspelling, abbreviation ,words or metaphor...etc, neither can it take the sequence of words into consideration.   
 
 The basic corpus-based approach like TF-IDF is considered to be able to generate relatively good precision.
-However, both approaches may utilize some keywords in the sentences rather than sentiment of sentence itself. In real world, we often use negation or irony to present our feeling rather than solely keywords. 
+However, both approaches may utilize some keywords in the sentences rather than sentiment of sentence itself. In real world, we often use negation or irony to present our feeling rather than solely keywords.
 To solve the problems from rapidly-evolved languages, there are both semi-supervised and unsupervised approaches introduced as well. 
+
+The another problem from the approach is the sparse matrix and high dimension vector due to the complexity of the language nature. 
+Sparse matrix results in inefficience of classifiers and difficulty of scaling up. Additionally, the relationship of synonymy can not be modeled.
+A classic method for generating dense vectors is to utilize singular value decomposition, SVD.
+SVD is part of a family of methods that can approximate an N-dimensional dataset using fewer dimensions, including Principle Components Analysis (PCA), Factor Analysis, and so on.
+Nonetheless, there is a significant computational cost for the SVD for a large cooccurrence matrix, and performance is not always better than using the full sparse vectors.
 
 \section{Chinese Related Sentiment Analysis}
 

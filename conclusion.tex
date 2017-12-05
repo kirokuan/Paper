@@ -12,6 +12,7 @@ In general, the model is not general enough, it may not be applicable when the d
 
 Additionally, compared to other methods, those approaches convert the sentence to vectors with lower dimensions.
 Theoretically, it may benefit the classifier with more dense presentation. Sparse matrix cause much more time and space to train.
+With such high dimension vectors, it is unlikely to apply the non-linear classifier.
 
 Generally, FastText can retrieve the better accuracy with segmentation inclusion. 
 With conversion to Pinyin, it also achieves the similar accuracy. Though, we tried the different settings for FastText,
@@ -29,7 +30,7 @@ The 2nd place in FEAR is 谋财害命(commit murder for money). The most term is
 Most of words in each classes actually are not used so commonly. It is contributed by the problem of IDF, which may overweight some rarely-used words.
 The other problem is that we observed the netizen keep posting something quite similar like advertisement, joke or news..., 
 Though their content are not the same exactly, the words or terminology they used may be quite common. 
-Besides TF-IDF, most algorithms assume that the articles themselves are distinct from others. In real world, it's not a common case except some well-organized website articles.
+Besides TF-IDF, most algorithms assume that the articles themselves are distinct from others. In real world, it is not a common case except some well-organized website articles.
 We may require some extra preprocess procedure to handle to prevent intentionally repeated posts.
 
 Some publications\cite{Chen2013TUP251293825} shows that the posters may use some morphs to avoid censorship, which we can't evaluate how these words contributes to the sentiment analysis. 
