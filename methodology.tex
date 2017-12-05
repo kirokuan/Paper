@@ -41,10 +41,18 @@ We used the released version from Facebook github.
 
 \section{Paragraph Vector}
 	
-This is method is purposed in \cite{PVDB}. The idea is obtain the summary of paragraphs,sentences or documents. 
+This is method is purposed in \cite{PVDB}. The idea is obtain the summary of paragraphs, sentences or documents. 
 There are 2 different algorithms we tested, which are DM(distributed memory) and DBOW(distributed bag of words). 
 The DM model in figure \ref{fig:dm} is quite similar with Word2Vec.
 Figure \ref{fig:dbow} show the model archeture. Compared with DM model, DBOW conceptually simple, this model requires to store less data. 
+
+The paragraph vectors are asked to contribute to the prediction task of the next word given many contexts sampled from the paragraph.
+The contexts are fixed-length and sampled from a sliding window over the paragraph. Therefore, DM take the sequence into consideration.
+
+However, in DBOW model, it ignore context words from input and force the model to predict words randomly sampled from the paragraph in the output.
+It is quite similar to Skip-gram in word2vec.
+
+The author suggested the DM may be better in general cases, while DBOW may took less resources. 
 Two models are also can ne concatenated, which means combine both models together. The author claimed it is appliable to  both short sentence and long paragraph.\\
 
 We use the implementation of Gensim and use SVM with linear kernel to classify.

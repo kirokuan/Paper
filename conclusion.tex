@@ -69,16 +69,17 @@ In the original paper, the dataset they conduected is Toronto Books, which conta
 However, the property of the dataset should not affect the word embedding it trains. Since the proper word embedding is available with other implementations.
 
 Using some pre-trained embeddings may help to deal with such situation. Another drawback is that Siamese-CBOW does not support the feature like subword information.
-It means if the words if absent from its training dataset, it would be consider non-existent at all. Conducting the vocabulary expansion like that in Skip-Thoughts may assist the problem.
+It means if the words is absent from its training dataset, it would be consider non-existent at all. Conducting the vocabulary expansion like that in Skip-Thoughts may assist the problem.
 
 
-\section{PVDM vs. FastText}
+\section{PVDM}
 
 In paragraph vector experiment, the result shows that DBOW produced best accuracy among 3 models. In the original paper, the author suggested that the DM is consistently better than DBOW
 , and that the sum version of DM is often better than concatenation. 
 So far, it's not clear under what condition that DBOW outperform the DM model. We tried leverge the model it built. 
 We fetched most similar word of I (我) as Table \ref{table:doc2vec}. Surprisingly, the similar words of DBOW are all not related words. 
 Both DM/C and DM/M generated better results, which top 10 related words are synonyms of I.
+It seemed predictable that DBOW stored less data to train.
 
 \begin{table}[]
 \centering
