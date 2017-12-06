@@ -106,6 +106,8 @@ We also tested the both dimesion size from 8-300, and loss function including hs
 
 In the siamese-cbow, we use siames-cbow with the default parameters that the author suggested. 
 The dimension is 100, and update algorithm is ada delta. 
-We ran it with epoch 5, 10 separately without any pre-trained word embedding, so it generates the word embedding from scratch. 
+We ran it with epoch 5, 10 separately without any pre-trained word embedding, so it generates the word embedding from scratch.
+Due to low performance of the trial without pre-trained word embedding, we also tried to use gensim to generate the pre-train word embedding from our dataset.
+With pre-trained word embedding, we tried epoch 10 to run.
 
 After the vectors are generated, we use both multinomial Naive-Bayes and Linear SVC to classify the results.
