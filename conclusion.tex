@@ -109,6 +109,27 @@ Although pinyin dataset archieve the same overall accuracy similar to segmented 
 Despite of the various settings of loss function, window size, both segmented dataset and non-segmented one classified most entries into 2 major classes.
 While with some specific parameters, the classifier on pinyin dataset can classify the minor class as well. 
 
+We tried to use T-SNE to visualize the vector space in Figure \ref{tsne}. As we can see, the vector space with some ambiguous boundary.
+
+
+\begin{figure*}[t!]
+    \centering
+     
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{fasttext-fasttext-All_seg_d200_w5_hs}
+        \caption{}
+    \end{subfigure}%
+    ~
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{fasttext-py-All_seg_d200_w15_softmax_pinyin}
+        \caption{}
+    \end{subfigure}
+    \caption{Visualization of vector space for 2 dataset}
+    \label{tsne}
+\end{figure*}
+
 \section{Subword Information}
 
 According to the paper, the feature subword information can compensate the insufficience of word embeddings. 
