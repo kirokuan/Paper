@@ -1,12 +1,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Paragraph vector\relax }}{8}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces The architecture of Siamese-CBOW\relax }}{8}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The architecture of fasttext\relax }}{7}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Paragraph vector\relax }}{8}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The architecture of Siamese-CBOW\relax }}{9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The emoticons in WeiBo\relax }}{9}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The emoticons in WeiBo\relax }}{10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces The confusion matrix for TF-IDF+ SVM\relax }}{12}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces The confusion matrix for two models comparison\relax }}{13}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The confusion matrix for TF-IDF+ SVM\relax }}{16}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Confusion Matrix of Siamese-CBOW}}{17}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Confusion Matrix of FastText}}{18}
 \addvspace {10\p@ }
 \contentsfinish 

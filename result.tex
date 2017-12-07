@@ -78,9 +78,6 @@ That we can see that the 2 major classes get best accuracy while the test result
 The ANGER, DISGUST, and FEAR are more likely to be classified as SAD. It is reasonable that those posts contain more negative feeling.
 The tendancy in the Siamese-CBOW result is more obvious. And it classify no entry into some rarely-used classes.
 
-In the confusion matrix for fasttext in Figure \ref{confusion3}, it shows different tendancy for Pinyin dataset classification. 
-The accuracy for SURPRICE is higher than SAD. It indicates that the SURPRICE may be modeled better than SAD, which contains more sample.
-
 \begin{figure}[h]
     \centering
 	\includegraphics[width=1\linewidth]{tf-idf}
@@ -101,12 +98,16 @@ The accuracy for SURPRICE is higher than SAD. It indicates that the SURPRICE may
    \caption{}
    \label{confusion5}
 \end{subfigure}
-\caption[Confusion Matrix of Siamese-CBOW]{(a) segmented dataset trained with dimension=300, window size=20, loss function hierarchical softmax,
-(b) pinyin dataset with dimension=100, window size=10, and loss function = softmax
+\caption[Confusion Matrix of Siamese-CBOW]{(a) The training set without pre-trained embedding,
+(b) The training set with pre-trained embedding
 }
 \end{figure}
 
 
+In the confusion matrix for fasttext in Figure \ref{confusion4}, it shows different tendancy for Pinyin dataset classification. 
+The accuracy for SURPRICE is higher than SAD. It indicates that the SURPRICE may be modeled better than SAD, which contains more sample.
+
+Figure \ref{confusion4} is quite similar with other confusion matrix, where most test data are classified as JOY and SAD.
 
 \begin{figure}
 \centering
@@ -117,11 +118,11 @@ The accuracy for SURPRICE is higher than SAD. It indicates that the SURPRICE may
 \end{subfigure}
 
 \begin{subfigure}[b]{1\textwidth}
-   \includegraphics[width=.9\linewidth]{All_seg_d100_w10_softmax_pinyin}
+   \includegraphics[width=.9\linewidth]{All_seg_d200_w15_softmax_pinyin}
    \caption{}
    \label{confusion4}
 \end{subfigure}
 \caption[Confusion Matrix of FastText]{(a) segmented dataset trained with dimension=300, window size=20, loss function hierarchical softmax,
-(b) pinyin dataset with dimension=100, window size=10, and loss function = softmax
+(b) pinyin dataset with dimension=200, window size=15, and loss function = softmax
 }
 \end{figure}
