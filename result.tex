@@ -88,12 +88,25 @@ The accuracy for SURPRICE is higher than SAD. It indicates that the SURPRICE may
     \label{confusion1}
 \end{figure}
 
-\begin{figure}[h]
-    \centering
-	\includegraphics[width=1\linewidth]{sc-ratio}
-    \caption{The confusion matrix for siamese-cbow}
-    \label{confusion2}
+\begin{figure}
+\centering
+\begin{subfigure}[b]{1\textwidth}
+   \includegraphics[width=.9\linewidth]{sc-ratio}
+   \caption{}
+   \label{confusion2} 
+\end{subfigure}
+
+\begin{subfigure}[b]{1\textwidth}
+   \includegraphics[width=.9\linewidth]{siamese-cbow-pretrained}
+   \caption{}
+   \label{confusion5}
+\end{subfigure}
+\caption[Confusion Matrix of Siamese-CBOW]{(a) segmented dataset trained with dimension=300, window size=20, loss function hierarchical softmax,
+(b) pinyin dataset with dimension=100, window size=10, and loss function = softmax
+}
 \end{figure}
+
+
 
 \begin{figure}
 \centering
