@@ -63,12 +63,14 @@ The word embedding is not converted correctly. For example, we use "我" (I) to 
 The related words it show are 扙(hurt, rarely-used word),第四节 (the fourth quarter) and 賈寶玉(the name). With 10 epoch word embedding, the  
 related words are 几家 (Some homes), 峯(peek), and 速成班 (rapid-archieve class). It seemed there is no sign of converge.
 
+In the confusion matrix, we found the most tested result fall into two major classes.
+It is quite similar as other models due to data imbalance.
+
 We tried to use pre-trained word-embeddings with 10 epoch to improve it, and the result is improved to the level of baseline.
 However, when we assessed the embeddings it generated, the embeddings are still far from converging. 
 According to original paper, the proper embedding can be trained properly. 
 We are not sure if the property is not available in Chinese dataset.
 
-And in the confusion matrix, we found the most tested result fall into two major classes.
 In the original paper, the dataset they conduected is Toronto Books, which contains novels,
  therefore the sematics of the sentences may be more highly coherent with previous sentence and next one. 
 The property of the dataset should not affect the word embedding it trains. 
