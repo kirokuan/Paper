@@ -14,7 +14,7 @@ Additionally, compared to other methods, those approaches convert the sentence t
 Theoretically, it may benefit the classifier with more dense presentation. Sparse matrix cause much more time and space to train.
 With such high dimension vectors, it is unlikely to apply the non-linear classifier.
 
-Generally, FastText can retrieve the better accuracy with segmentation inclusion. 
+Generally, FastText can retrieve the better accuracy with segmentation inclusion, and is able to train the large-scale dataset more efficiently with its own classifer.
 With conversion to Pinyin, it also achieves the similar accuracy. Though, we tried the different settings for FastText,
 the accuracy is not different significantly despite of the various settings of loss function, window size and dimensions. 
 In the comparison set, segmented dataset outperforms the one without segmentation. 

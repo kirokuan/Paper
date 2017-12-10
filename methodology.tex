@@ -27,7 +27,7 @@ While the computation and space complexity increase, it employs the hashing tric
 The word representation is looked up through a table and finally averaged into the text representation. 
 For the words absent from word embeddings, it uses subword infomation\cite{bojanowski2016enriching} to guess the meaning of the word.
 Another trick applied is pruning some of the vocabulary elements. Feature selection among N-gram is very inefficient and complicated.
-Here it used online parallelizable greedy approach: To check if the document is covered already, if not, add one with highest nrom.
+Here it used online parallelizable greedy approach: To check if the document is covered already, if not, add one with highest norm.
 
 Finally it uses the linear classification to classify the data. The classifier called "Product quantization" uses some tricks to speed up, which utilizes compressed-domain approximate nearest neighbor search (Jegou et al., 2011) \cite{jegou2011searching}.
 The compression technique approximates a real-valued vector by finding the closest vector in a pre-defined structured set of centroids.
