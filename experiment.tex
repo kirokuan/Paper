@@ -83,6 +83,7 @@ We tested the non-segmented dataset, since some training data in demostration is
 Additionally, we also want to test if the subword information work for Chinese. So we convert the dataset to pinyin as well. We can see the differences from the table\ref{ftdataset}.
 
 For converting to pinyin, we use jieba + pinyin (https://www.npmjs.com/package/pinyin) npm package to convert the  charaters to pinyin, which also includes the tone.
+We used built-in classifier to classify the test set.
 
 \begin{table}[]
 \centering
