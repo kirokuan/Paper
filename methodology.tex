@@ -26,11 +26,12 @@ This approach tries to take the local word order into consideration and evaluate
 While the computation and space complexity increase, it employs the hashing trick like word2vec as well. 
 The word representation is looked up through a table and finally averaged into the text representation. 
 For the words absent from word embeddings, it uses subword infomation\cite{bojanowski2016enriching} to guess the meaning of the word.
-Finally it uses the linear classification to classify the data.
+Another trick applied is pruning some of the vocabulary elements. Feature selection among N-gram is very inefficient and complicated.
+Here it used online parallelizable greedy approach: To check if the document is covered already, if not, add one with highest nrom.
 
-Besides, the classifier called "Product quantization" uses some tricks to speed up, which utilizes compressed-domain approximate nearest neighbor search (Jegou et al., 2011) \cite{jegou2011searching}.
+Finally it uses the linear classification to classify the data. The classifier called "Product quantization" uses some tricks to speed up, which utilizes compressed-domain approximate nearest neighbor search (Jegou et al., 2011) \cite{jegou2011searching}.
 The compression technique approximates a real-valued vector by finding the closest vector in a pre-defined structured set of centroids.
-The original PQ has been concurrently improved by Ge et al. (2013) and Norouzi \& Fleet (2013), who learn an orthogonal transform minimizing the overall quantization loss.
+The original PQ has been concurrently improved by Ge et al. (2013)\cite{ge2013optimized} and Norouzi \& Fleet (2013), who learn an orthogonal transform minimizing the overall quantization loss.
 
 We used the released version from Facebook github.
 
