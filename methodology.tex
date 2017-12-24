@@ -32,6 +32,7 @@ Here it used online parallelizable greedy approach: To check if the document is 
 Finally it uses the linear classification to classify the data. The classifier called "Product quantization" uses some tricks to speed up, which utilizes compressed-domain approximate nearest neighbor search (Jegou et al., 2011) \cite{jegou2011searching}.
 The compression technique approximates a real-valued vector by finding the closest vector in a pre-defined structured set of centroids.
 The original PQ has been concurrently improved by Ge et al. (2013)\cite{ge2013optimized} and Norouzi \& Fleet (2013), who learn an orthogonal transform minimizing the overall quantization loss.
+The technique may scrifices some accuracy to gain much more performance and efficiency of memory. It is proved by their experiment that with normalization, both PQ and OPQ are almost lossless with 4 subquantizers. 
 
 We used the released version from Facebook github.
 

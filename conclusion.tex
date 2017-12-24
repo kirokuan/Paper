@@ -141,7 +141,6 @@ However, for the non-segmented dataset, the word-embeddings consists vectors of 
 
 We tried to use T-SNE to visualize the vector space in Figure \ref{tsne}. As we can see, the vector space with some ambiguous boundary.
 
-
 \begin{figure*}[t!]
     \centering
      
@@ -160,6 +159,30 @@ We tried to use T-SNE to visualize the vector space in Figure \ref{tsne}. As we 
     \label{tsne}
 \end{figure*}
 
+\begin{table}[]
+\centering
+\caption{words with low norm in 3 dataset in fasttext}
+\label{table:low-norm}
+\begin{tabular}{|c|c|}
+\hline
+ dataset  & words  \\
+\hline
+segmented  &  旳, 颂, 硬伤, 財, 索取, 图像, 巾 \\
+non-segmented  & 喝水还那么麻烦, 给我试试好么@亚瑟小狼狗....etc   \\
+pinyin     &         \includegraphics[width=0.5\linewidth]{pinyin} \\   
+\hline
+\end{tabular}
+\end{table}
+
+We tried to analyze the vectors it generate. The number of vectors generated with 3 dataset with 100,000 posts are 25,743, 3,137 and 22,233 for segmented, non-segmented and pinyin dataset separately. 
+We listed the vectors with lowest norm in Table \cite{table:low-norm}. As the paper indicated that the vector with lower norm, it contains less infomation. 
+Therefore, most of them are stop words. Surprisingly, the non-segmented dataset contains much less words than other 2. 
+Additionally, the most words it contains are like the sentences rather than the terms. It implied that the fasttext itself can not handle segmentation properly, and explains why it performs poorly. 
+For the segmented dataset, the vectors with lowest norm are some rare used words, which can not be modeled properly with low occurance and few neighboring words around.
+For the pinyin dataset, the vectors with lowest norm are those special abbreviation and icons. Compared with segmented dataset, those rare used word may have the the same pronunciation with other words or can be inferred from subword information.
+
+The other property of fasttext is that it is insensitive to sequence of word order in the sentence.
+
 \section{Subword Information}
 
 According to the paper, the feature subword information can compensate the insufficience of word embeddings. 
@@ -176,13 +199,12 @@ It may be a good topic to evaluate the difference of these approaches.
 
 
 
-
 \section{Conclusion}
 
 We demonstrated the various modern methods on the Chinese corpus, and it indicated that some models like FastText are invariant to language property. 
-In general, most models improve the sematic analysis compared with tranditional TFIDF, and it is also more effient to train with vectors.
+In general, most models improve the sematic analysis compared with tranditional TFIDF, and it is more efficient to extract the informance with more dense vectors.
 
 Most methods are developed with English property, so segmentation plays a crucial role to make the Chinese posts look like English.
- But the segmentation may also contribute something wrong. Though FastText also can be conducted with non-segmented sentences, it performed worse due to the nature of word embedding.
-Since the word2vec can distinguish the term by its nature, there may be some way to train the Chinese corpus without segmentation.
+ But the segmentation may also contribute something wrong. Though FastText also can be conducted with non-segmented sentences, it performed worse due to improper segmentation.
 
+We can see fasttext demostrate excellent property in both performance including training and testing time and memory utilization.
