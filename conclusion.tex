@@ -19,6 +19,7 @@ With conversion to Pinyin, it also achieves the similar accuracy. Though, we tri
 the accuracy is not different significantly despite of the various settings of loss function, window size and dimensions. 
 In the comparison set, segmented dataset outperforms the one without segmentation. 
 It suggested that the term itself may be more meaningful than a single character. And it also took much less time than that of other implementatons.
+Although we did not perform it with linear classifier like that in other experiments, we can consider that the accuracy is not lossless.
 
 \section{Baseline}
 
@@ -43,16 +44,16 @@ It is relatively difficult to identify in TF-IDF model.
 \label{featureoftfidf}
 \begin{tabular}{llllll}
 ANGER	& DISGUST	& FEAR	& JOY	& SAD	& SURPRICE \\
-想瘦:4.40	&抬杠:4.68	&含铅:4.66	&余则:7.53	&grunewald:4.68	&印钞机:5.16 \\
-造謠:4.05	&赃款:3.79	&谋财害命:4.59	&符离:4.73	&节省时间:4.54	&绝密:4.23\\
-恶浪:3.55	&由此看来:3.66	&表同情:3.98	&驻守:4.01	&张春桥:4.21	&54:03.7\\
-顶缸:3.51	&淫妇:3.52	&经济体:3.86	&神明:3.72	&前导:3.83	&清福:3.60\\
-银行利息:3.32	&觀天象:3.42	&可憐見:3.43	&asce:3.56	&已閱:3.35	&任免:3.24\\
-卫冕冠军:3.24	&解除:3.38	&突如其来:3.35	&三元里:3.44	&q1050505041:3.34	&karei:3.07\\
-落水狗:3.23	&上刑:3.35	&万念俱灰:3.11	&何苦来哉:3.44	&杀伐:3.29	&一桩:3.02\\
-剖腹自杀:3.03	&矢泽爱:3.32	&供应站:3.03	&太妙了:3.34	&离世:3.28	&sikucd:2.97\\
-剥下:3.01	&超现实主义:3.29	&勞資:2.98	&两面三刀:3.28	&噴火龍:3.27	&touchsmart610:2.91\\
-多吉:2.98	&美國使館:3.06	&深红:2.90	&slient:3.25	&查無此人:3.18	&翻筋斗:2.82
+想瘦	&抬杠	&含铅	&余则	&grunewald	&印钞机 \\
+造謠	&赃款	&谋财害命	&符离	&节省时间	&绝密\\
+恶浪	&由此看来	&表同情	&驻守	&张春桥	&54:03.7\\
+顶缸	&淫妇	&经济体	&神明	&前导	&清福\\
+银行利息	&觀天象	&可憐見	&asce	&已閱	&任免\\
+卫冕冠军	&解除	&突如其来	&三元里	&q1050505041	&karei\\
+落水狗	&上刑	&万念俱灰	&何苦来哉	&杀伐	&一桩\\
+剖腹自杀	&矢泽爱	&供应站	&太妙了	&离世	&sikucd\\
+剥下	&超现实主义	&勞資	&两面三刀	&噴火龍	&touchsmart610\\
+多吉	&美國使館	&深红	&slient	&查無此人	&翻筋斗
 \end{tabular}
 \end{table}
 
@@ -88,7 +89,7 @@ In paragraph vector experiment, the result shows that DBOW produced best accurac
 So far, it is not clear under what condition that DBOW outperform the DM model. We tried leverge the model it built. 
 We fetched most similar word of I (我) as Table \ref{table:doc2vec}. Surprisingly, the similar words of DBOW are all not related words. 
 Both DM/C and DM/M generated better results, which top 10 related words are synonyms of I.
-It seemed predictable that DBOW stored less data to train.
+It seemed predictable that DBOW stored less data to train. DM/C and DM/M actually model the word in more proper way though the accuracy their accuracy is not good.
 
 \begin{table}[]
 \centering
@@ -129,7 +130,7 @@ biérén"    &   別人(others)\\
 
 \section{FastText}
 
-In fasttext, we tried to evaluate the 3 different dataset, segmented, non-segmented and pinyin. 
+In fasttext, we tried to evaluate the 3 different datasets, segmented, non-segmented and pinyin. 
 Although pinyin dataset archieve the same overall accuracy similar to segmented one, the confusion matrix show different tendancy.
 Despite of the various settings of loss function, window size, both segmented dataset and non-segmented one classified most entries into 2 major classes.
 While with some specific parameters, the classifier on pinyin dataset can classify the minor class as well. 
@@ -207,4 +208,6 @@ In general, most models improve the sematic analysis compared with tranditional 
 Most methods are developed with English property, so segmentation plays a crucial role to make the Chinese posts look like English.
  But the segmentation may also contribute something wrong. Though FastText also can be conducted with non-segmented sentences, it performed worse due to improper segmentation.
 
-We can see fasttext demostrate excellent property in both performance including training and testing time and memory utilization.
+We can see fasttext demostrate excellent property in both performance including training and testing time and memory utilization. 
+Besides the accuracy of the sematic conversion, both the performance and the efficiency of memory also become the interest of study.
+

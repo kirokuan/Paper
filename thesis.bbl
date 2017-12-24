@@ -24,6 +24,19 @@ K.-w. Fu and M.~Chau.
   approach.
 \newblock {\em PloS one}, 8(3):e58356, 2013.
 
+\bibitem{ge2013optimized}
+T.~Ge, K.~He, Q.~Ke, and J.~Sun.
+\newblock Optimized product quantization for approximate nearest neighbor
+  search.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}, pages 2946--2953, 2013.
+
+\bibitem{jegou2011searching}
+H.~J{\'e}gou, R.~Tavenard, M.~Douze, and L.~Amsaleg.
+\newblock Searching in one billion vectors: re-rank with source coding.
+\newblock In {\em Acoustics, Speech and Signal Processing (ICASSP), 2011 IEEE
+  International Conference on}, pages 861--864. IEEE, 2011.
+
 \bibitem{joulin2016fasttext}
 A.~Joulin, E.~Grave, P.~Bojanowski, M.~Douze, H.~J{\'e}gou, and T.~Mikolov.
 \newblock Fasttext.zip: Compressing text classification models.
