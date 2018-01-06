@@ -87,7 +87,12 @@ We use the implementation of Gensim and use SVM with linear kernel to classify.
 constituent words, instead of using pre-trained word embedding. 
 
 It applied the concept of bag of word from Word2Vec. It used the average from the words composing the sentence and use it to evaluate the possibility to predict the sentence around. 
-The architecture shows as Figure \ref{fig:siamese}
+The architecture shows as Figure \ref{fig:siamese}. As it indicated, the word embeddings are optimized directly for averaging.
+A supervised training criterion by predicting sentences occurring next to each other in the training data.
+Cosine similarities are used to compute the proximity of sentences.
+Softmax is applied in the last layer to produce the final probability distribution
+
+The author also evaluated the effect of the hyperparameters. The number of negative sampling yield limited loss, and the higher dimension is prefered to generate better result.
 
 We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the author, and made it compatible with python3 for better compatibility with unicode.
 
