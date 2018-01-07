@@ -28,7 +28,7 @@ ANGER & 怒 抓狂 \\
 The dataset we chose is Open WeiboScope\cite{fu2013reality}, which is collected WeiBo randomly with API by researchers at the Journalism and Media Center of the University of Hong Kong in 2012. 
 It contains 226 millions posts distributing evenly over the year.  
 The most weibo users come from the different province of China. There are also some users from Hong Kong or oversea. 
-The content of weibo contains both simplified Chinese and traditional Chinese.
+The content of weibo contains both simplified Chinese and traditional Chinese. Some province dialect also can be seen in the dataset.
 
 It's a Weibo feature to allow the user to use emoticon, 
 and the emoticon in raw data expressed as [笑](smile),[淚](tear). It displays as images like the Figure \ref{fig:weibo}. 
@@ -39,7 +39,7 @@ We evaluated the accuracy of the classification for different algorithms. We use
 
 For the data preprocessing and cleansing, most posts contains more than 1 tag. To avoid ambiguity, we only preserve those with single tag.
 we removed the posts containing too many tags, or without any tag. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly. 
-Besides, we only chose the posts over certain length (over above 10 characters). Finally, we used jieba and dictionary to segment to post. \\
+Besides, we only chose the posts over certain length (over 10 characters). Finally, we used jieba and dictionary to segment to post. \\
 
 We used most-used 6 emotion which most social network support: JOY, SAD, ANGER, FEAR, SURPRICE, DISGUST.
 We classify these tags into these classes manually. 
@@ -61,12 +61,12 @@ Therefore, we also removed those special tokens from the posts as well.
 \label{cat_num}
 \begin{tabular}{|c|c|}
 \hline
-ANGER      &331091 \\                                                           
-DISGUST    &261955 \\                                                         
-FEAR       &151564 \\                                                         
-JOY        &717059 \\                                                           
-SAD        &788492 \\                                                           
-SURPRICE   &191974 \\
+ANGER      &331,091 \\                                                           
+DISGUST    &261,955 \\                                                         
+FEAR       &151,564 \\                                                         
+JOY        &717,059 \\                                                           
+SAD        &788,492 \\                                                           
+SURPRICE   &191,974 \\
 \hline
 \end{tabular}
 \end{table}
@@ -76,6 +76,8 @@ SURPRICE   &191974 \\
 
 In the Paragraph vector experiment, we tested both DM and DBOW. Additionally, there are 2 different DM supported by gensim to use average or concatenation.
 We use DM/C and DM/M to represent concatenation and average separately, and used the parameters suggested for 3 models. 
+
+The dimension is 100, and negative-sampling is 5 for both DM and DBOW models.
 
 \section{FastText}
 
