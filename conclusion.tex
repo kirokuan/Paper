@@ -42,8 +42,9 @@ It is relatively difficult to identify in TF-IDF model.
 \centering
 \caption{The feature extracted from TF-IDF}
 \label{featureoftfidf}
-\begin{tabular}{llllll}
+\begin{tabular}{|c|c|c|c|c|c|}
 ANGER	& DISGUST	& FEAR	& JOY	& SAD	& SURPRICE \\
+\hline
 想瘦	&抬杠	&含铅	&余则	&grunewald	&印钞机 \\
 造謠	&赃款	&谋财害命	&符离	&节省时间	&绝密\\
 恶浪	&由此看来	&表同情	&驻守	&张春桥	&54:03.7\\
@@ -96,13 +97,16 @@ Though the result is better for DBOW, it may not be robust result. We need more 
 \centering
 \caption{The most similar 5 words of I (我) in 2 models of PVDM}
 \label{table:doc2vec}
-\begin{tabular}{llll}
+\begin{tabular}{|c|c|c|c|}
+\hline
       & DM/C & DBOW & DM/M \\
+\hline
 1 & 俺 &  三条  & 偶\\
 2 & 偶  & 田徑運動 & 他\\
 3 & 老子  & 温暖人间 & 俺\\
 4 & 哀家  & youtudou & 我们\\
-5 & 皮下  & 化妝水 & 她
+5 & 皮下  & 化妝水 & 她 \\
+\hline
 \end{tabular}
 \end{table}
 
@@ -250,8 +254,6 @@ In the \cite{DBLP:journals/corr/MikolovLS13}, it provides similar function to co
 It employs similarity of pre-trained word-embedding, rather than the similarity of n-gram characters features. 
 There are also some differnet approaches like morphologically annotated data, whcih were introduced by Cotterell and Schütze (2015).
 It may be a good topic to evaluate the difference of these approaches. 
-
-
 
 \section{Conclusion}
 
