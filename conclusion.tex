@@ -253,8 +253,10 @@ Intuitively, pinyin is less readible to native speaker and inreversible to the c
 Chinese contains less syllables and more homonyms than English do. In the original paper\cite{bojanowski2016enriching}, they evaluate the effectiveness in various languages like Arabic, Czech, German, English...etc.
 All of them belong to phonography, and most languages belong to phonography. While Chinese belongs to logogram specially. 
 
-We tried some examples in segmented dataset in Table \cite{table:related-words}
-The term acquired shared some similarity in consitute characters. So far, we are still hard to quantize the effectiveness conducted in Chinese.
+We tried some examples in segmented and pinyin dataset in Table \cite{table:related-words}
+The term acquired shared some similarity in consitute characters, and their meaning are similar by some degree.
+In the example of pinyin seemed only return the terms with morphological similarity.
+So far, we are still hard to quantize the effectiveness conducted in Chinese.
 
 In the \cite{DBLP:journals/corr/MikolovLS13}, it provides similar function to compensate the words absent from training set. 
 It employs similarity of pre-trained word-embedding, rather than the similarity of n-gram characters features. 
@@ -266,15 +268,15 @@ It may be a good topic to evaluate the difference of these approaches.
 \centering
 \caption{Query the word non-existing in dataset}
 \label{table:related-words}
-\begin{tabular}{|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
- 吃不起 & 给力   \\
+ 吃不起 & 给力 & gōngxǐfācái(恭喜發財)  \\
 \hline
-吃不饱  & ok \\
-买不起  & 得意   \\
-吃不完     &  [ \\   
-上不起     &   lt \\   
-经不起     &   想念 \\
+吃不饱  & ok & gōngxǐ (恭喜)\\
+买不起  & 得意 & gōngqíjùn (宮崎駿)\\
+吃不完     &  [ & gōngpū(公布)\\   
+上不起     &   lt & gōngrè(公認) \\   
+经不起     &   想念 & gōngpó(公婆)\\
 \hline
 \end{tabular}
 \end{table}
