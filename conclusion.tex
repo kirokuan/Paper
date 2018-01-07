@@ -193,6 +193,11 @@ The segmented n-grams vectors do not contain single character like "我", "們",
 
 We tried to evaluate the word "我們的"(ours) in both segmented vectors and pinyin vectors in Table \cite{table:ngrams-seg} and Table \cite{table:ngrams-pinyin}. 
 We can see the pinyin contain much more conbinations, and the term "wǒmén-de" which segmented properly indicated high promixity to the complete term. 
+In the segmented set, we can see the same tendancy. "們的", the term segmented poorly, generate negative similarity. 
+
+The length of ngrams is limited in 3-5 in this experiment. It may be better to model single character in Chinese by shortening the ngram minimum length.
+Additionally, the some pinyin may be consituted by only 2 letters.  Lowering the minimum length may model the them better as well, but it may also contribute the extra computation effort.
+The length of prefix and suffix may vary depending the languages, so it may be the parameter we can optimize fasttext depends on the language.
 
 \begin{table}[]
 \centering
@@ -238,7 +243,8 @@ We tried to evaluate if the features work in pinyin as well, which means sentima
 Although we converted the dataset to pinyin, the accuracy is not significantly different from the original accuracy. 
 Intuitively, pinyin is less readible to native speaker and inreversible to the characters, since the multiple characters own the same pronunciation. 
 Chinese contains less syllables and more homonyms than English do. In the original paper\cite{bojanowski2016enriching}, they evaluate the effectiveness in various languages like Arabic, Czech, German, English...etc.
-All of them belong to phonography, and most languages belong to phonography. While Chinese belongs to logogram specially. So far, we are still hard to quantize the effectiveness conducted in Chinese.
+All of them belong to phonography, and most languages belong to phonography. While Chinese belongs to logogram specially. 
+So far, we are still hard to quantize the effectiveness conducted in Chinese.
 
 In the \cite{DBLP:journals/corr/MikolovLS13}, it provides similar function to compensate the words absent from training set. 
 It employs similarity of pre-trained word-embedding, rather than the similarity of n-gram characters features. 
