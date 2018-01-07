@@ -49,6 +49,9 @@
   {\normalfont\huge\bfseries\centering}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
 % 顯示中文章節
 \usepackage{CJKnumb}
+\usepackage[encapsulated]{CJK}
+\usepackage{ucs}
+\usepackage[utf8]{inputenc}
 %\titleformat{\chapter}[display]
 %  {\centering\Huge\bfseries}{第\,\CJKnumber{\thechapter}\,章}{1em}{\Huge}
 
@@ -64,9 +67,11 @@
 
 %\frontmatter
 
-\begin{CJK}{UTF8}{bkai}
+\begin{CJK}{UTF8}{cyberbit}
+
 \CJKhorz
 % 將圖表更改為中文表示
+
 \renewcommand\contentsname{Content}
 \renewcommand\listfigurename{Figure Content}
 \renewcommand\listtablename{Table Content}
@@ -75,6 +80,7 @@
 \renewcommand\figurename{Figure}
 \renewcommand\tablename{Table}
 \renewcommand\bibname{Reference}
+%\newcommand{\cjktext}[1]{\begin{CJK}{UTF8}{cyberbit}#1\end{CJK}}
 %\makecertificationCH
 %\makecertificationEN
 
