@@ -264,13 +264,14 @@ Chinese contains less syllables and more homonyms than English do. In the origin
 All of them belong to phonography, and most languages belong to phonography. While Chinese belongs to logogram specially. 
 
 We tried some examples in segmented and pinyin dataset in Table \ref{table:related-words}
-The term acquired shared some similarity in consitute characters, and their meaning are similar by some degree. 
+The term acquired shared some similarity in consitute characters, so their meaning are similar by some degree. 
+It can not prove the model can assess the sematic of a new term precisely by its consitute character.
 For \enquote{\begin{CJK}{UTF8}{gbsn}给力\end{CJK}} (it works or supports), "ok" may be close in some degree, but others are not.
 In the example of pinyin seemed only return the terms with morphological similarity.
 So far, we are still hard to quantize the effectiveness conducted in Chinese.
 
-In the \cite{DBLP:journals/corr/MikolovLS13}, it provides similar function to compensate the words absent from training set. 
-It employs similarity of pre-trained word-embedding, rather than the similarity of n-gram characters features. 
+In the \cite{MikolovLS13}, it provides similar function to compensate the words absent from training set. 
+It employs similarity of pre-trained word-embedding by mapping the training set to pre-trained one to expand its vocabulary. 
 There are also some differnet approaches like morphologically annotated data, whcih were introduced by Cotterell and Schütze (2015).
 It may be a good topic to evaluate the difference of these approaches. 
 
@@ -299,7 +300,7 @@ We demonstrated the various modern methods on the Chinese corpus, and it indicat
 In general, most models improve the sematic analysis compared with tranditional TF-IDF, and it is more efficient to extract the information with more dense vectors.
 Different models can be used in different context.
 
-Most methods are developed with English property, so segmentation plays a crucial role to make the Chinese posts look like English.
+Most methods are developed based on English or Latin languages property, so segmentation or other peroprocess work play crucial roles to make other language genaralized.
 But the segmentation may also contribute something wrong. Though some of them also can be conducted with non-segmented sentences, it performed worse due to improper segmentation.
 
 We can see FastText demostrate excellent property in both performance including training and testing time and memory utilization. 
