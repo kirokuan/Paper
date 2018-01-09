@@ -43,7 +43,7 @@ It is relatively difficult to identify in TF-IDF model.
 \begin{table}[]
 \centering
 \caption{The feature extracted from TF-IDF}
-\label{featureoftfidf}
+\label{table:featureoftfidf}
 \begin{tabular}{|c|c|c|c|c|c|}
 ANGER	& DISGUST	& FEAR	& JOY	& SAD	& SURPRICE \\
 \hline
@@ -157,6 +157,24 @@ Somehow, fasttext treat them as separate term but they may be related highly.
 
 We tried to use T-SNE to visualize the vector space in Figure \ref{tsne}. As we can see, the vector space with some ambiguous boundary.
 
+
+\begin{CJK}{UTF8}{gbsn}
+\begin{table}[]
+\centering
+\caption{words with low norm in 3 dataset in fasttext}
+\label{table:lownorm}
+\begin{tabular}{|c|c|}
+\hline
+ dataset  & words  \\
+\hline
+segmented  & \begin{CJK}{UTF8}{bkai} 旳\end{CJK}, 颂, 硬伤, \begin{CJK}{UTF8}{bkai}財\end{CJK}, 索取, 图像, 巾 \\
+non-segmented  & 喝水还那么麻烦, 给我试试好么@亚瑟小狼狗....etc   \\
+pinyin     &         \includegraphics[width=0.5\linewidth]{pinyin} \\   
+\hline
+\end{tabular}
+\end{table}
+\end{CJK}
+
 \begin{figure*}[t!]
     \centering
      
@@ -175,25 +193,9 @@ We tried to use T-SNE to visualize the vector space in Figure \ref{tsne}. As we 
     \label{tsne}
 \end{figure*}
 
-\begin{CJK}{UTF8}{gbsn}
-\begin{table}[]
-\centering
-\caption{words with low norm in 3 dataset in fasttext}
-\label{table:low-norm}
-\begin{tabular}{|c|c|}
-\hline
- dataset  & words  \\
-\hline
-segmented  &  旳, 颂, 硬伤, 財, 索取, 图像, 巾 \\
-non-segmented  & 喝水还那么麻烦, 给我试试好么@亚瑟小狼狗....etc   \\
-pinyin     &         \includegraphics[width=0.5\linewidth]{pinyin} \\   
-\hline
-\end{tabular}
-\end{table}
-\end{CJK}
 
 We tried to analyze the vectors it generate. The number of vectors generated with 3 dataset with 100,000 posts are 25,743, 3,137 and 22,233 for segmented, non-segmented and pinyin dataset separately. 
-We listed the vectors with lowest norm in Table \cite{table:low-norm}. As the paper indicated that the vector with lower norm, it contains less infomation. 
+We listed the vectors with lowest norm in Table \ref{table:lownorm}. As the paper indicated that the vector with lower norm, it contains less infomation. 
 Therefore, most of them are stop words. Surprisingly, the non-segmented dataset contains much less words than other 2. 
 Additionally, the most words it contains are like the sentences rather than the terms. It implied that the fasttext itself can not handle segmentation properly, and explains why it performs poorly. 
 For the segmented dataset, the vectors with lowest norm are some rare used words, which can not be modeled properly with low occurance and few neighboring words around.
@@ -207,7 +209,7 @@ We evaluated the vectors from ngram level. We found that the term like \enquote{
 while the counterpart in the pinyin dataset consist 15 vectors, including \enquote{wǒmén}, \enquote{\textless wǒ}, \enquote{\textless wǒm}, \enquote{\textless wǒmé}, \enquote{\textless wǒmén}...etc. 
 The segmented n-grams vectors do not contain single character like \enquote{我}, \enquote{們}, becasuse the setting for prefix or subfix for english consist more than 2 or 3 letters above.
 
-We tried to evaluate the word \enquote{我們的}(ours) in both segmented vectors and pinyin vectors in Table \cite{table:ngrams-seg} and Table \cite{table:ngrams-pinyin}. 
+We tried to evaluate the word \enquote{我們的}(ours) in both segmented vectors and pinyin vectors in Table \ref{table:ngrams-seg} and Table \ref{table:ngrams-pinyin}. 
 We can see the pinyin contain much more conbinations, and the term \enquote{wǒmén-de} which segmented properly indicated high promixity to the complete term. 
 In the segmented set, we can see the same tendancy. \enquote{們的}, the term segmented poorly, generate negative similarity. 
 
@@ -261,7 +263,7 @@ Intuitively, pinyin is less readible to native speaker and inreversible to the c
 Chinese contains less syllables and more homonyms than English do. In the original paper\cite{bojanowski2016enriching}, they evaluate the effectiveness in various languages like Arabic, Czech, German, English...etc.
 All of them belong to phonography, and most languages belong to phonography. While Chinese belongs to logogram specially. 
 
-We tried some examples in segmented and pinyin dataset in Table \cite{table:related-words}
+We tried some examples in segmented and pinyin dataset in Table \ref{table:related-words}
 The term acquired shared some similarity in consitute characters, and their meaning are similar by some degree.
 In the example of pinyin seemed only return the terms with morphological similarity.
 So far, we are still hard to quantize the effectiveness conducted in Chinese.
@@ -293,7 +295,7 @@ It may be a good topic to evaluate the difference of these approaches.
 \section{Conclusion}
 
 We demonstrated the various modern methods on the Chinese corpus, and it indicated that some models like FastText are invariant to language property. 
-In general, most models improve the sematic analysis compared with tranditional TFIDF, and it is more efficient to extract the informance with more dense vectors.
+In general, most models improve the sematic analysis compared with tranditional TF-IDF, and it is more efficient to extract the information with more dense vectors.
 
 Most methods are developed with English property, so segmentation plays a crucial role to make the Chinese posts look like English.
  But the segmentation may also contribute something wrong. Though FastText also can be conducted with non-segmented sentences, it performed worse due to improper segmentation.
