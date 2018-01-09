@@ -256,15 +256,16 @@ mén     &  0.35   \\
 
 \subsection{Subword Information}
 
-According to the paper, the feature subword information can compensate the insufficience of word embeddings. 
+According to the paper, the feature of subword information can compensate the insufficience of word embeddings. 
 We tried to evaluate if the features work in pinyin as well, which means sentimatics can be inferred from the pronunciation. 
 Although we converted the dataset to pinyin, the accuracy is not significantly different from the original accuracy. 
-Intuitively, pinyin is less readible to native speaker and inreversible to the characters, since the multiple characters own the same pronunciation. 
+Intuitively, pinyin is less readible to native speaker and not reversible to the characters, since the multiple characters own the same pronunciation. 
 Chinese contains less syllables and more homonyms than English do. In the original paper\cite{bojanowski2016enriching}, they evaluate the effectiveness in various languages like Arabic, Czech, German, English...etc.
 All of them belong to phonography, and most languages belong to phonography. While Chinese belongs to logogram specially. 
 
 We tried some examples in segmented and pinyin dataset in Table \ref{table:related-words}
-The term acquired shared some similarity in consitute characters, and their meaning are similar by some degree.
+The term acquired shared some similarity in consitute characters, and their meaning are similar by some degree. 
+For \enquote{\begin{CJK}{UTF8}{gbsn}给力\end{CJK}} (it works or supports), "ok" may be close in some degree, but others are not.
 In the example of pinyin seemed only return the terms with morphological similarity.
 So far, we are still hard to quantize the effectiveness conducted in Chinese.
 
@@ -294,12 +295,13 @@ It may be a good topic to evaluate the difference of these approaches.
 
 \section{Conclusion}
 
-We demonstrated the various modern methods on the Chinese corpus, and it indicated that some models like FastText are invariant to language property. 
+We demonstrated the various modern methods on the Chinese corpus, and it indicated that PVDM and FastText are invariant to language property. 
 In general, most models improve the sematic analysis compared with tranditional TF-IDF, and it is more efficient to extract the information with more dense vectors.
+Different models can be used in different context.
 
 Most methods are developed with English property, so segmentation plays a crucial role to make the Chinese posts look like English.
- But the segmentation may also contribute something wrong. Though FastText also can be conducted with non-segmented sentences, it performed worse due to improper segmentation.
+But the segmentation may also contribute something wrong. Though some of them also can be conducted with non-segmented sentences, it performed worse due to improper segmentation.
 
-We can see fasttext demostrate excellent property in both performance including training and testing time and memory utilization. 
+We can see FastText demostrate excellent property in both performance including training and testing time and memory utilization. 
 Besides the accuracy of the sematic conversion, both the performance and the efficiency of memory also become the interest of study.
 
