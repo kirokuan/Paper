@@ -6,7 +6,7 @@ Here are some models we tested, including TF-IDF, fasttext, PVDB, and siamese-CB
 
 \section{TF-IDF + SVM}
 
-	TF-IDF represent as "term frequency–inverse document frequency". The conventional way to evaluate the semantics based on the occurrence of words and term, 
+	TF-IDF represent as \enquote{term frequency–inverse document frequency}. The conventional way to evaluate the semantics based on the occurrence of words and term, 
   and it also takes the occurrence of word in global context into consideration, which means the more entry the word present, less meaningful it is.
 
   It is simple and effective, but it still suffers from some disadvantages like data sparsity and high dimension, which may slow down the classifiers, and inability to model synonymy. \\
@@ -20,11 +20,11 @@ Here are some models we tested, including TF-IDF, fasttext, PVDB, and siamese-CB
 The approach is purposed by \cite{joulin2016fasttext}. 
 The structure of FastText can be considered as extension of word2vec as well, and it uses the hierarchical softmax to compute the probabilities for predefined classes. 
 However, the key difference of FastText from word2vec is that it employed bag of N-grams feature. 
-For example the word vector “apple” is a sum of the vectors of the N-grams “<ap”, “app”, ”appl”, “apple”, “apple>”, “ppl”, “pple”, “pple>”, “ple”, “ple>”, “le>”.
+For example the word vector “apple” is a sum of the vectors of the N-grams “\textless ap”, “app”, ”appl”, “apple”, “apple\textgreater”, “ppl”, “pple”, “pple\textgreater”, “ple”, “ple\textgreater”, “le\textgreater”.
 This approach tries to take the local word order into consideration and evaluate the partial information from spelling. It may also vectorize the rare words better, which have less neighboring words to model.
 It also a countermeasure to solve the problem of bag-of-words, that the order of words is not considered. 
-For example, the terms "我見你"(I see you) and "你見我"(you see me) are contributed to the same results in bag of words.
-However, in the ngrams model, the vector are average from its subset, including "我見"(I see), "我"(I)...etc.
+For example, the terms \enquote{我見你} (I see you) and \enquote{你見我}(you see me) are contributed to the same results in bag of words model.
+However, in the ngrams model, the vector are average from its subset, including \enquote{我見}(I see), \enquote{我} (I)...etc.
 
 While the computation and space complexity increase, it employs the hashing trick like word2vec as well. 
 The word representation is looked up through a table and finally averaged into the text representation. 
@@ -32,7 +32,7 @@ For the words absent from word embeddings, it uses subword infomation\cite{bojan
 Another trick applied is pruning some of the vocabulary elements. Feature selection among N-gram is very inefficient and complicated.
 Here it used online parallelizable greedy approach: To check if the document is covered already, if not, add one with highest norm.
 
-Finally it uses the linear classification to classify the data. The classifier called "Product quantization" uses some tricks to speed up, which utilizes compressed-domain approximate nearest neighbor search (Jegou et al., 2011) \cite{jegou2011searching}.
+Finally it uses the linear classification to classify the data. The classifier called \enquote{Product quantization} uses some tricks to speed up, which utilizes compressed-domain approximate nearest neighbor search (Jegou et al., 2011) \cite{jegou2011searching}.
 The compression technique approximates a real-valued vector by finding the closest vector in a pre-defined structured set of centroids.
 The original PQ has been concurrently improved by Ge et al. (2013)\cite{ge2013optimized} and Norouzi \& Fleet (2013), who learn an orthogonal transform minimizing the overall quantization loss.
 The technique may scrifices some accuracy to gain much more performance and efficiency of memory. It is proved by their experiment that with normalization, both PQ and OPQ are almost lossless with 4 subquantizers. 
