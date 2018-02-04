@@ -2,7 +2,7 @@
 
 \section{The model introduction}
 
-Here are some models we tested, including TF-IDF, fasttext, PVDB, and siamese-CBOW.
+Here are some models we tested, including TF-IDF, fasttext, PVDM, and siamese-CBOW.
 
 \section{TF-IDF + SVM}
 
@@ -50,7 +50,7 @@ We used the released version from Facebook github.
 
 \section{Paragraph Vector}
 	
-This is method is purposed in \cite{PVDB}. The idea is obtain the summary of paragraphs, sentences or documents. 
+This is method is purposed in \cite{PVDM}. The idea is obtain the summary of paragraphs, sentences or documents. 
 There are 2 different algorithms we tested, which are DM(distributed memory) and DBOW(distributed bag of words). 
 The DM model in figure \ref{fig:dm} is quite similar with Word2Vec.
 Figure \ref{fig:dbow} show the model archeture. Compared with DM model, DBOW conceptually simple, this model requires to store less data. 
@@ -94,9 +94,9 @@ It applied the concept of bag of word from Word2Vec. It used the average from th
 The architecture shows as Figure \ref{fig:siamese}. As it indicated, the word embeddings are optimized directly for averaging.
 A supervised training criterion by predicting sentences occurring next to each other in the training data.
 Cosine similarities are used to compute the proximity of sentences.
-Softmax is applied in the last layer to produce the final probability distribution
+Softmax is applied in the last layer to produce the final probability distribution.
 
-The author also evaluated the effect of the hyperparameters. The number of negative sampling yield limited loss, and the higher dimension is prefered to generate better result.
+The author also evaluated the effect of the hyperparameters. The number of negative sampling yield limited loss, and the higher dimension is preferred to generate better result.
 
 We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the author, and made it compatible with python3 for better compatibility with unicode.
 
