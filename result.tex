@@ -35,7 +35,7 @@ pinyin  & 0.513 & 0.518 & 0.516 & 0.517 & 0.51 \\
 \begin{table}[]
 \centering
 \caption{Results: the accuracy of Siamese-CBOW}
-\label{resultAll}
+\label{resultSCBOW}
 \begin{tabular}{|c|c|}
 \hline
 Siamese-CBOW(5) & 0.41 (± 0.04) \\
@@ -48,7 +48,7 @@ Siamese-CBOW(10) with pre-train & 0.45 (± 0.02) \\
 \begin{table}[]
 \centering
 \caption{Result of PVDM}
-\label{resultAll}
+\label{resultPVDM}
 \begin{tabular}{|c|c|c|c|}
 \hline
       & Test set & Training Set \\
@@ -75,14 +75,19 @@ In FastText experiment, we iterated through the parameters like window size from
 loss function ns,hs,softmax.  Since the result did't indicate significant difference between these parameters, 
 we only display 1 of them as reference.
 
-Additionally, we also tried to convert data set to pinyin to evaluate 
-if the pinyin improve the sematic recognition for FastText, 
+Additionally, we also tried to convert dataset to pinyin to evaluate 
+if pinyin improve the sematic recognition for FastText, 
 which support vocabulary expansion with subword information \cite{bojanowski2016enriching}. 
 
 \section{Result}
 
 It took around 2 days with GPU NVIDIA TITAN X (PASCAL) to finish Siamese-CBOW word-embedding training. With both 5,10 epoch the perforamance are below the baseline. 
-We would discuss in the Discussion. The other models can be complete with CPU within hours.
+We would discuss in the Discussion. The other models can be finished with CPU within hours.
+
+Figure \ref{resultSCBOW} and Figure \ref{resultPVDM} show the accuracy for Siamese-CBOW and PVBM separately. 
+In the experiment of Siamese-CBOW, we found that the result without pre-trained embedding of Siamese-CBOW is below the baseline. We trained the original dataset with gensim word2vec as pretrained embeddings.
+The result is improved by the pre-trained embeddings, but it is not significant statistically from the baseline. In the result of PVDM, DBOW perform better than the other 2 DM models by little. 
+The overall accuracy is a little below of baseline.
 
 We also look into the classification result with confusion matrix in Figure \ref{confusion1} and Figure \ref{confusion2}.
 

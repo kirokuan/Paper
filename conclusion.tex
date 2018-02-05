@@ -175,24 +175,21 @@ pinyin     &         \includegraphics[width=0.5\linewidth]{pinyin} \\
 \end{table}
 \end{CJK}
 
-\begin{figure*}[t!]
-    \centering
-     
-    \begin{subfigure}[t]{0.5\textwidth}
+\begin{figure}[H]
+    \centering     
+    \begin{subfigure}[b]{0.6\textwidth}
         \centering
         \includegraphics[width=1\linewidth]{ft-All_seg_d200_w15_hs}
         \caption{segmented dataset, dimesion=200 , window size=15, loss function=  hierarchical softmax}
-    \end{subfigure}%
-    ~
-    \begin{subfigure}[t]{0.5\textwidth}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.6\textwidth}
         \centering
         \includegraphics[width=1\linewidth]{fasttext-py-All_seg_d200_w15_softmax_pinyin}
         \caption{pinyin dataset,  dimesion=200 , window size=15, loss function= softmax}
     \end{subfigure}
     \caption{Visualization of vector space for 2 dataset}
     \label{tsne}
-\end{figure*}
-
+\end{figure}
 
 We tried to analyze the vectors it generate. The number of vectors generated with 3 dataset with 100,000 posts are 25,743, 3,137 and 22,233 for segmented, non-segmented and pinyin dataset separately. 
 We listed the vectors with lowest norm in Table \ref{table:lownorm}. As the paper indicated that the vector with lower norm, it contains less infomation. 
