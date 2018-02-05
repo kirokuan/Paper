@@ -2,7 +2,7 @@
 
 \begin{table}[]
 \centering
-\caption{Results}
+\caption{Results: the best accuracy of different models}
 \label{resultAll}
 \begin{tabular}{|c|c|}
 \hline
@@ -10,8 +10,6 @@ Tf-IDF   & 0.44 (± 0.04) \\
 PVDM(dbow) & 0.40    \\
 FastText &  ~0.51   \\
 FastText(Pinyin) &  ~0.51  \\
-Siamese-CBOW(5) & 0.41 (± 0.04) \\
-Siamese-CBOW(10) & 0.39 (± 0.03) \\
 Siamese-CBOW(10) with pre-train & 0.45 (± 0.02) \\
 
 \hline
@@ -28,7 +26,21 @@ Siamese-CBOW(10) with pre-train & 0.45 (± 0.02) \\
 \hline
 no segmentation  & 0.369 & 0.375 & 0.389 & 0.372 & 0.368 \\
 segmentation  & 0.515 & 0.515 & 0.514 & 0.516 & 0.513 \\
-segmentation + pinyin  & 0.513 & 0.518 & 0.516 & 0.517 & 0.51 \\
+pinyin  & 0.513 & 0.518 & 0.516 & 0.517 & 0.51 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[]
+\centering
+\caption{Results: the accuracy of Siamese-CBOW}
+\label{resultAll}
+\begin{tabular}{|c|c|}
+\hline
+Siamese-CBOW(5) & 0.41 (± 0.04) \\
+Siamese-CBOW(10) & 0.39 (± 0.03) \\
+Siamese-CBOW(10) with pre-train & 0.45 (± 0.02) \\
 \hline
 \end{tabular}
 \end{table}

@@ -53,7 +53,7 @@ We used the released version from Facebook github.
 This is method is purposed in \cite{PVDM}. The idea is obtain the summary of paragraphs, sentences or documents. 
 There are 2 different algorithms we tested, which are DM(distributed memory) and DBOW(distributed bag of words). 
 The DM model in figure \ref{fig:dm} is quite similar with Word2Vec.
-Figure \ref{fig:dbow} show the model archeture. Compared with DM model, DBOW conceptually simple, this model requires to store less data. 
+Figure \ref{fig:dbow} show the model archeture. Compared with DM model, DBOW is conceptually simple, this model store less data. 
 
 The paragraph vectors are asked to contribute to the prediction task of the next word given many contexts sampled from the paragraph.
 The contexts are fixed-length and sampled from a sliding window over the paragraph. Therefore, DM take the sequence into consideration.

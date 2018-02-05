@@ -27,15 +27,15 @@ ANGER & 怒 抓狂 \\
 
 The dataset we chose is Open WeiboScope\cite{fu2013reality}, which is collected WeiBo randomly with API by researchers at the Journalism and Media Center of the University of Hong Kong in 2012. 
 It contains 226 millions posts distributing evenly over the year.  
-The most weibo users come from the different province of China. There are also some users from Hong Kong or oversea. 
+The most weibo users come from the different provinces of China. There are also some users from Hong Kong or oversea. 
 The content of weibo contains both simplified Chinese and traditional Chinese. Some province dialect also can be seen in the dataset.
 
-It's a Weibo feature to allow the user to use emoticon, 
+It is a Weibo feature to allow the user to use emoticon, 
 and the emoticon in raw data expressed as [笑](smile),[淚](tear). It displays as images like the Figure \ref{fig:weibo}. 
 We used the tags in posts as the indicators of sentiment, and removed some duplicated posts or some posts without any tags, or too many tags. 
 We evaluated the accuracy of the classification for different algorithms. We used the TF-IDF and SVM (Joachims, 1998). as baseline.
 
-\section{Preprocess}
+\section{Preproccess}
 
 For the data preprocessing and cleansing, most posts contains more than 1 tag. To avoid ambiguity, we only preserve those with single tag.
 we removed the posts containing too many tags, or without any tag. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly. 
