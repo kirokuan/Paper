@@ -33,7 +33,7 @@ Another trick applied is pruning some of the vocabulary elements. Feature select
 Here it used online parallelizable greedy approach: To check if the document is covered already, if not, add one with highest norm.
 
 Finally it uses the linear classification to classify the data. The classifier called \enquote{Product quantization} uses some tricks to speed up, which utilizes compressed-domain approximate nearest neighbor search (Jegou et al., 2011) \cite{jegou2011searching}.
-The compression technique approximates a real-valued vector by finding the closest vector in a pre-defined structured set of centroids like Figure \ref{}.
+The compression technique approximates a real-valued vector by finding the closest vector in a pre-defined structured set of centroids like Figure \ref{fig:pq}.
 The original PQ has been concurrently improved by Ge et al. \cite{ge2013optimized} and Norouzi \& Fleet , who learn an orthogonal transform minimizing the overall quantization loss.
 The technique may scrifices some accuracy to gain much more performance and efficiency of memory. It is proved by their experiment that with normalization, both PQ and OPQ are almost lossless with 4 subquantizers. 
 
@@ -49,7 +49,7 @@ We used the released version from Facebook github.
 \begin{figure}[h]
     \centering
 	\includegraphics[width=.8\linewidth]{fasttext}
-    \caption{The architecture of fasttext}
+    \caption{The architecture of fasttext: the image is cited from \cite{joulin2016fasttext}.}
     \label{fig:fasttext}
 \end{figure}
 
@@ -87,7 +87,7 @@ We use the implementation of Gensim and use SVM with linear kernel to classify.
   \caption{distributed bag of words}
   \label{fig:dbow}
 \end{subfigure}
-\caption{Paragraph vector}
+\caption{Paragraph vector: the images show the difference of two models, and the images are from \cite{PVDM}.}
 \label{fig:PVDM}
 \end{figure}
 
@@ -109,6 +109,6 @@ We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overvie
 \begin{figure}[h]
     \centering
 	\includegraphics[width=.9\linewidth]{siamesecbow}
-    \caption{The architecture of Siamese-CBOW}
+    \caption{The architecture of Siamese-CBOW, the image is from original paper\cite{kenter2016siamesecbow}.}
     \label{fig:siamese}
 \end{figure}
