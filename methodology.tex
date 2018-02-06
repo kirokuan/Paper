@@ -33,12 +33,18 @@ Another trick applied is pruning some of the vocabulary elements. Feature select
 Here it used online parallelizable greedy approach: To check if the document is covered already, if not, add one with highest norm.
 
 Finally it uses the linear classification to classify the data. The classifier called \enquote{Product quantization} uses some tricks to speed up, which utilizes compressed-domain approximate nearest neighbor search (Jegou et al., 2011) \cite{jegou2011searching}.
-The compression technique approximates a real-valued vector by finding the closest vector in a pre-defined structured set of centroids.
-The original PQ has been concurrently improved by Ge et al. (2013)\cite{ge2013optimized} and Norouzi \& Fleet (2013), who learn an orthogonal transform minimizing the overall quantization loss.
+The compression technique approximates a real-valued vector by finding the closest vector in a pre-defined structured set of centroids like Figure \ref{}.
+The original PQ has been concurrently improved by Ge et al. \cite{ge2013optimized} and Norouzi \& Fleet , who learn an orthogonal transform minimizing the overall quantization loss.
 The technique may scrifices some accuracy to gain much more performance and efficiency of memory. It is proved by their experiment that with normalization, both PQ and OPQ are almost lossless with 4 subquantizers. 
 
 We used the released version from Facebook github.
 
+\begin{figure}[h]
+    \centering
+	\includegraphics[width=.8\linewidth]{pq}
+    \caption{Production quantization: It use predefined centroids to proximate the distance of 2 points. There are two type of PQ, symmetric and asymmetric. }
+    \label{fig:pq}
+\end{figure}
 
 \begin{figure}[h]
     \centering
