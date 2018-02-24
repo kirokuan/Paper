@@ -27,8 +27,8 @@ ANGER & 怒 抓狂 \\
 
 The dataset we chose is Open WeiboScope\cite{fu2013reality}, which is collected WeiBo randomly with API by researchers at the Journalism and Media Center of the University of Hong Kong in 2012. 
 It contains 226 millions posts distributing evenly over the year.  
-The most weibo users come from the different provinces of China. There are also some users from Hong Kong or oversea. 
-The content of weibo contains both simplified Chinese and traditional Chinese. Some province dialect also can be seen in the dataset.
+The most Weibo users come from the different provinces of China. There are also some users from Hong Kong or oversea. 
+The content of Weibo contains both simplified Chinese and traditional Chinese. Some province dialect is seen in the dataset.
 
 It is a Weibo feature to allow the user to use emoticon, 
 and the emoticon in raw data expressed as [笑](smile),[淚](tear). It displays as images like the Figure \ref{fig:weibo}. 
@@ -37,20 +37,21 @@ We evaluated the accuracy of the classification for different algorithms. We use
 
 \section{Preproccess}
 
-For the data preprocessing and cleansing, most posts contains more than 1 tag. To avoid ambiguity, we only preserve those with single tag.
+For the data preprocessing and cleansing, most posts contain more than 1 tag. To avoid ambiguity, we only preserve those with single tag.
 we removed the posts containing too many tags, or without any tag. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly. 
 Besides, we only chose the posts over certain length (over 10 characters). Finally, we used jieba and dictionary to segment to post. \\
 
 We used most-used 6 emotion which most social network support: JOY, SAD, ANGER, FEAR, SURPRICE, DISGUST.
-We classify these tags into these classes manually. 
+We classified these tags into these classes manually. 
 Like \cite{zhao2012moodlens}, we also suffered the problem that the numbers of emoticon classes skewed. The numbers of JOY and SAD are more than 50\% of posts. 
 We only selected some specific tags from JOY and SAD to make the whole dataset more balance.   
 The mapping table shows in Table \ref{CategoryTable}. The JOY contains the tags like 呵呵(haha), 贊(excellent)...etc. 
 The SAD contains the tags like 失望(disppointed), 淚(tear).
 
 
-We removed the tags from the original post, and there are so many tags. 
-The posts left for 6 categories display in Table \ref{cat_num}. The majority classes are still JOY and SAD. 
+We removed the tags from the original posts, and there are so many tags. 
+The posts left for 6 categories display in Table \ref{cat_num}. 
+The classes the most posts belonging to are still JOY and SAD. 
 
 After initial round, we found some special string or tokens like username or url may affect the result. 
 Therefore, we also removed those special tokens from the posts as well.
@@ -79,18 +80,18 @@ We use DM/C and DM/M to represent concatenation and average separately, and used
 
 The dimension is 100, and negative-sampling is 5 for both DM and DBOW models, and window size are 5, 10 for concatenation, average separately. 
 
-\section{FastText}
+\section{Fasttext}
 
-In the FastText experiment, we tried 3 formats, including non-segmented dataset, segmented dataset and the dataset with pinyin.
-We tested the non-segmented dataset, since some training data in demostration is Japanese without segmentation. We wonder if the segmentation matters.
+In the fasttext experiment, we tried 3 formats, including non-segmented dataset, segmented dataset and the dataset with pinyin.
+We tested the non-segmented dataset, since some training data in demonstration is Japanese without segmentation. We wonder if the segmentation matters.
 Additionally, we also want to test if the subword information work for Chinese. So we convert the dataset to pinyin as well. We can see the differences from the table\ref{ftdataset}.
 
-For converting to pinyin, we use jieba + pinyin (https://www.npmjs.com/package/pinyin) npm package to convert the  charaters to pinyin, which also includes the tone.
+For converting to pinyin, we use jieba + pinyin (https://www.npmjs.com/package/pinyin) npm package to convert the characters to pinyin, which also includes the tone.
 We used built-in classifier to classify the test set.
 
 \begin{table}[]
 \centering
-\caption{FastText Dataset}
+\caption{Fasttext Dataset}
 \label{ftdataset}
 \begin{tabular}{|c|c|}
 \hline
@@ -103,12 +104,12 @@ segmentation + pinyin  & bì lǎ , hǎosì yǒu shǎo shǎo hóulóngtòng tiān
 \end{tabular}
 \end{table}
 
-We also tested the both dimesion size from 8-300, and loss function including hs (Hierarchical Softmax), ns (negative sampling), softmax.
+We also tested the both dimesion size from 8-300, and loss function including hs (hierarchical softmax), ns (negative sampling), softmax.
 
 
 \section{Siamese-CBOW}
 
-In the siamese-cbow, we use siames-cbow with the default parameters that the author suggested. 
+We use siames-cbow with the default parameters that the author suggested. 
 The dimension is 100, and update algorithm is ada delta. 
 We ran it with epoch 5, 10 separately without any pre-trained word embedding, so it generates the word embedding from scratch.
 Due to low performance of the trial without pre-trained word embedding, we also tried to use gensim to generate the pre-train word embedding from our dataset.

@@ -9,17 +9,17 @@ Here are some models we tested, including TF-IDF, fasttext, PVDM, and siamese-CB
 	TF-IDF represent as \enquote{term frequency–inverse document frequency}. The conventional way to evaluate the semantics based on the occurrence of words and term, 
   and it also takes the occurrence of word in global context into consideration, which means the more entry the word present, less meaningful it is.
 
-  It is simple and effective, but it still suffers from some disadvantages like data sparsity and high dimension, which may slow down the classifiers, and inability to model synonymy. \\
+  It is simple and effective, but it still suffers from some disadvantages like data sparsity and high dimension, which may slow down the classifiers, and inability to model synonym. \\
 
   The SVM we conducted is LinearSVC in sklearn, which uses linear kernel. It used one-vs-rest strategy to handle the multiclass cases.
-  In the other word, it generates less models than SVC.
+  In the other word, it generates fewer models than SVC does.
   We used default parameters. The penalty is l2, and loss function is squared hinge. 
 
 \section{FastText}
 	
 The approach is purposed by \cite{joulin2016fasttext}. 
 The structure of FastText can be considered as extension of word2vec as well, and it uses the hierarchical softmax to compute the probabilities for predefined classes. 
-However, the key difference of FastText from word2vec is that it employed bag of N-grams feature. 
+However, the key difference of FastText from word2vec is that it employed bag of N-grams features. 
 For example the word vector “apple” is a sum of the vectors of the N-grams “\textless ap”, “app”, ”appl”, “apple”, “apple\textgreater”, “ppl”, “pple”, “pple\textgreater”, “ple”, “ple\textgreater”, “le\textgreater”.
 This approach tries to take the local word order into consideration and evaluate the partial information from spelling. It may also vectorize the rare words better, which have less neighboring words to model.
 It also a countermeasure to solve the problem of bag-of-words, that the order of words is not considered. 
@@ -35,7 +35,7 @@ Here it used online parallelizable greedy approach: To check if the document is 
 Finally it uses the linear classification to classify the data. The classifier called \enquote{Product quantization} uses some tricks to speed up, which utilizes compressed-domain approximate nearest neighbor search (Jegou et al., 2011) \cite{jegou2011searching}.
 The compression technique approximates a real-valued vector by finding the closest vector in a pre-defined structured set of centroids like Figure \ref{fig:pq}.
 The original PQ has been concurrently improved by Ge et al. \cite{ge2013optimized} and Norouzi \& Fleet , who learn an orthogonal transform minimizing the overall quantization loss.
-The technique may scrifices some accuracy to gain much more performance and efficiency of memory. It is proved by their experiment that with normalization, both PQ and OPQ are almost lossless with 4 subquantizers. 
+The technique may scrifice some accuracy to gain much more performance and efficiency of memory. It is proved by their experiment that with normalization, both PQ and OPQ are almost lossless with 4 subquantizers. 
 
 We used the released version from Facebook github.
 
@@ -56,20 +56,20 @@ We used the released version from Facebook github.
 
 \section{Paragraph Vector}
 	
-This is method is purposed in \cite{PVDM}. The idea is obtain the summary of paragraphs, sentences or documents. 
-There are 2 different algorithms we tested, which are DM(distributed memory) and DBOW(distributed bag of words). 
-The DM model in figure \ref{fig:dm} is quite similar with Word2Vec.
-Figure \ref{fig:dbow} show the model archeture. Compared with DM model, DBOW is conceptually simple, this model store less data. 
+The method is purposed in \cite{PVDM}. The idea is to obtain the summary of paragraphs, sentences or documents. 
+There are 2 different algorithms they purposed, which are distributed memory(DM) and distributed bag of words(DBOW). 
+The DM model in figure \ref{fig:dm} is quite similar with word2vec. The difference between PVDM and word2vec is that the former contains paragraph matrix.
+Every paragraph is mapped to unique vector. Figure \ref{fig:dbow} show the model architecture. Compared with DM model, DBOW is conceptually simple, this model store less data. 
 
 The paragraph vectors are asked to contribute to the prediction task of the next word given many contexts sampled from the paragraph.
 The contexts are fixed-length and sampled from a sliding window over the paragraph. Therefore, DM take the sequence into consideration.
 
-However, in DBOW model, it ignore context words from input and force the model to predict words randomly sampled from the paragraph in the output.
+However, in DBOW model, it ignores context words from input and forces the model to predict words randomly sampled from the paragraph in the output.
 It is quite similar to Skip-gram in word2vec.
 
-The author suggested the DM may be better in general cases, while DBOW may took less resources. 
-Two models are also can be concatenated, which means combine both models together. 
-The author claimed it is appliable to  both short sentence and long paragraph.\\
+The author suggested that DM may be better in general cases, while DBOW take fewer resources. 
+Two models also can be concatenated, which means combine both models together. 
+The author claimed it is applicable to both short sentence and long paragraph.\\
 
 We use the implementation of Gensim and use SVM with linear kernel to classify.
 
@@ -96,7 +96,7 @@ We use the implementation of Gensim and use SVM with linear kernel to classify.
 	The Simese-CBOW\cite{kenter2016siamesecbow} computes a sentence embedding is to average the embeddings of its
 constituent words, instead of using pre-trained word embedding. 
 
-It applied the concept of bag of word from Word2Vec. It used the average from the words composing the sentence and use it to evaluate the possibility to predict the sentence around. 
+It applied the concept of bag of word from word2vec. It used the average from the words composing the sentence and use it to evaluate the possibility to predict the sentence around. 
 The architecture shows as Figure \ref{fig:siamese}. As it indicated, the word embeddings are optimized directly for averaging.
 A supervised training criterion by predicting sentences occurring next to each other in the training data.
 Cosine similarities are used to compute the proximity of sentences.
