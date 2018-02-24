@@ -5,26 +5,25 @@
 
 \section{Abstract}
 
-How to make the sentence embedding with its own semantics more precisely is study of interest, since it's beneficial for several NLP tasks like machine translation, sentiment analysis. 
-Since the internet text volume grows so enormously and rapidly, and the new derivative or new word keep growing as well.
-How to make the information can be extracted more efficiently and precisely become more critical for many applications.  
-Chinese forums, blogs or microblog expand especially rapidly. The studies tried to vectorize the sentences with deep learning approach with more general way to make it invariant to the languages properties.  
+How to make the sentence embedding with its own semantics more precisely is a study of interest, since it is beneficial for several NLP tasks like machine translation, sentiment analysis. 
+The volume of internet text grows so enormously and rapidly, and the new derivative or new word keep growing as well.
+It become more critical for many applications to make the information can be extracted more efficiently and precisely.  
+Chinese forums, blogs or microblog expand especially rapidly. The studies tried to vectorize the sentences with deep learning approaches in more general way to make it invariant to the languages properties.  
 
 
 Recently word2vec\cite{word2vec} is considered to work for evaluating word semantics in general cases.  
-Additionally, its character is invariant to the languages. Nevertheless, 
+Additionally, the character of word2vec is invariant to the languages. Nevertheless, 
 the embedding in sentence or pharse level is more complicated, it is related to the sentence structure,  
-intention or context. There are several methods raised in recent years, like Siamese-CBOW, FastText ...etc. 
+intention or context. There are several methods raised in recent years, like Siamese-CBOW, FastText. 
 Most of them are able to train batch of text to construct sematic vectors.
 
-The most dataset for NLP work are still in Indo-European Languages, including English, Spanish ...etc. As Wiki sugguested that 46\% people speak Indo-European as their first language. 
-Although Indo-European languages are spread widely, there are also other languages like Chinese, Japanese ....etc, which also display different properties of the languages.
+Most dataset for NLP work are still in Indo-European Languages, including English, Spanish. Wiki sugguested that 46\% people speak Indo-European as their first language. 
+Although Indo-European languages are spread widely, there are also other languages like Chinese, Japanese, which own their special properties.
 
 \section{Purpose}
 
-So far, most the studies are conducted in English or more general way to applied in various languages
-,since the most platforms are contributed by the worldwide users. Most techniques also are aimed at being invariant to language properties or appliable to multilanguage environment. 
+So far, most studies about the sentiment analysis are conducted mainly in English ,or they are developed to be applied in multiligual environments
+, which are like the forums, reviews platforms contributed by the worldwide users. Most techniques also are aimed at being invariant to language properties or appliable to multilanguage environment. 
 However, few of them evaluate the effectiveness of these techniques to other languages, neither they evaluate the multiligual dataset with considering the characteristic of other languages.   
-we are also interested if those models also work in Chinese or other languages, and if the algorithm is invariant to the language grammar or language property. 
-
-In this paper, we demostrate the modern methods on practical data, and compare it with traditional methods. Additionally, we will also evaluate the models.
+We are also interested if those models also work in Chinese or other languages, and if the algorithm is invariant to the language grammar or language property. 
+In this paper, we demostrate the modern methods on practical data, and compare it with traditional methods.
