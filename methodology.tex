@@ -15,11 +15,11 @@ Here are some models we tested, including TF-IDF, fasttext, PVDM, and siamese-CB
   In the other word, it generates fewer models than SVC does.
   We used default parameters. The penalty is l2, and loss function is squared hinge. 
 
-\section{FastText}
+\section{Fasttext}
 	
 The approach is purposed by \cite{joulin2016fasttext}. 
-The structure of FastText can be considered as extension of word2vec as well, and it uses the hierarchical softmax to compute the probabilities for predefined classes. 
-However, the key difference of FastText from word2vec is that it employed bag of N-grams features. 
+The structure of fasttext can be considered as extension of word2vec as well, and it uses the hierarchical softmax to compute the probabilities for predefined classes. 
+However, the key difference of fasttext from word2vec is that it employed bag of N-grams features. 
 For example the word vector “apple” is a sum of the vectors of the N-grams “\textless ap”, “app”, ”appl”, “apple”, “apple\textgreater”, “ppl”, “pple”, “pple\textgreater”, “ple”, “ple\textgreater”, “le\textgreater”.
 This approach tries to take the local word order into consideration and evaluate the partial information from spelling. It may also vectorize the rare words better, which have less neighboring words to model.
 It also a countermeasure to solve the problem of bag-of-words, that the order of words is not considered. 
