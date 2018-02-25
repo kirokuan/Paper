@@ -23,8 +23,8 @@ Although we did not perform it with linear classifier like that in other experim
 \section{Baseline}
 
 \begin{CJK}{UTF8}{gbsn}
-We used TF-IDF as the baseline, and the result is 0.44(±0.04), which is statistically greater than the random result in 6 classes problem, 
-even we consider the skewed classes.  We tried to evaluate the feature that TF-IDF used to classify as Table \ref{table:featureoftfidf}. 
+We used TF-IDF as the baseline, and the result is 0.44(±0.04), which is statistically greater than the random result in 6 classes.
+We tried to evaluate the feature that TF-IDF used to classify as Table \ref{table:featureoftfidf}. 
 Though some term here seemed related like, 2nd place in ANGER is \begin{CJK}{UTF8}{bkai}造謠\end{CJK} (create humor), the third one is 恶浪(violent billow). 
 The second place in FEAR is 谋财害命(commit murder for money). The most term is not so related intuitively. 
 \end{CJK}
@@ -32,10 +32,10 @@ The second place in FEAR is 谋财害命(commit murder for money). The most term
 Most of the words in each class actually are not used so commonly. It is contributed by the problem of IDF, which may overweight some rarely-used words.
 The other problem is that we observed the netizens kept posting something like advertisement, joke or news..., 
 Though their contents are not the same exactly, the words or terminology they used may be quite common. 
-Besides TF-IDF, most algorithms assume that the articles themselves are distinct from others. In the real world, it is not a common case except some well-organized website articles.
+Aside from TF-IDF, most algorithms assume that the articles themselves are distinct from others. In the real world, it is not a common case except some well-organized website articles.
 We may require some extra preprocess procedure to handle to prevent intentionally repeated posts.
 
-Some publications\cite{Chen2013TUP25129382512940} show that the posters may use some morphs to avoid censorship, which we can not evaluate how these words contribute to the sentiment analysis. 
+Some publications\cite{Chen2013TUP25129382512940} show that the posters may use some morphs to avoid censorship, which we cannot evaluate how these words contribute to the sentiment analysis. 
 However, the similarity of morphs can be modeled by word2vec with proper context and volume. 
 It is relatively difficult to identify in TF-IDF model. 
 \begin{CJK}{UTF8}{gbsn}
