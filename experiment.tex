@@ -80,9 +80,9 @@ We use DM/C and DM/M to represent concatenation and average separately, and used
 
 The dimension is 100, and negative-sampling is 5 for both DM and DBOW models, and window size are 5, 10 for concatenation, average separately. 
 
-\section{Fasttext}
+\section{FestText}
 
-In the fasttext experiment, we tried 3 formats, including non-segmented dataset, segmented dataset and the dataset with pinyin.
+In FestText experiment, we tried 3 formats, including non-segmented dataset, segmented dataset and the dataset with pinyin.
 We tested the non-segmented dataset, since some training data in demonstration is Japanese without segmentation. We wonder if the segmentation matters.
 Additionally, we also want to test if the subword information work for Chinese. So we convert the dataset to pinyin as well. We can see the differences from the table\ref{ftdataset}.
 
@@ -91,7 +91,7 @@ We used built-in classifier to classify the test set.
 
 \begin{table}[]
 \centering
-\caption{Fasttext Dataset}
+\caption{FestText Dataset}
 \label{ftdataset}
 \begin{tabular}{|c|c|}
 \hline
