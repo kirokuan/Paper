@@ -35,7 +35,7 @@ and the emoticon in raw data expressed as [笑](smile),[淚](tear). It displays 
 We used the tags in posts as the indicators of sentiment, and removed some duplicated posts or some posts without any tags, or too many tags. 
 We evaluated the accuracy of the classification for different algorithms. We used the TF-IDF and SVM (Joachims, 1998). as baseline.
 
-\section{Preproccess}
+\section{Preprocess}
 
 For the data preprocessing and cleansing, most posts contain more than 1 tag. To avoid ambiguity, we only preserve those with single tag.
 we removed the posts containing too many tags, or without any tag. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly. 
@@ -111,7 +111,7 @@ We also tested the both dimesion size from 8-300, and loss function including hs
 
 We use siames-cbow with the default parameters that the author suggested. 
 The dimension is 100, and update algorithm is ada delta. 
-We ran it with epoch 5, 10 separately without any pre-trained word embedding, so it generates the word embeddings from scratch.
+We ran it with epoch 5, 10 separately without any pre-trained word embeddings, so it generates the word embeddings from scratch.
 Due to low performance of the trial without pre-trained word embeddings, we also tried to use gensim to generate the pre-train word embeddings from our dataset.
 With pre-trained word embeddings, we tried epoch 10 to run.
 

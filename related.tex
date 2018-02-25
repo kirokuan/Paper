@@ -3,7 +3,7 @@
 
 \section{Traditional Approach}
 
-K. Dashtipour et al\cite{Dashtipour2016} summarized both corpus-base and lexicon-base techniques purposed recently and listed the languages those techniques aiming at, and there are some innovative mothods combined both approaches. 
+K. Dashtipour et al \cite{Dashtipour2016} summarized both corpus-base and lexicon-base techniques purposed recently and listed the languages those techniques aiming at, and there are some innovative mothods combined both approaches. 
 The advantage of corpus-base is that it is dictionary-free, but it requires relatively larger corpus to build the model, while lexicon-based approach depends mainly on existing resources to detect the sentiment.
 When lexicon-based approach comes to the informal articles contributed by netizens, it may suffer some troubles like misspelling, abbreviation ,words or metaphor...etc, neither can it take the sequence of words into consideration.   
 
@@ -24,7 +24,7 @@ Howerver, in Chinese and Japanese, segmentation may also be invloved. In the exa
 
 Though most approaches are tested and verified by English dataset, there are some work to test in Chinese dataset as well.
 
-\cite{zhao2012moodlens} performed the basic way to classify the articles from WeiBo with Naive Bayes and smoothing with Laplace smooth.  
+Zhao et al. \cite{zhao2012moodlens} performed the basic way to classify the articles from WeiBo with Naive Bayes and smoothing with Laplace smooth.  
 In this work, the authors also use emoticon as the ground truth to verify the approach, it also applied some imcrement learning. \\
 
 %There are also some researches about Emoticon in sentiment analysis like 
@@ -34,14 +34,14 @@ In this work, the authors also use emoticon as the ground truth to verify the ap
 
 Besides the traditional approaches, they try to extract the effective features in statistical way. 
 With deep learning approaches, it may be possible to learn more in continuous representations.
-Additionally, sentiment analysis with typical deep learning models are conducted. Multiple tasks are performed like  parsing (Socher et al., 2013a), language
-modeling (Bengio et al., 2003; Mnih and Hinton,2009) and NER (Turian et al., 2010). For sentiment analysis, the legendacy models were also tested, like CNN \cite{kim2014convolutional}, RNN \cite{arevian2007recurrent}, but most of them are applied in English dataset only. 
+Additionally, sentiment analysis with typical deep learning models are conducted. Multiple tasks are performed like parsing (Socher et al., 2013a), language
+modeling (Bengio et al., 2003; Mnih and Hinton,2009) and NER (Turian et al., 2010). For sentiment analysis, the legendary models were also tested, like CNN \cite{kim2014convolutional}, RNN \cite{arevian2007recurrent}, but most of them are applied in English dataset only. 
 
-Recently, word2vec(Mikolov et al. 2013)\cite{word2vec} is considered to perform efficiently to vectorize the meaning of single words. It is a log-bilinear model to learn continuous
+Recently, word2vec(Mikolov et al. 2013) \cite{word2vec} is considered to perform efficiently to vectorize the meaning of single words. It is a log-bilinear model to learn continuous
 representations of words on very large corpora efficiently. The similar concept can be adapted to phrase or sentence level as well.
 Mikolov also purposed it with sentence level \cite{PVDM} called PVDM, and claimed it can be applied to both short text and long articles. These approaches are unsupervised, but it can be conducted to sentiment analysis with proper transformation. 
 
-The other way to model the sentimatic is using encoder-decoder model, which come from statistical machine translation. Skip-thoughts\cite{kiros2015skip} employs the GRU encoder-decoder models.
+The other way to model the semantic is to use encoder-decoder model, which come from statistical machine translation. Skip-thoughts\cite{kiros2015skip} employs the GRU encoder-decoder models.
 And it also combines "vocabulary expansion" from \cite{MikolovLS13}, they used vocabulary expansion to map word embeddings into the RNN encoder space.
 Therefore, it made it possible to use less vocabulary to build model, and reuse pre-trained model.
 
@@ -52,5 +52,5 @@ sentence (or document) from the representations of the words or phrases it conta
 Pang et al. \cite{pang2002thumbs} already used bag-of-word representations, and present the word as one-hot vector. They get the better classification results. However, it is still not enough to represent the complex meaning or linguistic characteristics.
 The following works, like \cite{tang2014learning}, the paper purposed to use deep learning to make sentiment analysis directly.
 
-There is also a work\cite{multilingual} to evaluate the multiligual approaches and monoligual one. However, it used the Spanish and English as target, both two are belongs 
+There is also a work\cite{multilingual} to evaluate the multilingual approaches and monolingual one. However, it used the Spanish and English as target, both two are belongs 
 to Indo-European languages. It also addressed the culture difference, "dragon" mean harmful in English but it's opposite in Chinese. 
