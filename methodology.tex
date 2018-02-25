@@ -59,16 +59,15 @@ We used the released version from Facebook github.
 The method is purposed in \cite{PVDM}. The idea is to obtain the summary of paragraphs, sentences or documents. 
 There are 2 different algorithms they purposed, which are distributed memory(DM) and distributed bag of words(DBOW). 
 The DM model in figure \ref{fig:dm} is quite similar with word2vec. The difference between PVDM and word2vec is that the former contains paragraph matrix.
-Every paragraph is mapped to unique vector. Figure \ref{fig:dbow} show the model architecture. Compared with DM model, DBOW is conceptually simple, this model store less data. 
+Every paragraph is mapped to unique vector. Figure \ref{fig:dbow} show the model architecture. DBOW is conceptually simple compared to DM model, this model store less data. 
 
 The paragraph vectors are asked to contribute to the prediction task of the next word given many contexts sampled from the paragraph.
-The contexts are fixed-length and sampled from a sliding window over the paragraph. Therefore, DM take the sequence into consideration.
+The contexts are fixed-length and sampled from a sliding window over the paragraphs. Therefore, DM take the sequence into consideration.
 
-However, in DBOW model, it ignores context words from input and forces the model to predict words randomly sampled from the paragraph in the output.
+However, it ignores context words from input and forces the model to predict words randomly sampled from the paragraph in the output in DBOW model.
 It is quite similar to Skip-gram in word2vec.
 
 The author suggested that DM is consistently better in general cases, while DBOW take fewer resources. 
-Two models also can be concatenated, which means combine both models together. 
 The author claimed it is applicable to both short sentence and long paragraph.\\
 
 We use the implementation of Gensim and use SVM with linear kernel to classify.
@@ -93,10 +92,8 @@ We use the implementation of Gensim and use SVM with linear kernel to classify.
 
 \section{Siamese-CBOW}
 
-	The Simese-CBOW\cite{kenter2016siamesecbow} computes sentence embeddings is to average the embeddings of its
-constituent words, instead of using pre-trained word embedding. 
+The Simese-CBOW\cite{kenter2016siamesecbow} computes sentence embeddings is to average the embeddings of its constituent words, instead of using pre-trained word embedding. It applied the concept of bag of word from word2vec. It used the average from the words composing the sentence and use it to evaluate the possibility to predict the sentence around. 
 
-It applied the concept of bag of word from word2vec. It used the average from the words composing the sentence and use it to evaluate the possibility to predict the sentence around. 
 The architecture shows as Figure \ref{fig:siamese}. As it indicated, the word embeddings are optimized directly for averaging.
 A supervised training criterion by predicting sentences occurring next to each other in the training data.
 Cosine similarities are used to compute the proximity of sentences.
