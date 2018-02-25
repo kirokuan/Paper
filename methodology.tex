@@ -2,7 +2,7 @@
 
 \section{The model introduction}
 
-Here are some models we tested, including TF-IDF, FastText, PVDM, and siamese-CBOW.
+Here are some models we tested, including TF-IDF, FastText, PVDM, and Siamese-CBOW.
 
 \section{TF-IDF + SVM}
 
@@ -37,7 +37,7 @@ The compression technique approximates a real-valued vector by finding the close
 The original PQ has been concurrently improved by Ge et al. \cite{ge2013optimized} and Norouzi \& Fleet , who learn an orthogonal transform minimizing the overall quantization loss.
 The technique may sacrifice some accuracy to gain much more performance and efficiency of memory. It is proved by their experiment that with normalization, both PQ and OPQ are almost lossless with 4 subquantizers. 
 
-We used the released version from Facebook github.
+We used the released build from Facebook github. 
 
 \begin{figure}[h]
     \centering
@@ -70,7 +70,7 @@ It is quite similar to Skip-gram in word2vec.
 The author suggested that DM is consistently better in general cases, while DBOW take fewer resources. 
 The author claimed it is applicable to both short sentence and long paragraph.\\
 
-We use the implementation of Gensim and use SVM with linear kernel to classify.
+We use the implementation from Gensim, which support both DM and DBOW models. We use SVM with linear kernel as classifier.
 
 \begin{figure}
 \centering
@@ -92,16 +92,17 @@ We use the implementation of Gensim and use SVM with linear kernel to classify.
 
 \section{Siamese-CBOW}
 
-The Simese-CBOW\cite{kenter2016siamesecbow} computes sentence embeddings is to average the embeddings of its constituent words, instead of using pre-trained word embedding. It applied the concept of bag of word from word2vec. It used the average from the words composing the sentence and use it to evaluate the possibility to predict the sentence around. 
+The Siamese-CBOW\cite{kenter2016siamesecbow} computes sentence embeddings is to average the embeddings of its constituent words, instead of using pre-trained word embedding. It applied the concept of bag of word from word2vec. 
+It used the average from the words composing the sentence and use it to evaluate the possibility to predict the sentence around. 
 
 The architecture shows as Figure \ref{fig:siamese}. As it indicated, the word embeddings are optimized directly for averaging.
 A supervised training criterion by predicting sentences occurring next to each other in the training data.
 Cosine similarities are used to compute the proximity of sentences.
 Softmax is applied in the last layer to produce the final probability distribution.
 
-The author also evaluated the effect of the hyperparameters. The number of negative sampling yield limited loss, and the higher dimension is preferred to generate better result.
+The authors also evaluated the effect of the hyperparameters. The number of negative sampling yield limited loss, and the higher dimension is preferred to generate better result.
 
-We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the author, and made it compatible with python3 for better compatibility with unicode.
+We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the authors, and made it compatible with python3 for better compatibility with unicode.
 
 \begin{figure}[h]
     \centering

@@ -37,11 +37,11 @@ We evaluated the accuracy of the classification for different algorithms. We use
 
 \section{Preprocess}
 
-For the data preprocessing and cleansing, most posts contain more than 1 tag. To avoid ambiguity, we only preserve those with single tag.
+For the data preprocessing and cleansing, most posts contain more than one tag. To avoid ambiguity, we only preserve those with the single tag.
 We removed the posts containing too many tags, or without any tag. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly. 
-Besides, we only chose the posts over certain length (over 10 characters). Finally, we used jieba and dictionary to segment to post. \\
+Besides, we only chose the posts over the certain length (over 10 characters). Finally, we used jieba and dictionary to segment to post. \\
 
-We used most-used 6 emotion which most social network support: JOY, SAD, ANGER, FEAR, SURPRICE, DISGUST.
+We used most-used 6 emotion which most social network support: JOY, SAD, ANGER, FEAR, SURPRISE, DISGUST.
 We classified these tags into these classes manually. 
 Like \cite{zhao2012moodlens}, we also suffered the problem that the numbers of emoticon classes skewed. The numbers of JOY and SAD are more than 50\% of posts. 
 We only selected some specific tags from JOY and SAD to make the whole dataset more balance.   
@@ -75,19 +75,19 @@ SURPRICE   &191,974 \\
 
 \section{PVDM}
 
-In the Paragraph vector experiment, we tested both DM and DBOW. Additionally, there are 2 different DM supported by gensim to use average or concatenation.
+In the Paragraph vector experiment, we tested both DM and DBOW. Additionally, there are 2 different DM supported by Gensim to use average or concatenation.
 We use DM/C and DM/M to represent concatenation and average separately, and used the parameters suggested for 3 models. 
 
 The dimension is 100, and negative-sampling is 5 for both DM and DBOW models, and window size are 5, 10 for concatenation, average separately. 
 
-\section{FestText}
+\section{FastText}
 
-In FestText experiment, we tried 3 formats, including non-segmented dataset, segmented dataset and the dataset with pinyin.
-We tested the non-segmented dataset, since some training data in demonstration is Japanese without segmentation. We wonder if the segmentation matters.
-Additionally, we also want to test if the subword information work for Chinese. So we convert the dataset to pinyin as well. We can see the differences from the table\ref{ftdataset}.
+In FastText experiment, we tried 3 formats, including non-segmented dataset, segmented dataset and the dataset with pinyin.
+We tested the non-segmented dataset since some training data in the demonstration is Japanese without segmentation. We wonder if the segmentation matters.
+Additionally, we also want to test if the subword information works for Chinese. So we convert the dataset to pinyin as well. We can see the differences from the table\ref{ftdataset}.
 
 For converting to pinyin, we use jieba + pinyin (https://www.npmjs.com/package/pinyin) npm package to convert the characters to pinyin, which also includes the tone.
-We used built-in classifier to classify the test set.
+We used the built-in classifier to classify the test set.
 
 \begin{table}[]
 \centering
@@ -109,10 +109,8 @@ We also tested the both dimesion size from 8-300, and loss function including hs
 
 \section{Siamese-CBOW}
 
-We use siames-cbow with the default parameters that the author suggested. 
-The dimension is 100, and update algorithm is ada delta. 
-We ran it with epoch 5, 10 separately without any pre-trained word embeddings, so it generates the word embeddings from scratch.
-Due to low performance of the trial without pre-trained word embeddings, we also tried to use gensim to generate the pre-train word embeddings from our dataset.
-With pre-trained word embeddings, we tried epoch 10 to run.
-
-After the vectors are generated, we use both multinomial Naive-Bayes and Linear SVC to classify the results.
+We use Siamese-CBOW with the default parameters that the authors suggested. 
+The dimension of the model is 100, and update algorithm is ada delta. 
+We ran it with epoch 5 and 10 separately without any pre-trained word embeddings, so it generates the word embeddings from scratch.
+Due to low performance of the trial without pre-trained word embeddings, we also tried to use Gensim to generate the pre-train word embeddings from our dataset.
+With pre-trained word embeddings, we tried epoch 10 to run. After the vectors are generated, we use Linear SVC to classify the results. 
