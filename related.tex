@@ -19,7 +19,7 @@ Nonetheless, there is a significant computational cost for the SVD for a large c
 
 \section{Chinese Related Sentiment Analysis}
 
-In recent years, most models are aimed at English or more general way. When it comes to multiligual environment, the preprocess approach may differ in languages. The traditional ways to counter the variation of words like stemming or lemmatization are appliable to most Latin languages.
+In recent years, most models are evaluated with the English benchmark. When it comes to multiligual environment, the preprocess approach may differ in languages. The traditional ways to counter the variation of words like stemming or lemmatization are appliable to most Latin languages.
 Howerver, in Chinese and Japanese, segmentation may also be invloved. In the example of FastText\cite{joulin2016fasttext}, they also demostrated to convert character into pinyin, which make the subword infomation can be obtained. 
 
 Though most approaches are tested and verified by English dataset, there are some work to test in Chinese dataset as well.
@@ -32,8 +32,8 @@ In this work, the authors also use emoticon as the ground truth to verify the ap
 
 \section{Advanced Approach}
 
-Besides the traditional approaches, they try to extract the effective features in statistical way. 
-With deep learning approaches, it may be possible to learn more in continuous representations.
+Besides the traditional approaches, they try to extract the effective features to represent the similarity between words or phrases.
+The deep learning approaches demonstrated the success at handling complex problems, and they are also applied to construct more complicated and general models in continuous representations.
 Additionally, sentiment analysis with typical deep learning models are conducted. Multiple tasks are performed like parsing (Socher et al., 2013a), language
 modeling (Bengio et al., 2003; Mnih and Hinton,2009) and NER (Turian et al., 2010). For sentiment analysis, the legendary models were also tested, like CNN \cite{kim2014convolutional}, RNN \cite{arevian2007recurrent}, but most of them are applied in English dataset only. 
 
