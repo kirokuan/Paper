@@ -31,14 +31,14 @@ The most Weibo users come from the different provinces of China. There are also 
 The content of Weibo contains both simplified Chinese and traditional Chinese. Some province dialect is seen in the dataset.
 
 It is a Weibo feature to allow the user to use emoticon, 
-and the emoticon in raw data expressed as [笑](smile),[淚](tear). It displays as images like the Figure \ref{fig:weibo}. 
+and the emoticon in raw data expressed as [笑](smile), [淚](tear). It displays as images like the Figure \ref{fig:weibo}. 
 We used the tags in posts as the indicators of sentiment, and removed some duplicated posts or some posts without any tags, or too many tags. 
 We evaluated the accuracy of the classification for different algorithms. We used the TF-IDF and SVM (Joachims, 1998). as baseline.
 
 \section{Preprocess}
 
 For the data preprocessing and cleansing, most posts contain more than 1 tag. To avoid ambiguity, we only preserve those with single tag.
-we removed the posts containing too many tags, or without any tag. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly. 
+We removed the posts containing too many tags, or without any tag. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly. 
 Besides, we only chose the posts over certain length (over 10 characters). Finally, we used jieba and dictionary to segment to post. \\
 
 We used most-used 6 emotion which most social network support: JOY, SAD, ANGER, FEAR, SURPRICE, DISGUST.

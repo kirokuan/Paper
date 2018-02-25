@@ -30,12 +30,12 @@ While the computation and space complexity increase, it employs the hashing tric
 The word representation is looked up through a table and finally averaged into the text representation. 
 For the words absent from word embeddings, it uses subword infomation\cite{bojanowski2016enriching} to guess the meaning of the word.
 Another trick applied is pruning some of the vocabulary elements. Feature selection among N-gram is very inefficient and complicated.
-Here it used online parallelizable greedy approach: To check if the document is covered already, if not, add one with highest norm.
+Here it used online parallelizable greedy approach: To check if the document is covered already, if not, add one with the highest norm.
 
-Finally it uses the linear classification to classify the data. The classifier called \enquote{Product quantization} uses some tricks to speed up, which utilizes compressed-domain approximate nearest neighbor search (Jegou et al., 2011) \cite{jegou2011searching}.
-The compression technique approximates a real-valued vector by finding the closest vector in a pre-defined structured set of centroids like Figure \ref{fig:pq}.
+Finally, it uses the linear classification to classify the data. The classifier called \enquote{Product quantization} uses some tricks to speed up, which utilizes compressed-domain approximate nearest neighbor search (Jegou et al., 2011) \cite{jegou2011searching}.
+The compression technique approximates a real-valued vector by finding the closest vector in a predefined structured set of centroids like Figure \ref{fig:pq}.
 The original PQ has been concurrently improved by Ge et al. \cite{ge2013optimized} and Norouzi \& Fleet , who learn an orthogonal transform minimizing the overall quantization loss.
-The technique may scrifice some accuracy to gain much more performance and efficiency of memory. It is proved by their experiment that with normalization, both PQ and OPQ are almost lossless with 4 subquantizers. 
+The technique may sacrifice some accuracy to gain much more performance and efficiency of memory. It is proved by their experiment that with normalization, both PQ and OPQ are almost lossless with 4 subquantizers. 
 
 We used the released version from Facebook github.
 
