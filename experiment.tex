@@ -39,7 +39,7 @@ We evaluated the accuracy of the classification for different algorithms. We use
 
 For the data preprocessing and cleansing, most posts contain more than one tag. To avoid ambiguity, we only preserve those with the single tag.
 We removed the posts containing too many tags, or without any tag. We also removed the duplicated posts by their post id roughly because it is a property of Chinese microblog \cite{fu2013reality} for Chinese netizens to post repeatedly. 
-Besides, we only chose the posts over the certain length (over 10 characters). Finally, we used jieba and dictionary to segment to post. \\
+Besides, we only chose the posts over the certain length (over 10 characters). Finally, we used jieba and dictionary to segment to post. 
 
 We used most-used 6 emotion which most social network support: JOY, SAD, ANGER, FEAR, SURPRISE, DISGUST.
 We classified these tags into these classes manually. 
@@ -76,18 +76,23 @@ SURPRISE   &191,974 \\
 \section{PVDM}
 
 In the Paragraph vector experiment, we tested both DM and DBOW. Additionally, there are 2 different DM supported by Gensim to use average or concatenation.
-We use DM/C and DM/M to represent concatenation and average separately and used the parameters suggested for 3 models. 
+We use DM/C and DM/M to represent concatenation and average separately and used the parameters suggested for three models. 
 
-The dimension is 100, and negative-sampling is 5 for both DM and DBOW models, and window size are 5, 10 for concatenation, average separately. 
+The dimension of the vector is 100, and negative-sampling is 5 for both DM and DBOW models, and window size are 5, 10 for concatenation, average separately. 
+
 
 \section{FastText}
 
 In FastText experiment, we tried three formats, including non-segmented dataset, segmented dataset and the dataset with pinyin.
 We tested the non-segmented dataset since some training data in the demonstration is Japanese without segmentation. We wonder if the segmentation matters.
-Additionally, we also want to test if the subword information works for Chinese. So we convert the dataset to pinyin as well. We can see the differences from the table\ref{ftdataset}.
+Additionally, we also want to test if the subword information \cite{bojanowski2016enriching} works for Chinese. So we convert the dataset to pinyin as well. We can see the differences from the table\ref{ftdataset}.
 
 For converting to pinyin, we use jieba + pinyin (https://www.npmjs.com/package/pinyin) npm package to convert the characters to pinyin, which also includes the tone.
 We used the built-in classifier to classify the test set.
+
+We iterated through the parameters like window size from 8 to 100, loss function ns, hs, softmax.  
+Since the result did not indicate significant difference between these parameters, we only display 1 of them as reference. 
+
 
 \begin{table}[]
 \centering
@@ -114,3 +119,131 @@ The dimension of the vector is 100, and update algorithm is ada delta.
 We ran it with epoch 5 and 10 separately without any pre-trained word embeddings, so it generates the word embeddings from scratch.
 Due to low performance of the trial without pre-trained word embeddings, we also tried to use Gensim to generate the pre-train word embeddings from our dataset.
 With pre-trained word embeddings, we tried epoch 10 to run. After the vectors are generated, we use Linear SVC to classify the results. 
+
+\begin{table}[]
+\centering
+\caption{Results: the best accuracy of different models}
+\label{resultAll}
+\begin{tabular}{|c|c|}
+\hline
+Tf-IDF   & 0.44 (± 0.04) \\
+PVDM(dbow) & 0.40    \\
+Fasttext &  0.51   \\
+Fasttext(Pinyin) &  0.51  \\
+Siamese-CBOW(10) with pre-train & 0.45 (± 0.02) \\
+
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{Fasttext}
+\label{fasttext}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+   & 8 & 12 & 16 & 32 & 64 \\
+\hline
+no segmentation  & 0.369 & 0.375 & 0.389 & 0.372 & 0.368 \\
+segmentation  & 0.515 & 0.515 & 0.514 & 0.516 & 0.513 \\
+pinyin  & 0.513 & 0.518 & 0.516 & 0.517 & 0.51 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[]
+\centering
+\caption{Results: the accuracy of Siamese-CBOW}
+\label{resultSCBOW}
+\begin{tabular}{|c|c|}
+\hline
+Siamese-CBOW(5) & 0.41 (± 0.04) \\
+Siamese-CBOW(10) & 0.39 (± 0.03) \\
+Siamese-CBOW(10) with pre-train & 0.45 (± 0.02) \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{Result of PVDM}
+\label{resultPVDM}
+\begin{tabular}{|c|c|c|c|}
+\hline
+      & Test set & Training Set \\
+\hline
+DM/C  & 0.384 &  0.384 \\
+DM/M &  0.38  & 0.436 \\
+DBOW &  0.404  & 0.457 \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Experimental Results}
+
+It took around 2 days with GPU NVIDIA TITAN X (PASCAL) to finish Siamese-CBOW word embeddings training. The performance with epoch 5, 10 are below the baseline. 
+The other models were finished with CPU within hours.
+
+Figure \ref{resultSCBOW} and Figure \ref{resultPVDM} show the accuracy for Siamese-CBOW and PVBM separately. 
+In the experiment of Siamese-CBOW, we found that the result without pre-trained embedding of Siamese-CBOW is below the baseline. We trained the original dataset with Gensim word2vec as pre-trained embeddings.
+The result is improved by the pre-trained embeddings, but it is not significant statistically from the baseline. 
+In the result of PVDM, DBOW performs better than the other two DM models by little. 
+The overall accuracy is a little below of baseline.
+
+
+\begin{figure}[h]
+    \centering
+	\includegraphics[width=1\linewidth]{tf-idf}
+    \caption{The confusion matrix for TF-IDF+ SVM}
+    \label{confusion1}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}[b]{1\textwidth}
+   \includegraphics[width=.9\linewidth]{sc-ratio}
+   \caption{}
+   \label{confusion2} 
+\end{subfigure}
+
+\begin{subfigure}[b]{1\textwidth}
+   \includegraphics[width=.9\linewidth]{siamese-cbow-pretrained}
+   \caption{}
+   \label{confusion5}
+\end{subfigure}
+\caption[Confusion Matrix of Siamese-CBOW]{(a) The training set without pre-trained embedding,
+(b) The training set with pre-trained embedding
+}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\begin{subfigure}[b]{1\textwidth}
+   \includegraphics[width=.9\linewidth]{fasttext-All_seg_d300_w20_hs}
+   \caption{}
+   \label{confusion3} 
+\end{subfigure}
+
+\begin{subfigure}[b]{1\textwidth}
+   \includegraphics[width=.9\linewidth]{All_seg_d200_w15_softmax_pinyin}
+   \caption{}
+   \label{confusion4}
+\end{subfigure}
+\caption[Confusion matrix of FastText]{(a) segmented dataset trained with dimension=300, window size=20, loss function hierarchical softmax,
+(b) pinyin dataset with dimension=200, window size=15, and loss function = softmax
+}
+\end{figure}
+
+We also look into the classification results with confusion matrices. 
+In Figure \ref{confusion1} and Figure \ref{confusion2}, we can see that the 2 major classes give the best accuracy while the test results skewed into these 2 major classes as well.  
+The ANGER, DISGUST, and FEAR are more likely to be classified as SAD. It is reasonable that those posts contain more negative sentiment.
+The tendency in the Siamese-CBOW result is more obvious. It classified no entry into some rarely used classes, which may also result from its low performance.
+
+We also evaluated all classification details of FastText experiments.
+In the confusion matrix for FastText in Figure \ref{confusion4}, it shows different tendency for Pinyin dataset classification. 
+The accuracy for SURPRISE is higher than SAD. It indicates that the SURPRISE may be modeled better than SAD, which contains more samples.
+Figure \ref{confusion3} is quite similar with confusion matrices in other experiments, where most test data are classified as JOY and SAD, because the two classes contain the majority of the posts.
+Most of the results of the segmented dataset are alike despite of the settings of loss function and dimension.

@@ -5,7 +5,7 @@
 	TF-IDF represent as \enquote{term frequency–inverse document frequency}. The conventional way to evaluate the semantics based on the occurrence of words and term, 
   and it also takes the occurrence of word in global context into consideration, which means the more entry the word present, less meaningful it is.
 
-  It is simple and effective, but it still suffers from some disadvantages like data sparsity and high dimension, which may slow down the classifiers, and inability to model synonym. \\
+  It is simple and effective, but it still suffers from some disadvantages like data sparsity and high dimension, which may slow down the classifiers, and inability to model synonym. 
 
   The SVM we conducted is LinearSVC in sklearn, which uses linear kernel. It used one-vs-rest strategy to handle the multiclass cases.
   In the other word, it generates fewer models than SVC does.
