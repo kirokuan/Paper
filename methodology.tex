@@ -1,8 +1,4 @@
-\chapter{Methods}
-
-\section{The model introduction}
-
-Here are some models we tested, including TF-IDF, FastText, PVDM, and Siamese-CBOW.
+\chapter{Methodology}
 
 \section{TF-IDF + SVM}
 
@@ -36,8 +32,7 @@ Finally, it uses the linear classification to classify the data. The classifier 
 The compression technique approximates a real-valued vector by finding the closest vector in a predefined structured set of centroids like Figure \ref{fig:pq}.
 The original PQ has been concurrently improved by Ge et al. \cite{ge2013optimized} and Norouzi \& Fleet , who learn an orthogonal transform minimizing the overall quantization loss.
 The technique may sacrifice some accuracy to gain much more performance and efficiency of memory. It is proved by their experiment that with normalization, both PQ and OPQ are almost lossless with 4 subquantizers. 
-
-We used the released build from Facebook github. 
+We used the released build from Facebook github.
 
 \begin{figure}[h]
     \centering
@@ -68,7 +63,7 @@ However, it ignores context words from input and forces the model to predict wor
 It is quite similar to Skip-gram in word2vec.
 
 The author suggested that DM is consistently better in general cases, while DBOW take fewer resources. 
-The author claimed it is applicable to both short sentence and long paragraph.\\
+The author claimed it is applicable to both short sentence and long paragraph.
 
 We use the implementation from Gensim, which support both DM and DBOW models. We use SVM with linear kernel as classifier.
 
@@ -102,7 +97,8 @@ Softmax is applied in the last layer to produce the final probability distributi
 
 The authors also evaluated the effect of the hyperparameters. The number of negative sampling yield limited loss, and the higher dimension is preferred to generate better result.
 
-We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the authors, and made it compatible with python3 for better compatibility with unicode.
+We used the implementation (https://bitbucket.org/TomKenter/siamese-cbow/overview) from the authors.
+We made it able to run in python3 for better compatibility with unicode.
 
 \begin{figure}[h]
     \centering

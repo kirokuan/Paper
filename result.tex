@@ -68,30 +68,31 @@ We used baseline TD-IDF plus SVM with linear kernel as baseline.
 Since the original distribution for classes is a little skewed, most of the test samples are classified into 2 major classes.
 We compared it with other models with different settings. \\
 
-For PVDM, we use 3 different models DM/C, DM/M and DBOW. All of them, we choose most commonly used parameters, DM : dimension:100, window size:10, negative:5, hs:0 and we tested both DM with concatenation of context vectors (DM/C) and average of context vectors(DM/M). 
-The other model dbow, we chose the same parameters.
+For PVDM, we use 3 different models DM/C, DM/M and DBOW. 
+All of them, we choose most commonly used parameters. 
+The settings for DM is dimension:100, window size:10, negative:5, hs:0 and we tested both DM with concatenation of context vectors (DM/C) and average of context vectors(DM/M). 
+The other model DBOW, we chose the same parameters.
 
-In FastText experiment, we iterated through the parameters like window size from 8 to 100, 
-loss function ns, hs, softmax.  Since the result did not indicate significant difference between these parameters, 
-we only display 1 of them as reference.
+In FastText experiment, we iterated through the parameters like window size from 8 to 100, loss function ns, hs, softmax.  
+Since the result did not indicate significant difference between these parameters, we only display 1 of them as reference.
 
-Additionally, we also tried to convert dataset to pinyin to evaluate if pinyin improve the semantic recognition for FastText, 
-which support vocabulary expansion with subword information \cite{bojanowski2016enriching}. 
+Additionally, we also tried to convert dataset to pinyin to evaluate if pinyin improve the semantic recognition for FastText, which support vocabulary expansion with subword information \cite{bojanowski2016enriching}. 
 
-\section{Result}
+\section{Experimental Results}
 
-It took around 2 days with GPU NVIDIA TITAN X (PASCAL) to finish Siamese-CBOW word embeddings training. The perforamance with epoch 5, 10 are below the baseline. 
+It took around 2 days with GPU NVIDIA TITAN X (PASCAL) to finish Siamese-CBOW word embeddings training. The performance with epoch 5, 10 are below the baseline. 
 The other models were finished with CPU within hours.
 
 Figure \ref{resultSCBOW} and Figure \ref{resultPVDM} show the accuracy for Siamese-CBOW and PVBM separately. 
-In the experiment of Siamese-CBOW, we found that the result without pre-trained embedding of Siamese-CBOW is below the baseline. We trained the original dataset with Gensim word2vec as pretrained embeddings.
-The result is improved by the pre-trained embeddings, but it is not significant statistically from the baseline. In the result of PVDM, DBOW perform better than the other 2 DM models by little. 
+In the experiment of Siamese-CBOW, we found that the result without pre-trained embedding of Siamese-CBOW is below the baseline. We trained the original dataset with Gensim word2vec as pre-trained embeddings.
+The result is improved by the pre-trained embeddings, but it is not significant statistically from the baseline. 
+In the result of PVDM, DBOW performs better than the other two DM models by little. 
 The overall accuracy is a little below of baseline.
 
 We also look into the classification result with confusion matrix in Figure \ref{confusion1} and Figure \ref{confusion2}.
 That we can see that the 2 major classes give the best accuracy while the test results skewed into these 2 major classes as well.  
 The ANGER, DISGUST, and FEAR are more likely to be classified as SAD. It is reasonable that those posts contain more negative sentiment.
-The tendency in the Siamese-CBOW result is more obvious. It classify no entry into some rarely used classes.
+The tendency in the Siamese-CBOW result is more obvious. It classified no entry into some rarely used classes.
 
 \begin{figure}[h]
     \centering
